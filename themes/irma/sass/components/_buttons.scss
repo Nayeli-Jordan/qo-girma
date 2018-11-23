@@ -1,0 +1,12 @@
+// Buttons
+// ==========================================================================
+
+.btn {
+	padding: 0 20px;
+	text-align: center;
+	line-height: 30px;
+	font-weight: 300;
+	line-height: 30px;	
+	transition: .3s ease-out;
+	@extend %shadow;
+}
