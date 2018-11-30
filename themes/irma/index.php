@@ -16,9 +16,10 @@
 				<video id="video-<?php echo $post_id; ?>" src="<?php echo $videoLink; ?>" class="width-100p" muted autoplay></video>
 	     		<div id="portada-<?php echo $post_id; ?>" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)" class="bg-image bg-absolute hide"></div>
 	     		<div id="videoControles">
-		     		<i id="videoStop" class="">stop</i>
-		     		<i id="videoVolumen" class="icon-menu"></i>
-		     		<i id="videoMute" class="icon-close"></i>	     			
+		     		<i id="videoStop" class="icon-stop"></i>
+		     		<i id="videoPlay" class="icon-play"></i>
+		     		<i id="videoVolumen" class="icon-volume"></i>
+		     		<i id="videoMute" class="icon-volume-off"></i>	     			
 	     		</div>
 
 			<?php endwhile;

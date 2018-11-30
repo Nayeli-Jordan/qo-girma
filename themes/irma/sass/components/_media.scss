@@ -45,7 +45,7 @@ video.responsive-video {
     bottom: 20px;
     i {
     	&:before {
-			background: -webkit-linear-gradient(#eee, #333);
+			background: -webkit-linear-gradient(to right, $purple-color, $pink-color);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;    		
     	}
