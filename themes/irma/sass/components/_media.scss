@@ -39,18 +39,53 @@ video.responsive-video {
 /* INDEX */
 
 /* Video */
-#videoControles {
-	position: absolute;
-    right: 20px;
-    bottom: 20px;
-    i {
-    	&:before {
-			background: -webkit-linear-gradient(to right, $purple-color, $pink-color);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;    		
-    	}
-    }
+#intro-video {
+	video {
+		margin-bottom: -6px;
+	}
+	#videoPortada {
+		transition: .2s ease-out;
+		&.hide {
+			display: block;
+			opacity: 0;
+			z-index: -1;			
+		}
+		#buttonPlay {
+			width: 85px;
+			height: 60px;
+			color: #fff;
+			text-align: center;
+			font-size: 30px;
+			line-height: 60px;
+			background-color: #dc0000;
+			border-radius: 10px;
+			box-shadow: 4px 2px 2px 0 rgba(155, 155, 155, 0.14);
+			cursor: pointer;
+		}
+	}
+	#videoControles {
+		position: absolute;
+	    right: 20px;
+	    bottom: 20px;
+	    @media #{$small-and-down} {
+			right: 10px;
+			bottom: 5px;
+	    }
+	    i {
+	    	font-size: 25px;
+	    	cursor: pointer;
+	    	&:before {
+				background: -webkit-linear-gradient(left, $purple-color 0%, $pink-color 100%);
+				background: -moz-linear-gradient(left, $purple-color 0%, $pink-color 100%);
+				background: -o-linear-gradient(left, $purple-color 0%, $pink-color 100%);
+				background: -ms-linear-gradient(left, $purple-color 0%, $pink-color 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;	
+	    	}
+	    }
+	}	
 }
+
 
 #intro-que-hacemos img{ width: 120px; }
 

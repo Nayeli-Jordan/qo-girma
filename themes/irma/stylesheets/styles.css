@@ -3397,25 +3397,67 @@ video.responsive-video {
 
 /* INDEX */
 /* Video */
-/* line 42, ../sass/components/_media.scss */
-#videoControles {
+/* line 43, ../sass/components/_media.scss */
+#intro-video video {
+  margin-bottom: -6px;
+}
+/* line 46, ../sass/components/_media.scss */
+#intro-video #videoPortada {
+  transition: .2s ease-out;
+}
+/* line 48, ../sass/components/_media.scss */
+#intro-video #videoPortada.hide {
+  display: block;
+  opacity: 0;
+  z-index: -1;
+}
+/* line 53, ../sass/components/_media.scss */
+#intro-video #videoPortada #buttonPlay {
+  width: 85px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  background-color: #dc0000;
+  border-radius: 10px;
+  box-shadow: 4px 2px 2px 0 rgba(155, 155, 155, 0.14);
+  cursor: pointer;
+}
+/* line 66, ../sass/components/_media.scss */
+#intro-video #videoControles {
   position: absolute;
   right: 20px;
   bottom: 20px;
 }
-/* line 47, ../sass/components/_media.scss */
-#videoControles i:before {
-  background: -webkit-linear-gradient(to right, #48476f, #c24871);
+@media only screen and (max-width: 430px) {
+  /* line 66, ../sass/components/_media.scss */
+  #intro-video #videoControles {
+    right: 10px;
+    bottom: 5px;
+  }
+}
+/* line 74, ../sass/components/_media.scss */
+#intro-video #videoControles i {
+  font-size: 25px;
+  cursor: pointer;
+}
+/* line 77, ../sass/components/_media.scss */
+#intro-video #videoControles i:before {
+  background: -webkit-linear-gradient(left, #48476f 0%, #c24871 100%);
+  background: -moz-linear-gradient(left, #48476f 0%, #c24871 100%);
+  background: -o-linear-gradient(left, #48476f 0%, #c24871 100%);
+  background: -ms-linear-gradient(left, #48476f 0%, #c24871 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* line 55, ../sass/components/_media.scss */
+/* line 90, ../sass/components/_media.scss */
 #intro-que-hacemos img {
   width: 120px;
 }
 
-/* line 57, ../sass/components/_media.scss */
+/* line 92, ../sass/components/_media.scss */
 #gallery .bg-image {
   padding-bottom: 30%;
 }
