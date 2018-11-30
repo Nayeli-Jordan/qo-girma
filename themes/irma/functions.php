@@ -12,8 +12,8 @@ define( 'SITEURL', get_site_url() . '/' );
 	#SNIPPETS
 \*------------------------------------*/
 require_once( 'inc/pages.php' );
-/*require_once( 'inc/post-types.php' );
-require_once( 'inc/taxonomies.php' );*/
+require_once( 'inc/post-types.php' );
+/*require_once( 'inc/taxonomies.php' );*/
 
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
@@ -26,13 +26,13 @@ add_action( 'wp_enqueue_scripts', function(){
  
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
 	// wp_enqueue_script( 'masonry_js', JSPATH.'packery.pkgd.min.js', array(), '', true );
-	//wp_enqueue_script( 'irma_functions', JSPATH.'functions.js', array('materialize_js'), '1.0', true );
+	wp_enqueue_script( 'irma_functions', JSPATH .'functions.js', array(), '1.0', true );
  
 	wp_localize_script( 'irma_functions', 'siteUrl', SITEURL );
 	wp_localize_script( 'irma_functions', 'theme_path', THEMEPATH );
 	
 	// $is_home = is_front_page() ? "1" : "0";
-	// wp_localize_script( 'rcc_functions', 'isHome', $is_home );
+	// wp_localize_script( 'irma_functions', 'isHome', $is_home );
  
 });
 
@@ -41,14 +41,14 @@ add_action( 'wp_enqueue_scripts', function(){
 */
 
 // Agregar css y js al administrador
-/*function load_custom_files_wp_admin() {
-        wp_register_style( 'rcc_wp_admin_css', THEMEPATH . '/admin/admin-style.css', false, '1.0.0' );
-        wp_enqueue_style( 'rcc_wp_admin_css' );
+function load_custom_files_wp_admin() {
+        wp_register_style( 'irma_wp_admin_css', THEMEPATH . '/admin/admin-style.css', false, '1.0.0' );
+        wp_enqueue_style( 'irma_wp_admin_css' );
 
-        wp_register_script( 'rcc_wp_admin_js', THEMEPATH . 'admin/admin-script.js', false, '1.0.0' );
-        wp_enqueue_script( 'rcc_wp_admin_js' );        
+        /*wp_register_script( 'irma_wp_admin_js', THEMEPATH . 'admin/admin-script.js', false, '1.0.0' );
+        wp_enqueue_script( 'irma_wp_admin_js' );*/        
 }
-add_action( 'admin_enqueue_scripts', 'load_custom_files_wp_admin' );*/
+add_action( 'admin_enqueue_scripts', 'load_custom_files_wp_admin' );
 
 //Habilitar thumbnail en post
 add_theme_support( 'post-thumbnails' ); 
@@ -118,3 +118,37 @@ function woocommerce_support() {
 /**
 * CUSTOM FUNCTIONS
 */
+
+/*
+** CONTRATOS
+*/
+
+//Custom fields empleado
+add_action( 'add_meta_boxes', 'gi_video_custom_metabox' );
+function gi_video_custom_metabox(){
+    add_meta_box( 'gi_video_meta', 'Detalles video', 'display_gi_video_atributos', 'gi_video', 'advanced', 'default');
+}
+
+function display_gi_video_atributos( $gi_video ){
+    $videoLink       = esc_html( get_post_meta( $gi_video->ID, 'gi_video_videoLink', true ) );
+?>
+    <table class="gi-custom-fields">
+        <tr>
+            <th colspan="4">
+                <label for="gi_video_videoLink">Dirección*:</label>
+                <input type="text" id="gi_video_videoLink" name="gi_video_videoLink" value="<?php echo $videoLink; ?>" required>
+            </th>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'save_post', 'gi_video_save_metas', 10, 2 );
+function gi_video_save_metas( $idgi_video, $gi_video ){
+    //Comprobamos que es del tipo que nos interesa
+    if ( $gi_video->post_type == 'gi_video' ){
+    //Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['gi_video_videoLink'] ) ){
+            update_post_meta( $idgi_video, 'gi_video_videoLink', $_POST['gi_video_videoLink'] );
+        }
+    }
+}

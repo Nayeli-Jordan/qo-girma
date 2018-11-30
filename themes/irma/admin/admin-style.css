@@ -1,0 +1,20 @@
+/* General styles admin */
+
+/* Forms style */
+.gi-custom-fields, .gi-custom-fields tbody { 
+	width: 100%; 
+	text-align: left;
+}
+.gi-custom-fields input[type="text"],
+.gi-custom-fields input[type="date"],
+.gi-custom-fields input[type="number"],
+.gi-custom-fields input[type="email"],
+.gi-custom-fields textarea,
+.gi-custom-fields select {
+	width: 100%;
+	min-height: 40px;
+	padding: 0 5px;
+	margin: 0px;
+	font-weight: 400;
+    line-height: 40px;   
+}

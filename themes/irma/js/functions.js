@@ -9,24 +9,27 @@ var $=jQuery.noConflict();
 		\*------------------------------------*/
 
 		$(document).ready(function() {
-			//footerBottom();
+			footerBottom();
 		});
  
 		$(window).on('resize', function(){
-			//footerBottom();
+			footerBottom();
 		});
  
 		$(document).scroll(function() {
 
 		});
  
-		// if( parseInt( isHome ) ){
+		// Nav
+		$(".open-nav").click(function() {
+			$('#top-menu').addClass('active');
+			$('body').addClass('overflow-hide');
+		});
 
-		// } 
-
-		// if( parseInt( isSingular ) ){
-
-		// } 
+		$(".close-nav").click(function() {
+			$('#top-menu').removeClass('active');
+			$('body').removeClass('overflow-hide');
+		});
 
 	});
 })(jQuery);
@@ -34,10 +37,13 @@ var $=jQuery.noConflict();
 /**
  * Fija el footer abajo
  */
-/*
 function footerBottom(){
-	var alturaFooter = getFooterHeight();
-	$('.main-body').css('padding-bottom', alturaFooter );
+	var alturaFooter   = getFooterHeight();
+	var heightMainBody = $(window).height() - getHeaderHeight();
+	$('.main-body').css({
+		'padding-bottom': alturaFooter,
+		'min-height': heightMainBody,
+	});
 }
 function getHeaderHeight(){
 	return $('.js-header').outerHeight();
@@ -45,4 +51,3 @@ function getHeaderHeight(){
 function getFooterHeight(){
 	return $('footer').outerHeight();
 }// getFooterHeight
-*/

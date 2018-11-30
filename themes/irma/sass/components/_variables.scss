@@ -5,8 +5,8 @@
 // Colors
 // ==========================================================================
 
-//$primary-color: #bc1582 !default;
-$primary-color: 		#de0d88 !default;
+//blue color;
+$primary-color: 		#3f5484 !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
@@ -16,9 +16,12 @@ $dark-color: 			#000 !default;
 $orange-color: 			#d88e4d !default;
 $pink-color-light:		#e2647c !default;
 
-$pink-color: 			#c24871 !default;
 $blue-color: 			#3e4b75 !default;
 $purple-color: 			#48476f !default;
+$uva-dark-color: 		#6a4a73 !default;
+$uva-color: 			#804971 !default;
+$pink-color: 			#c24871 !default;
+
 
 
 // Global
@@ -64,7 +67,8 @@ $size-percent:			100 !default;
 
 // Typography
 // ==========================================================================
-$font-default: 			"Helvetica Neue", sans-serif !default;
+$font-default: 			"Open Sans", sans-serif !default;
+$font-text: 			"Roboto", sans-serif !default;
 
 // Header Styles
 $h1-fontsize: 			24px !default;

@@ -34,3 +34,24 @@ video.responsive-video {
 	top: 0; bottom: 0; 
 	left: 0; right: 0;
 }
+
+
+/* INDEX */
+
+/* Video */
+#videoControles {
+	position: absolute;
+    right: 20px;
+    bottom: 20px;
+    i {
+    	&:before {
+			background: -webkit-linear-gradient(#eee, #333);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;    		
+    	}
+    }
+}
+
+#intro-que-hacemos img{ width: 120px; }
+
+#gallery .bg-image { padding-bottom: 30%; }
