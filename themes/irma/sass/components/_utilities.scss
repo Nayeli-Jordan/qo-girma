@@ -1,3 +1,72 @@
 // ==========================================================================
 // Utilities
 // ==========================================================================
+
+
+
+#intro-actividad {
+	.col:first-child {
+		position: relative;
+		padding: 0px;
+		img { margin-bottom: -6px; }
+	}
+	.link-actividad {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		right: 23%;
+		a {
+			position: absolute;
+			display: block;
+			padding: 15px 30px;
+			color: $primary-color; 
+			text-transform: uppercase;
+			font-weight: 600;
+			background-color: $light-color;
+			&:first-child { 
+				top: 28%;
+			}
+			&:nth-child(2) { 
+				top: 48%;
+				width: 220px;
+				height: 44px;
+				font-size: 14px;
+			}
+			&:nth-child(3) { 
+				top: 68%; 
+			}
+			span {
+				position: absolute;
+				right: -22px;
+				top: 0px;
+				width: 0; 
+				height: 0; 
+				border-left: 22px solid $light-color;
+				border-top: 22px solid transparent;
+				border-bottom: 22px solid transparent;
+			}
+			&:hover {
+				color: $orange-color;
+			}
+		}
+		@media #{$medium-only} {
+			right: 25%;
+			a {
+				padding: 10px 20px;
+			}
+		}
+		@media #{$large-and-up} {
+			a {
+				&:nth-child(2) { width: 240px; }
+				&:first-child, &:nth-child(3) {
+					span {
+						right: -27px;
+						border-left: 27px solid $light-color;
+						border-top: 27px solid transparent;
+						border-bottom: 27px solid transparent;						
+					}					
+				}
+			}
+		}
+	} 	
+} 

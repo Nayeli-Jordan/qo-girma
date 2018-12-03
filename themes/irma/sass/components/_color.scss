@@ -11,5 +11,7 @@
 // Bg Color
 // ==========================================================================
 
-.bg-degrade-purple_to_pink { background-image: linear-gradient(to right, $blue-color, $purple-color, $uva-dark-color, $uva-color, $pink-color); }
-.bg-degrade-pink_to_purple { background-image: linear-gradient(to right, $pink-color, $uva-color, $uva-dark-color, $purple-color, $blue-color); }
+.bg-light 					{ background-color: $light-color; }
+.bg-degrade-purple_to_pink  { background-image: linear-gradient(to right, $blue-color -10%, $purple-color, $uva-dark-color, $uva-color, $pink-color 85%); }
+.bg-degrade-pink_to_purple  { background-image: linear-gradient(to right, $pink-color, $uva-color, $uva-dark-color, $purple-color, $blue-color); }
+.bg-degrade-pink_to_yellow  { background-image: linear-gradient(to right, $pink-color 50%, $orange-color, $yellow-color); }

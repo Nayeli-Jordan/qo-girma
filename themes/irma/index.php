@@ -58,8 +58,20 @@
 			</div>			
 		</div>
 	</section>
-	<section>
-		
+	<section id="intro-actividad" class="bg-degrade-pink_to_yellow">
+		<div class="row">
+			<div class="col s12 m9">
+				<img src="<?php echo THEMEPATH ?>images/actividad1.png" class="responsive-img">
+				<div class="link-actividad">
+					<a href="" class="fontfam-text">Talleres<span></span></a>
+					<a href="" class="fontfam-text">Alianzas estratégicas<span></span></a>
+					<a href="" class="fontfam-text">Logros<span></span></a>					
+				</div>
+			</div>
+			<div class="col s12 m3">
+			
+			</div>			
+		</div>
 	</section>
 	<section id="gallery" class="row">
 	<?php 
