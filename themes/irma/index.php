@@ -15,7 +15,8 @@
 
 				<video id="videoHome" src="<?php echo $videoLink; ?>" class="width-100p" muted autoplay></video>
 	     		<div id="videoPortada" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)" class="bg-image bg-absolute">
-	     			<div id="buttonPlay" class="content-center"><i class="icon-play"></i></div>		     		
+	     			<h2 class="uppercase color-blue">¿Quiénes Somos?</h2>
+	     			<div id="buttonPlay" class="content-center"><i class="icon-play"></i></div>     		
 	     		</div>
 	     		<div id="videoControles">	     			
 		     		<i id="videoPause" class="icon-pause"></i>

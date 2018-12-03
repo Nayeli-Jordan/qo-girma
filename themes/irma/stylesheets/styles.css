@@ -1901,12 +1901,17 @@
   color: #000;
 }
 
-/* line 13, ../sass/components/_color.scss */
+/* line 8, ../sass/components/_color.scss */
+.color-blue {
+  color: #3e4b75;
+}
+
+/* line 14, ../sass/components/_color.scss */
 .bg-degrade-purple_to_pink {
   background-image: linear-gradient(to right, #3e4b75, #48476f, #6a4a73, #804971, #c24871);
 }
 
-/* line 14, ../sass/components/_color.scss */
+/* line 15, ../sass/components/_color.scss */
 .bg-degrade-pink_to_purple {
   background-image: linear-gradient(to right, #c24871, #804971, #6a4a73, #48476f, #3e4b75);
 }
@@ -7902,12 +7907,22 @@ small {
 
 /* INDEX */
 /* line 60, ../sass/components/_typography.scss */
+#videoPortada h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #3e4b75;
+  position: absolute;
+  right: 50px;
+  top: 30px;
+}
+
+/* line 68, ../sass/components/_typography.scss */
 #intro-que-hacemos p {
   font-size: 20px;
   line-height: 26px;
 }
 @media (max-width: 870px) {
-  /* line 60, ../sass/components/_typography.scss */
+  /* line 68, ../sass/components/_typography.scss */
   #intro-que-hacemos p {
     font-size: 15px;
   }
