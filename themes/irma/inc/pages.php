@@ -137,13 +137,37 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
-	// ¿Necesitas ayuda?
-	if( ! get_page_by_path('necesitas-ayuda') ){
+	// ¿Necesitas ayuda? - Preguntas frecuentes
+	if( ! get_page_by_path('preguntas-frecuentes') ){
 		$page = array(
 			'post_author' => 1,
 			'post_status' => 'publish',
-			'post_title'  => '¿Necesitas ayuda?',
-			'post_name'   => 'necesitas-ayuda',
+			'post_title'  => 'Preguntas frecuentes',
+			'post_name'   => 'preguntas-frecuentes',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
+	// ¿Necesitas ayuda? - Formulario
+	if( ! get_page_by_path('formulario-necesitas-ayuda') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Formulario',
+			'post_name'   => 'formulario-necesitas-ayuda',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
+	// ¿Necesitas ayuda? - Test acudir a terapia
+	if( ! get_page_by_path('test-acudir-a-terapia') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Test acudir a terapia',
+			'post_name'   => 'test-acudir-a-terapia',
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );

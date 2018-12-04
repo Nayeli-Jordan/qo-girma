@@ -11,12 +11,15 @@ a {
 html{
   line-height: 1.5;
   color: $dark-color;
+  font-size: 14px;
+  line-height: 20px;
   font-family: $font-default;
   font-weight: 800;
   letter-spacing: 0.5px;
   & .fontfam-text{
     font-family: $font-text;
     font-weight: 500;
+    letter-spacing: 0;
   }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -32,11 +35,7 @@ h4 { font-size: $h4-fontsize;}
 h5 { font-size: $h5-fontsize;}
 h6 { font-size: $h6-fontsize;}
 
-p { 
-  margin: 0px;
-  font-size: 12px;
-  line-height: 20px;
-}
+p { margin: 0px; }
 
 // Text Styles
 em                            { font-style: italic; }
@@ -50,12 +49,13 @@ small                         { font-size: 75%; }
 .uppercase                    { text-transform: uppercase; }
 .lowercase                    { text-transform: lowercase; }
 
-.text-underline               { text-decoration: underline; }
+.text-underline,
 .text-underline-hover:hover   { text-decoration: underline; }
 
 .text-center                  { text-align: center; } 
 .text-left                    { text-align: left; }
 .text-right                   { text-align: right; }
+.text-justify                 { text-align: justify; }
 
 /* INDEX */
 #videoPortada h2 {
@@ -72,4 +72,21 @@ small                         { font-size: 75%; }
   @media (max-width: 870px ) {
     font-size: 15px;
   }
+}
+
+/* Heder-page */
+.header-page, #body-page {
+  strong {
+    font-family: $font-default;
+  }
+  ul {
+    padding: 0 20px;
+    li {
+      list-style-type: disc;
+    }
+  }
+}
+
+#body-page {
+  color: $blue-text-color;
 }

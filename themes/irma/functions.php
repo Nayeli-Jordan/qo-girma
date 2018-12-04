@@ -59,7 +59,8 @@ function add_top_menu(){
 	register_nav_menu('top_menu',__('Top menu'));
 	register_nav_menu('quienes-somos',__('Quienes somos'));
 	register_nav_menu('que-hacemos',__('Que hacemos'));
-	register_nav_menu('como-ayudar',__('Como ayudar'));
+    register_nav_menu('como-ayudar',__('Como ayudar'));
+	register_nav_menu('necesitas-ayuda',__('Necesitas ayuda'));
 }
 
 //Delimitar número palabras excerpt

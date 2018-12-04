@@ -103,7 +103,7 @@
 					?>				
 				</ul>
 			</nav>
-			<?php if (!is_home() && !is_page('necesitas-ayuda')) : ?>
+			<?php if (!is_home()) : ?>
 				<nav id="sub-menu">
 					<ul>
 						<?php
@@ -113,6 +113,8 @@
 								$submenu_name = 'que-hacemos';
 							} elseif (is_page( array('voluntariado', 'donativos') )) {
 								$submenu_name = 'como-ayudar';
+							} elseif (is_page( array('preguntas-frecuentes', 'formulario-necesitas-ayuda', 'test-acudir-a-terapia') )) {
+								$submenu_name = 'necesitas-ayuda';
 							}
 
 							if (( $locations = get_nav_menu_locations()) && isset( $locations[ $submenu_name ])) {

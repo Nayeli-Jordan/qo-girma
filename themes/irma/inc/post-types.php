@@ -67,6 +67,38 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'thumbnail' ),
 		'menu_icon' 		 => 'dashicons-format-gallery'
 	);
-	register_post_type( 'gi_gallery', $args );	
+	register_post_type( 'gi_gallery', $args );
+
+	// Preguntas frecuentes
+	$labels = array(
+		'name'          => 'Preguntas frecuentes',
+		'singular_name' => 'Preguntas frecuentes',
+		'add_new'       => 'Nuevo Preguntas frecuentes',
+		'add_new_item'  => 'Nuevo Preguntas frecuentes',
+		'edit_item'     => 'Editar Preguntas frecuentes',
+		'new_item'      => 'Nuevo Preguntas frecuentes',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Preguntas frecuentes',
+		'search_items'  => 'Buscar Preguntas frecuentes',
+		'not_found'     => 'No hay Preguntas frecuentes.',
+		'menu_name'     => 'Preguntas frecuentes'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'gi_faqs' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor' ),
+		'menu_icon' 		 => 'dashicons-testimonial'
+	);
+	register_post_type( 'gi_faqs', $args );	
 
 });

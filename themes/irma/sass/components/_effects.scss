@@ -4,7 +4,7 @@
 .rotate-180 { transform: rotate(180deg); }
 
 @mixin shadow {
-  box-shadow: 4px 2px 2px 0 rgba(155, 155, 155, 0.14);
+  box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
 }
 %shadow {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),

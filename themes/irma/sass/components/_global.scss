@@ -20,7 +20,7 @@ html {
 .main-body {
   position: relative;
   .container-limit {
-    @media #{$large-and-up} { padding-left: 150px;  }    
+    @media #{$large-and-up} { padding-left: 160px;  }    
   }
 }
 
@@ -34,9 +34,7 @@ ul {
     padding: 0px;
     margin: 0px;
     li {        
-        margin: 0px; 
-        font-size: 12px;
-        line-height: 20px;
+        margin: 0px;
         list-style-type: none;
     }
 }

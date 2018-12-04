@@ -1,6 +1,11 @@
-<?php get_header(); 
+<?php 
+/*
+Template Name: Contenido completo
+Template Post Type: page
+*/
+get_header(); 
 	if (have_posts()) : while (have_posts()) : the_post();?>
-		<section class="header-page">
+		<section id="header-page-complete" class="header-page">
 			<div class="[ container container-limit ]">
 				<div class="row">
 					<div class="col s12 m5">

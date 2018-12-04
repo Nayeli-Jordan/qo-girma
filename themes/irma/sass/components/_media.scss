@@ -86,7 +86,32 @@ video.responsive-video {
 	}	
 }
 
-
 #intro-que-hacemos img{ width: 120px; }
 
-#gallery .bg-image { padding-bottom: 30%; }
+#gallery .bg-image { 
+	padding-bottom: 30%; 
+	@media #{$sm-and-down}{ padding-bottom: 50%; }
+}
+
+/* PAGE */
+.triangle-title {
+	width: 0; 
+	height: 0; 
+	border-left-width: 100px;
+    border-left-style: solid;
+    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+    -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    border-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+	//border-left:  solid #f0ad4e;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent; 
+}
+
+/* Templete title complete */
+#title-complete img {
+	height: 50px;
+    vertical-align: middle;
+    margin-right: 20px;
+}

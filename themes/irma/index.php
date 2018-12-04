@@ -60,7 +60,7 @@
 	</section>
 	<section id="intro-actividad" class="bg-degrade-pink_to_yellow">
 		<div class="row">
-			<div class="col s12 m9">
+			<div class="col s12 m9 l8 xl7">
 				<img src="<?php echo THEMEPATH ?>images/actividad1.png" class="responsive-img">
 				<div class="link-actividad">
 					<a href="" class="fontfam-text">Talleres<span></span></a>
@@ -68,7 +68,7 @@
 					<a href="" class="fontfam-text">Logros<span></span></a>					
 				</div>
 			</div>
-			<div class="col s12 m3">
+			<div class="col s12 m3 l4 xl5">
 			
 			</div>			
 		</div>
@@ -85,7 +85,7 @@
         if ( $loop->have_posts() ) {
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-				<div class="col s12 sm6 m4 bg-image" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)"></div>
+				<div class="col s6 m4 bg-image" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)"></div>
 
 			<?php endwhile;
 		} 

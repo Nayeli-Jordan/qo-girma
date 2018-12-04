@@ -10,16 +10,23 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			footerBottom();
-
+			/* Templete Content Complete */
+			if ($('#header-page-complete').length > 0) {
+				contentComplete();
+			}
 			/* VIDEO */
 			if ($("#videoHome")[0]){
 				console.log('Hay video');
 				runVideo();
-			}
+			}			
 		});
  
 		$(window).on('resize', function(){
 			footerBottom();
+			/* Templete Content Complete */
+			if ($('#header-page-complete').length > 0) {
+				contentComplete();
+			}
 		});
  
 		$(document).scroll(function() {
@@ -111,4 +118,24 @@ function runVideo(){
 		$('#videoControles').addClass('hide');
 		$('#videoPortada').removeClass('hide');
 	});
+}
+
+/* Template Complete content */
+function contentComplete(){
+	var heightHeaderFooter  = getFooterHeight() + getHeaderHeight();
+	var heightWindow 		= $(window).height();
+	if (heightWindow > heightHeaderFooter) {
+		heightContent		= heightWindow - heightHeaderFooter;
+		$('#header-page-complete').css({
+			'min-height': heightContent,
+		});
+		/* Verificar si el contenido puede tener center full */
+		heightConteiner 	= $('.container-limit').outerHeight();
+		heightConteiner 	= heightConteiner + 65; /* Padding y border (30 + 30 + 5) */
+		if (heightConteiner < heightContent) {
+			$('.container-limit').addClass('content-center');
+		} else {
+			$('.container-limit').removeClass('content-center');
+		}
+	}
 }
