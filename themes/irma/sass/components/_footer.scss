@@ -4,9 +4,9 @@ footer {
 	width: 100%;
 	text-align: center;
 	.footer-necesitas-ayuda {
-		background-image: linear-gradient(to right, $primary-color , $purple-color, $pink-color);
 		padding-top: 30px!important;
 		padding-bottom: 30px!important;
+		@extend .bg-degrade-purple_to_pink;
 		img {
 			width: 100px;
 		}

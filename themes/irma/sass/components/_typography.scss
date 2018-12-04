@@ -89,4 +89,7 @@ small                         { font-size: 75%; }
 
 #body-page {
   color: $blue-text-color;
+  a { 
+    &:hover { text-decoration: underline; }
+  }
 }

@@ -21,10 +21,12 @@ get_header();
 		</section>
 		<section id="body-page" class="[ container container-limit ]">
 			<div class="row padding-top-bottom-xlarge">				
-				<div class="col s12 m10 fontfam-text">
+				<div class="col s12 fontfam-text">
 					<?php the_content(); ?>
 					<?php if (is_page('preguntas-frecuentes')) {
 						include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/preguntas-frecuentes.php');
+					} else if  (is_page('formulario-necesitas-ayuda')) {
+						include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/formulario-necesitas-ayuda.php');
 					} ?>
 				</div>	
 			</div>

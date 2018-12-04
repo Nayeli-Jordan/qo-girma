@@ -1917,7 +1917,7 @@
 }
 
 /* line 15, ../sass/components/_color.scss */
-.bg-degrade-purple_to_pink {
+.bg-degrade-purple_to_pink, header nav#top-menu ul li a:hover:after, header nav#top-menu ul li a.active:after, .header-page, footer .footer-necesitas-ayuda {
   background-image: linear-gradient(to right, #3e4b75 -10%, #48476f, #6a4a73, #804971, #c24871 85%);
 }
 
@@ -1953,35 +1953,83 @@ header nav#top-menu {
 
 /* line 4, ../sass/components/_forms.scss */
 input:not([type="submit"]),
-textarea {
+textarea,
+select {
   margin-bottom: 10px;
   padding: 0 10px;
   width: 100%;
   max-width: 100%;
+  height: 30px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
   line-height: 30px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 0px;
   outline: none;
+  border-bottom: 3px solid #48476f;
 }
 
-/* line 16, ../sass/components/_forms.scss */
+/* line 21, ../sass/components/_forms.scss */
 textarea {
   height: 100px;
+  resize: none;
 }
 
-/* line 19, ../sass/components/_forms.scss */
+/* line 25, ../sass/components/_forms.scss */
 input[type="submit"] {
   display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  font-size: 16px;
   color: #fff;
+  box-shadow: 0px;
+  border: 0px;
+  border-radius: 3px;
   background-color: #3f5484;
   cursor: pointer;
 }
 
-/* line 27, ../sass/components/_forms.scss */
+/* line 39, ../sass/components/_forms.scss */
 ::-webkit-inner-spin-button {
   display: none;
   -webkit-appearance: none;
+}
+
+/* Formulario Necesitas ayuda */
+/* line 45, ../sass/components/_forms.scss */
+#formNecesitasAyuda {
+  margin-top: 20px;
+}
+/* line 47, ../sass/components/_forms.scss */
+#formNecesitasAyuda .col {
+  margin-bottom: 10px;
+}
+/* line 49, ../sass/components/_forms.scss */
+#formNecesitasAyuda .col.text-right {
+  margin-bottom: 0px;
+}
+/* line 51, ../sass/components/_forms.scss */
+#formNecesitasAyuda .col.text-right p {
+  text-align: right;
+}
+/* line 53, ../sass/components/_forms.scss */
+#formNecesitasAyuda .col.text-right p input {
+  display: inline-block;
+}
+/* line 54, ../sass/components/_forms.scss */
+#formNecesitasAyuda .col.text-right p .ajax-loader {
+  position: absolute;
+}
+
+/* line 59, ../sass/components/_forms.scss */
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  border-color: #48476f !important;
+}
+
+/* line 62, ../sass/components/_forms.scss */
+div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+  border-color: #d90000;
 }
 
 /* line 3, ../sass/components/_global.scss */
@@ -2053,20 +2101,20 @@ ul li {
 
 /* line 54, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* line 57, ../sass/components/_global.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #6a4a73;
 }
 
 /* line 61, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
-  border-radius: 0px;
+  border-radius: 4px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #c24871;
 }
 
 /* ::-webkit-scrollbar-button {
@@ -2094,101 +2142,108 @@ ul li {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 34, ../sass/components/_grid.scss */
+/* line 33, ../sass/components/_grid.scss */
+.row.row-complete {
+  /* Eliminar padding */
+  width: calc(100% + 21px);
+  left: -10.5px;
+  position: relative;
+}
+/* line 41, ../sass/components/_grid.scss */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 40, ../sass/components/_grid.scss */
+/* line 47, ../sass/components/_grid.scss */
 .row .col {
   padding: 0 0.75rem;
   min-height: 1px;
   float: left;
   box-sizing: border-box;
 }
-/* line 46, ../sass/components/_grid.scss */
+/* line 53, ../sass/components/_grid.scss */
 .row .col[class*="push-"], .row .col[class*="pull-"] {
   position: relative;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s1 {
   width: 8.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s2 {
   width: 16.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s3 {
   width: 25%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s4 {
   width: 33.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s5 {
   width: 41.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s6 {
   width: 50%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s7 {
   width: 58.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s8 {
   width: 66.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s9 {
   width: 75%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s10 {
   width: 83.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s11 {
   width: 91.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
-/* line 54, ../sass/components/_grid.scss */
+/* line 61, ../sass/components/_grid.scss */
 .row .col.s12 {
   width: 100%;
   margin-left: auto;
@@ -2340,84 +2395,84 @@ ul li {
   left: 100%;
 }
 @media only screen and (min-width: 431px) {
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm1 {
     width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm2 {
     width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm3 {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm4 {
     width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm5 {
     width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm6 {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm7 {
     width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm8 {
     width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm9 {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm10 {
     width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm11 {
     width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 73, ../sass/components/_grid.scss */
+  /* line 80, ../sass/components/_grid.scss */
   .row .col.sm12 {
     width: 100%;
     margin-left: auto;
@@ -2570,84 +2625,84 @@ ul li {
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m1 {
     width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m2 {
     width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m3 {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m4 {
     width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m5 {
     width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m6 {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m7 {
     width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m8 {
     width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m9 {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m10 {
     width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m11 {
     width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 93, ../sass/components/_grid.scss */
+  /* line 100, ../sass/components/_grid.scss */
   .row .col.m12 {
     width: 100%;
     margin-left: auto;
@@ -2800,84 +2855,84 @@ ul li {
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l1 {
     width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l2 {
     width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l3 {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l4 {
     width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l5 {
     width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l6 {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l7 {
     width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l8 {
     width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l9 {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l10 {
     width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l11 {
     width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 113, ../sass/components/_grid.scss */
+  /* line 120, ../sass/components/_grid.scss */
   .row .col.l12 {
     width: 100%;
     margin-left: auto;
@@ -3030,84 +3085,84 @@ ul li {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl1 {
     width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl2 {
     width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl3 {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl4 {
     width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl5 {
     width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl6 {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl7 {
     width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl8 {
     width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl9 {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl10 {
     width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl11 {
     width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  /* line 133, ../sass/components/_grid.scss */
+  /* line 140, ../sass/components/_grid.scss */
   .row .col.xl12 {
     width: 100%;
     margin-left: auto;
@@ -3367,6 +3422,11 @@ ul li {
 }
 
 /* '' */
+/* line 69, ../sass/components/_icons.scss */
+.icon-xlarge {
+  font-size: 60px;
+}
+
 /* line 4, ../sass/components/_media.scss */
 img.responsive-img,
 video.responsive-video {
@@ -7992,6 +8052,10 @@ small {
 #body-page {
   color: #325192;
 }
+/* line 93, ../sass/components/_typography.scss */
+#body-page a:hover {
+  text-decoration: underline;
+}
 
 /* line 8, ../sass/components/_utilities.scss */
 #intro-actividad .col:first-child {
@@ -8224,12 +8288,11 @@ header nav#top-menu ul li a:after {
   bottom: -5px;
   left: 10px;
   width: 1px;
-  height: 1px;
+  height: 2px;
 }
 /* line 47, ../sass/components/_header.scss */
-header nav#top-menu ul li a:hover:after {
+header nav#top-menu ul li a:hover:after, header nav#top-menu ul li a.active:after {
   width: calc(100% - 20px);
-  background-color: #3f5484;
 }
 @media only screen and (max-width: 992px) {
   /* line 21, ../sass/components/_header.scss */
@@ -8283,31 +8346,32 @@ header nav#top-menu ul li a:hover:after {
   }
   /* line 87, ../sass/components/_header.scss */
   header nav#top-menu ul li a:hover {
-    color: #fff;
+    color: #fff !important;
     background-color: #d88e4d;
     box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
   }
   /* line 93, ../sass/components/_header.scss */
+  header nav#top-menu ul li.pather-item a {
+    color: #c24871;
+  }
+  /* line 94, ../sass/components/_header.scss */
   header nav#top-menu ul li.sub-item a {
     padding-left: 50px;
   }
   /* line 96, ../sass/components/_header.scss */
-  header nav#top-menu ul li:last-child a {
+  header nav#top-menu ul li.sub-item a.active {
     color: #fff;
     background-color: #c24871;
-  }
-  /* line 99, ../sass/components/_header.scss */
-  header nav#top-menu ul li:last-child a:hover {
-    background-color: #d45a83;
+    box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
   }
 }
-/* line 107, ../sass/components/_header.scss */
+/* line 106, ../sass/components/_header.scss */
 header nav#sub-menu {
   position: absolute;
   margin-top: -50px;
   width: 200px;
 }
-/* line 113, ../sass/components/_header.scss */
+/* line 112, ../sass/components/_header.scss */
 header nav#sub-menu ul li a {
   display: block;
   padding: 0 20px 0 10px;
@@ -8320,35 +8384,34 @@ header nav#sub-menu ul li a {
   border-bottom-right-radius: 20px;
   box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
 }
-/* line 125, ../sass/components/_header.scss */
+/* line 124, ../sass/components/_header.scss */
 header nav#sub-menu ul li a.active {
   background-color: #d88e4d;
   color: #fff;
 }
-/* line 129, ../sass/components/_header.scss */
+/* line 128, ../sass/components/_header.scss */
 header nav#sub-menu ul li a:hover {
   background-color: #c24871;
   color: #fff;
 }
 @media only screen and (max-width: 992px) {
-  /* line 107, ../sass/components/_header.scss */
+  /* line 106, ../sass/components/_header.scss */
   header nav#sub-menu {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 138, ../sass/components/_header.scss */
+  /* line 137, ../sass/components/_header.scss */
   header nav#sub-menu.menuFixed ul {
     position: fixed;
     top: 0px;
   }
 }
 
-/* line 146, ../sass/components/_header.scss */
+/* line 145, ../sass/components/_header.scss */
 .header-page {
   color: #fff;
   padding: 30px 0;
-  background-image: linear-gradient(to right, #3f5484, #48476f, #c24871);
   /* .triangle {
   	width: 0; 
   	height: 0; 
@@ -8357,7 +8420,7 @@ header nav#sub-menu ul li a:hover {
   	border-bottom: 50px solid transparent; 		
   } */
 }
-/* line 150, ../sass/components/_header.scss */
+/* line 149, ../sass/components/_header.scss */
 .header-page h2 {
   font-size: 30px;
   text-transform: uppercase;
@@ -8372,7 +8435,6 @@ footer {
 }
 /* line 6, ../sass/components/_footer.scss */
 footer .footer-necesitas-ayuda {
-  background-image: linear-gradient(to right, #3f5484, #48476f, #c24871);
   padding-top: 30px !important;
   padding-bottom: 30px !important;
 }

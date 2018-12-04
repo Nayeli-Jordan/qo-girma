@@ -2,23 +2,35 @@
 // ==========================================================================
 
 input:not([type="submit"]),
-textarea {
+textarea,
+select {
 	margin-bottom: 10px;
 	padding: 0 10px;
 	width: 100%;	
 	max-width: 100%;
+	height: 30px;
+	font-size: 14px;
+	font-family: $font-text;
 	line-height: 30px;
 	background-color: $light-color;
-	border-radius: 10px;
+	border-radius: 0px;
 	border: 0px;
 	outline: none;
+	border-bottom: 3px solid $purple-color;
 }
 textarea {
 	height: 100px;
+	resize: none;
 }
 input[type="submit"] {
     display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    font-size: 16px;
     color: $light-color;
+    box-shadow: 0px;
+    border: 0px;
+    border-radius: 3px;
     background-color: $primary-color;  
     cursor: pointer;
 }
@@ -27,4 +39,26 @@ input[type="submit"] {
 ::-webkit-inner-spin-button {
     display: none;
     -webkit-appearance: none;
+}
+
+/* Formulario Necesitas ayuda */
+#formNecesitasAyuda {
+	margin-top: 20px;
+	.col {
+		margin-bottom: 10px;
+		&.text-right {
+			margin-bottom: 0px;
+			p {
+				text-align: right;
+				input { display: inline-block; }
+				.ajax-loader { position: absolute; }
+			}
+		}
+	}
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+	border-color: $purple-color!important;
+}
+div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+	border-color: $red-dark-color;
 }
