@@ -107,7 +107,7 @@ header {
 	nav#sub-menu {
 		position: absolute;
 		margin-top: -50px;
-		width: 160px;
+		width: 200px;
 		ul {
 			li {
 				a {
@@ -134,6 +134,12 @@ header {
 			}
 		}
 		@media #{$medium-and-down} { display: none; }
+		@media #{$large-and-up} {
+			&.menuFixed ul {
+				position: fixed;
+				top: 0px;
+			}
+		}
 	}
 }
 

@@ -90,3 +90,28 @@
 	border-bottom: 5px solid $orange-color;
 	.container-limit.content-center { width: 90%; }
 }
+
+/* Preguntas frecuentes */
+#preguntasFrecuentes {
+	h2 {
+		font-size: 16px;
+		cursor: pointer;
+		.minor, .more { 
+			display: inline-block;
+			width: 10px;
+			opacity: 0.7; 
+		}
+		.minor { display: none; }
+		& + .content-faq { 
+			display: none; 
+			padding-top: 10px;
+			transition: .3s ease-out;
+		}
+		&.active {
+			color: $purple-color;
+			& .minor { display: inline-block; }
+			& .more { display: none; }
+			& + .content-faq { display: block; }
+		}
+	}
+}

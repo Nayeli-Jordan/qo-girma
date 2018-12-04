@@ -2018,7 +2018,7 @@ html body {
 @media only screen and (min-width: 993px) {
   /* line 22, ../sass/components/_global.scss */
   .main-body .container-limit {
-    padding-left: 160px;
+    padding-left: 200px;
   }
 }
 
@@ -8107,6 +8107,45 @@ small {
   width: 90%;
 }
 
+/* Preguntas frecuentes */
+/* line 96, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2 {
+  font-size: 16px;
+  cursor: pointer;
+}
+/* line 99, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2 .minor, #preguntasFrecuentes h2 .more {
+  display: inline-block;
+  width: 10px;
+  opacity: 0.7;
+}
+/* line 104, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2 .minor {
+  display: none;
+}
+/* line 105, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2 + .content-faq {
+  display: none;
+  padding-top: 10px;
+  transition: .3s ease-out;
+}
+/* line 110, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2.active {
+  color: #48476f;
+}
+/* line 112, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2.active .minor {
+  display: inline-block;
+}
+/* line 113, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2.active .more {
+  display: none;
+}
+/* line 114, ../sass/components/_utilities.scss */
+#preguntasFrecuentes h2.active + .content-faq {
+  display: block;
+}
+
 /* line 1, ../sass/components/_header.scss */
 header {
   position: relative;
@@ -8266,7 +8305,7 @@ header nav#top-menu ul li a:hover:after {
 header nav#sub-menu {
   position: absolute;
   margin-top: -50px;
-  width: 160px;
+  width: 200px;
 }
 /* line 113, ../sass/components/_header.scss */
 header nav#sub-menu ul li a {
@@ -8297,8 +8336,15 @@ header nav#sub-menu ul li a:hover {
     display: none;
   }
 }
+@media only screen and (min-width: 993px) {
+  /* line 138, ../sass/components/_header.scss */
+  header nav#sub-menu.menuFixed ul {
+    position: fixed;
+    top: 0px;
+  }
+}
 
-/* line 140, ../sass/components/_header.scss */
+/* line 146, ../sass/components/_header.scss */
 .header-page {
   color: #fff;
   padding: 30px 0;
@@ -8311,7 +8357,7 @@ header nav#sub-menu ul li a:hover {
   	border-bottom: 50px solid transparent; 		
   } */
 }
-/* line 144, ../sass/components/_header.scss */
+/* line 150, ../sass/components/_header.scss */
 .header-page h2 {
   font-size: 30px;
   text-transform: uppercase;

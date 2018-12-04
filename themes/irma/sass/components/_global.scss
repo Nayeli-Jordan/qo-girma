@@ -20,7 +20,7 @@ html {
 .main-body {
   position: relative;
   .container-limit {
-    @media #{$large-and-up} { padding-left: 160px;  }    
+    @media #{$large-and-up} { padding-left: 200px;  }    
   }
 }
 

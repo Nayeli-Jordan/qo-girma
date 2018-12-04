@@ -10,6 +10,7 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			footerBottom();
+			fixedSubmenu();
 			/* Templete Content Complete */
 			if ($('#header-page-complete').length > 0) {
 				contentComplete();
@@ -23,6 +24,7 @@ var $=jQuery.noConflict();
  
 		$(window).on('resize', function(){
 			footerBottom();
+			fixedSubmenu();
 			/* Templete Content Complete */
 			if ($('#header-page-complete').length > 0) {
 				contentComplete();
@@ -30,7 +32,7 @@ var $=jQuery.noConflict();
 		});
  
 		$(document).scroll(function() {
-
+			fixedSubmenu();
 		});
  
 		// Nav
@@ -78,6 +80,15 @@ var $=jQuery.noConflict();
 			});
 		}
 
+		/* Preguntas frecuentes */
+		$("#preguntasFrecuentes h2").click(function() {
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+			} else {
+				$(this).addClass('active');
+			}			
+		});
+
 	});
 })(jQuery);
  
@@ -99,6 +110,16 @@ function getFooterHeight(){
 	return $('footer').outerHeight();
 }// getFooterHeight
 
+/* Fijar sub menú desktop */
+function fixedSubmenu(){
+	var topSubmenu = $('#sub-menu').offset();
+	var topWindow = $(window).scrollTop();
+    if(topWindow >= topSubmenu.top){
+        $('#sub-menu').addClass('menuFixed');
+    } else {
+        $('#sub-menu').removeClass('menuFixed');
+    }
+}
 
 /* VIDEO */
 function runVideo(){
@@ -139,3 +160,4 @@ function contentComplete(){
 		}
 	}
 }
+
