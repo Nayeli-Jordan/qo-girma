@@ -11,7 +11,7 @@ a {
 html{
   line-height: 1.5;
   color: $dark-color;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-family: $font-default;
   font-weight: 800;
@@ -29,7 +29,10 @@ h1, h2, h3, h4, h5, h6 {
 
 // Header Styles
 h1 { font-size: $h1-fontsize;}
-h2 { font-size: $h2-fontsize;}
+h2 { 
+  font-size: $h2-fontsize;
+  text-transform: uppercase;
+}
 h3 { font-size: $h3-fontsize;}
 h4 { font-size: $h4-fontsize;}
 h5 { font-size: $h5-fontsize;}
@@ -90,6 +93,9 @@ small                         { font-size: 75%; }
 #body-page {
   color: $blue-text-color;
   a { 
-    &:hover { text-decoration: underline; }
+    &:hover { 
+      color: $uva-color;
+      text-decoration: underline; 
+    }
   }
 }

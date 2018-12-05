@@ -1884,11 +1884,19 @@
 
 /* line 4, ../sass/components/_buttons.scss */
 .btn {
+  display: inline-block;
   padding: 0 20px;
+  color: #fff;
   text-align: center;
-  line-height: 30px;
-  line-height: 30px;
+  line-height: 40px;
+  border-radius: 3px;
+  background-color: #48476f;
   transition: .3s ease-out;
+}
+/* line 14, ../sass/components/_buttons.scss */
+.btn:hover {
+  text-decoration: none !important;
+  background-color: #804971;
 }
 
 /* line 4, ../sass/components/_color.scss */
@@ -2101,7 +2109,7 @@ ul li {
 
 /* line 54, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 /* line 57, ../sass/components/_global.scss */
@@ -7908,7 +7916,7 @@ a {
 html {
   line-height: 1.5;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
@@ -7929,45 +7937,46 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 31, ../sass/components/_typography.scss */
 h1 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 /* line 32, ../sass/components/_typography.scss */
 h2 {
-  font-size: 22px;
-}
-
-/* line 33, ../sass/components/_typography.scss */
-h3 {
-  font-size: 20px;
-}
-
-/* line 34, ../sass/components/_typography.scss */
-h4 {
-  font-size: 18px;
-}
-
-/* line 35, ../sass/components/_typography.scss */
-h5 {
-  font-size: 16px;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 /* line 36, ../sass/components/_typography.scss */
-h6 {
-  font-size: 14px;
+h3 {
+  font-size: 18px;
+}
+
+/* line 37, ../sass/components/_typography.scss */
+h4 {
+  font-size: 16px;
 }
 
 /* line 38, ../sass/components/_typography.scss */
+h5 {
+  font-size: 13px;
+}
+
+/* line 39, ../sass/components/_typography.scss */
+h6 {
+  font-size: 12px;
+}
+
+/* line 41, ../sass/components/_typography.scss */
 p {
   margin: 0px;
 }
 
-/* line 41, ../sass/components/_typography.scss */
+/* line 44, ../sass/components/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 43, ../sass/components/_typography.scss */
+/* line 46, ../sass/components/_typography.scss */
 small {
   font-size: 75%;
 }
@@ -7975,44 +7984,44 @@ small {
 /* .font-thin                    { font-weight: 200; }
 .font-normal                  { font-weight: 300; }
 .font-strong, strong          { font-weight: 500; } */
-/* line 49, ../sass/components/_typography.scss */
+/* line 52, ../sass/components/_typography.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 50, ../sass/components/_typography.scss */
+/* line 53, ../sass/components/_typography.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 52, ../sass/components/_typography.scss */
+/* line 55, ../sass/components/_typography.scss */
 .text-underline,
 .text-underline-hover:hover {
   text-decoration: underline;
 }
 
-/* line 55, ../sass/components/_typography.scss */
+/* line 58, ../sass/components/_typography.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 56, ../sass/components/_typography.scss */
+/* line 59, ../sass/components/_typography.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 57, ../sass/components/_typography.scss */
+/* line 60, ../sass/components/_typography.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 58, ../sass/components/_typography.scss */
+/* line 61, ../sass/components/_typography.scss */
 .text-justify {
   text-align: justify;
 }
 
 /* INDEX */
-/* line 61, ../sass/components/_typography.scss */
+/* line 64, ../sass/components/_typography.scss */
 #videoPortada h2 {
   text-transform: uppercase;
   font-size: 40px;
@@ -8022,38 +8031,39 @@ small {
   top: 30px;
 }
 
-/* line 69, ../sass/components/_typography.scss */
+/* line 72, ../sass/components/_typography.scss */
 #intro-que-hacemos p {
   font-size: 20px;
   line-height: 26px;
 }
 @media (max-width: 870px) {
-  /* line 69, ../sass/components/_typography.scss */
+  /* line 72, ../sass/components/_typography.scss */
   #intro-que-hacemos p {
     font-size: 15px;
   }
 }
 
 /* Heder-page */
-/* line 79, ../sass/components/_typography.scss */
+/* line 82, ../sass/components/_typography.scss */
 .header-page strong, #body-page strong {
   font-family: "Open Sans", sans-serif;
 }
-/* line 82, ../sass/components/_typography.scss */
+/* line 85, ../sass/components/_typography.scss */
 .header-page ul, #body-page ul {
   padding: 0 20px;
 }
-/* line 84, ../sass/components/_typography.scss */
+/* line 87, ../sass/components/_typography.scss */
 .header-page ul li, #body-page ul li {
   list-style-type: disc;
 }
 
-/* line 90, ../sass/components/_typography.scss */
+/* line 93, ../sass/components/_typography.scss */
 #body-page {
   color: #325192;
 }
-/* line 93, ../sass/components/_typography.scss */
+/* line 96, ../sass/components/_typography.scss */
 #body-page a:hover {
+  color: #804971;
   text-decoration: underline;
 }
 
@@ -8371,7 +8381,11 @@ header nav#sub-menu {
   margin-top: -50px;
   width: 200px;
 }
-/* line 112, ../sass/components/_header.scss */
+/* line 110, ../sass/components/_header.scss */
+header nav#sub-menu ul {
+  width: 200px;
+}
+/* line 113, ../sass/components/_header.scss */
 header nav#sub-menu ul li a {
   display: block;
   padding: 0 20px 0 10px;
@@ -8384,12 +8398,12 @@ header nav#sub-menu ul li a {
   border-bottom-right-radius: 20px;
   box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
 }
-/* line 124, ../sass/components/_header.scss */
+/* line 125, ../sass/components/_header.scss */
 header nav#sub-menu ul li a.active {
   background-color: #d88e4d;
   color: #fff;
 }
-/* line 128, ../sass/components/_header.scss */
+/* line 129, ../sass/components/_header.scss */
 header nav#sub-menu ul li a:hover {
   background-color: #c24871;
   color: #fff;
@@ -8401,29 +8415,22 @@ header nav#sub-menu ul li a:hover {
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 137, ../sass/components/_header.scss */
+  /* line 138, ../sass/components/_header.scss */
   header nav#sub-menu.menuFixed ul {
     position: fixed;
     top: 0px;
   }
 }
+/* line 144, ../sass/components/_header.scss */
+header.nav-fixed {
+  position: fixed;
+  width: 100%;
+}
 
-/* line 145, ../sass/components/_header.scss */
+/* line 150, ../sass/components/_header.scss */
 .header-page {
   color: #fff;
   padding: 30px 0;
-  /* .triangle {
-  	width: 0; 
-  	height: 0; 
-  	border-left: 100px solid #f0ad4e;
-  	border-top: 50px solid transparent;
-  	border-bottom: 50px solid transparent; 		
-  } */
-}
-/* line 149, ../sass/components/_header.scss */
-.header-page h2 {
-  font-size: 30px;
-  text-transform: uppercase;
 }
 
 /* line 1, ../sass/components/_footer.scss */

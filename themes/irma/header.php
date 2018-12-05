@@ -67,7 +67,7 @@
 					$submenu_name = 'quienes-somos';
 				} elseif (is_page( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma') )) {
 					$submenu_name = 'que-hacemos';
-				} elseif (is_page( array('voluntariado', 'donativos') )) {
+				} elseif (is_page( array('voluntariado', 'donativos', 'donador-frecuente') )) {
 					$submenu_name = 'como-ayudar';
 				} elseif (is_page( array('preguntas-frecuentes', 'formulario-necesitas-ayuda', 'test-acudir-a-terapia') )) {
 					$submenu_name = 'necesitas-ayuda';
@@ -148,7 +148,7 @@
 								if ($description != '') {
 									if (is_page($description)) {
 										$currentPage	='active';
-									}										
+									}								
 								}
 
 								$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';

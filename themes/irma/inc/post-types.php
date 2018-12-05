@@ -101,4 +101,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'gi_faqs', $args );	
 
+	// Artículos
+	$labels = array(
+		'name'          => 'Artículos',
+		'singular_name' => 'Artículos',
+		'add_new'       => 'Nuevo Artículos',
+		'add_new_item'  => 'Nuevo Artículos',
+		'edit_item'     => 'Editar Artículos',
+		'new_item'      => 'Nuevo Artículos',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Artículos',
+		'search_items'  => 'Buscar Artículos',
+		'not_found'     => 'No hay Artículos.',
+		'menu_name'     => 'Artículos'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'gi_articulo' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-media-text'
+	);
+	register_post_type( 'gi_articulo', $args );	
+
 });

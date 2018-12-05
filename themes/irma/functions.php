@@ -13,7 +13,7 @@ define( 'SITEURL', get_site_url() . '/' );
 \*------------------------------------*/
 require_once( 'inc/pages.php' );
 require_once( 'inc/post-types.php' );
-/*require_once( 'inc/taxonomies.php' );*/
+require_once( 'inc/taxonomies.php' );
 
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
@@ -45,8 +45,8 @@ function load_custom_files_wp_admin() {
         wp_register_style( 'irma_wp_admin_css', THEMEPATH . '/admin/admin-style.css', false, '1.0.0' );
         wp_enqueue_style( 'irma_wp_admin_css' );
 
-        /*wp_register_script( 'irma_wp_admin_js', THEMEPATH . 'admin/admin-script.js', false, '1.0.0' );
-        wp_enqueue_script( 'irma_wp_admin_js' );*/        
+        wp_register_script( 'irma_wp_admin_js', THEMEPATH . 'admin/admin-script.js', false, '1.0.0' );
+        wp_enqueue_script( 'irma_wp_admin_js' );        
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_files_wp_admin' );
 
@@ -117,14 +117,12 @@ function woocommerce_support() {
 
 
 /**
-* CUSTOM FUNCTIONS
+************ CUSTOM FUNCTIONS *************
 */
 
 /*
-** CONTRATOS
+** VIDEOS HOME
 */
-
-//Custom fields empleado
 add_action( 'add_meta_boxes', 'gi_video_custom_metabox' );
 function gi_video_custom_metabox(){
     add_meta_box( 'gi_video_meta', 'Detalles video', 'display_gi_video_atributos', 'gi_video', 'advanced', 'default');
@@ -135,7 +133,7 @@ function display_gi_video_atributos( $gi_video ){
 ?>
     <table class="gi-custom-fields">
         <tr>
-            <th colspan="4">
+            <th>
                 <label for="gi_video_videoLink">Dirección*:</label>
                 <input type="text" id="gi_video_videoLink" name="gi_video_videoLink" value="<?php echo $videoLink; ?>" required>
             </th>
@@ -150,6 +148,39 @@ function gi_video_save_metas( $idgi_video, $gi_video ){
     //Guardamos los datos que vienen en el POST
         if ( isset( $_POST['gi_video_videoLink'] ) ){
             update_post_meta( $idgi_video, 'gi_video_videoLink', $_POST['gi_video_videoLink'] );
+        }
+    }
+}
+
+/*
+** Artículos
+*/
+add_action( 'add_meta_boxes', 'gi_articulo_custom_metabox' );
+function gi_articulo_custom_metabox(){
+    add_meta_box( 'gi_articulo_meta', 'URL Artículo', 'display_gi_articulo_atributos', 'gi_articulo', 'advanced', 'default');
+}
+
+function display_gi_articulo_atributos( $gi_articulo ){
+    $url       = esc_html( get_post_meta( $gi_articulo->ID, 'gi_articulo_url', true ) );
+?>
+    <table class="gi-custom-fields">
+        <tr>
+            <th>
+                <label for="gi_articulo_url">URL*:</label>
+                <input type="text" name="gi_articulo_url" id="gi_articulo_url" class="meta-image" value="<?php echo $url; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </th>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'save_post', 'gi_articulo_save_metas', 10, 2 );
+function gi_articulo_save_metas( $idgi_articulo, $gi_articulo ){
+    //Comprobamos que es del tipo que nos interesa
+    if ( $gi_articulo->post_type == 'gi_articulo' ){
+    //Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['gi_articulo_url'] ) ){
+            update_post_meta( $idgi_articulo, 'gi_articulo_url', $_POST['gi_articulo_url'] );
         }
     }
 }

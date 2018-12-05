@@ -19,7 +19,11 @@ var $=jQuery.noConflict();
 			if ($("#videoHome")[0]){
 				console.log('Hay video');
 				runVideo();
-			}			
+			}
+			/* Donador frecuente active */
+			if(window.location.href.indexOf("donador-frecuente") > -1) {
+				$('#sub-menu li.itemDonativos a').addClass('active');
+			}	
 		});
  
 		$(window).on('resize', function(){

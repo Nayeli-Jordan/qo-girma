@@ -18,3 +18,18 @@
 	font-weight: 400;
     line-height: 40px;   
 }
+.gi-custom-fields .button.image-upload {
+	float: right;
+    margin-top: 3px;
+    color: #fff;
+    background-color: #48476f;
+}
+.gi-custom-fields .button.image-upload:hover { background-color: #3e4b75; }
+
+#normal-sortables .postbox,
+#side-sortables .postbox:not(#submitdiv):not(#postimagediv):not(#tax_tipo_articulodiv) { border-color: #48476f; }
+#normal-sortables h2,
+#side-sortables .postbox:not(#submitdiv):not(#postimagediv):not(#tax_tipo_articulodiv) h2 {
+	color: #fff;
+	background-color: #48476f;
+}
