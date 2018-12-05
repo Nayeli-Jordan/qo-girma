@@ -94,19 +94,8 @@ video.responsive-video {
 }
 
 /* PAGE */
-.triangle-title {
-	width: 0; 
-	height: 0; 
-	border-left-width: 100px;
-    border-left-style: solid;
-    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
-    -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    border-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
-	//border-left:  solid #f0ad4e;
-	border-top: 50px solid transparent;
-	border-bottom: 50px solid transparent; 
+#body-page img {
+	@extend .responsive-img;
 }
 
 /* Templete title complete */

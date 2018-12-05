@@ -1,7 +1,7 @@
 // Forms
 // ==========================================================================
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="image"]),
 textarea,
 select {
 	margin-bottom: 10px;
@@ -61,4 +61,15 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 }
 div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
 	border-color: $red-dark-color;
+}
+
+/* Donar - PayPal */
+#donation-paypal input[type="image"]{
+	display: block;
+	width: 280px;
+	height: auto;
+	margin: auto;
+	&:hover {
+		@extend .shadow;
+	}
 }

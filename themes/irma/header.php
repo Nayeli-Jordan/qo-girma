@@ -58,106 +58,109 @@
 	</head>
 	<body>
 		<header class="js-header">
-			<a href="<?php echo SITEURL ?>">
-				<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
-			</a>
-			<i class="icon-menu open-nav"></i>
-			<?php /* Detect Active */ 
-				if (is_page( array('historia', 'mision', 'vision', 'filosofia', 'directorio') )) {
-					$submenu_name = 'quienes-somos';
-				} elseif (is_page( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma') )) {
-					$submenu_name = 'que-hacemos';
-				} elseif (is_page( array('voluntariado', 'donativos', 'donador-frecuente') )) {
-					$submenu_name = 'como-ayudar';
-				} elseif (is_page( array('preguntas-frecuentes', 'formulario-necesitas-ayuda', 'test-acudir-a-terapia') )) {
-					$submenu_name = 'necesitas-ayuda';
-				}
-			?>
-			<nav id="top-menu">
-				<i class="icon-close close-nav"></i>
-				<ul class="container" itemscope>
-					<?php
-						$menu_name 		= 'top_menu';					
+			<div id="content-header">
+				<a href="<?php echo SITEURL ?>">
+					<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
+				</a>
+				<i class="icon-menu open-nav"></i>
+				<?php /* Detect Active */ 
+					if (is_page( array('historia', 'mision', 'vision', 'filosofia', 'directorio') )) {
+						$submenu_name = 'quienes-somos';
+					} elseif (is_page( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida') )) {
+						$submenu_name = 'que-hacemos';
+					} elseif (is_page( array('voluntariado', 'donativos', 'donador-frecuente') )) {
+						$submenu_name = 'como-ayudar';
+					} elseif (is_page( array('preguntas-frecuentes', 'formulario-necesitas-ayuda', 'test-acudir-a-terapia') )) {
+						$submenu_name = 'necesitas-ayuda';
+					}
+				?>
+				<nav id="top-menu">
+					<i class="icon-close close-nav"></i>
+					<ul class="container" itemscope>
+						<?php
+							$menu_name 		= 'top_menu';					
 
-						if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
-							$menu = wp_get_nav_menu_object( $locations[ $menu_name ]);
-							$menu_items = wp_get_nav_menu_items( $menu->term_id );
-							$menu_list = '';
-							$subItem_name 	= ''; /* Sub menu vacio inicial */
-							foreach ( (array) $menu_items as $key => $menu_item) {
+							if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
+								$menu = wp_get_nav_menu_object( $locations[ $menu_name ]);
+								$menu_items = wp_get_nav_menu_items( $menu->term_id );
+								$menu_list = '';
+								$subItem_name 	= ''; /* Sub menu vacio inicial */
+								foreach ( (array) $menu_items as $key => $menu_item) {
 
-								$url 				= $menu_item->url;
-								$title 				= $menu_item->title;
-								$xfn 				= $menu_item->xfn;
+									$url 				= $menu_item->url;
+									$title 				= $menu_item->title;
+									$xfn 				= $menu_item->xfn;
 
-								$currentSection 	= '';
-								if ($xfn != '') {
-									if ($xfn === $submenu_name) {
-										$currentSection	='active';
-									}										
-								}
-
-								$menu_list .='<li itemprop="actionOption" class="pather-item"><a href="' . $url . '" class="' . $currentSection . '">' . $title . '</a></li>';
-
-								/*Obtener sub elementos nav mobile */
-								$subItem_name 		= $xfn;
-								if (( $locations = get_nav_menu_locations()) && isset( $locations[ $subItem_name ])) {
-									$subItem = wp_get_nav_menu_object( $locations[ $subItem_name ]);
-									$subItem_items = wp_get_nav_menu_items( $subItem->term_id );
-									$subItem_list = '';
-									foreach ( (array) $subItem_items as $key => $subItem_item) {
-
-										$url 				= $subItem_item->url;
-										$title 				= $subItem_item->title;
-										$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $subItem_item->classes ), $subItem_item) ) );
-										$description		= $subItem_item->description;
-
-										$currentPageItem 		= '';
-										if ($description != '') {
-											if (is_page($description)) {
-												$currentPageItem	='active';
-											}										
-										}
-
-										$menu_list .='<li itemprop="actionOption" class="sub-item ' . $class .'"><a href="' . $url . '"  class="' . $currentPageItem . '">' . $title . '</a></li>';
+									$currentSection 	= '';
+									if ($xfn != '') {
+										if ($xfn === $submenu_name) {
+											$currentSection	='active';
+										}										
 									}
-								} /*End if sub menú */
 
-							}
-						}
-						echo $menu_list;
-					?>				
-				</ul>
-			</nav>
-			<?php if (!is_home()) : ?>
-				<nav id="sub-menu">
-					<ul>
-					<?php
-						if (( $locations = get_nav_menu_locations()) && isset( $locations[ $submenu_name ])) {
-							$submenu = wp_get_nav_menu_object( $locations[ $submenu_name ]);
-							$submenu_items = wp_get_nav_menu_items( $submenu->term_id );
-							$submenu_list = '';
-							foreach ( (array) $submenu_items as $key => $submenu_item) {
+									$menu_list .='<li itemprop="actionOption" class="pather-item"><a href="' . $url . '" class="' . $currentSection . '">' . $title . '</a></li>';
 
-								$url 				= $submenu_item->url;
-								$title 				= $submenu_item->title;
-								$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $submenu_item->classes ), $submenu_item) ) );
-								$description		= $submenu_item->description;
+									/*Obtener sub elementos nav mobile */
+									$subItem_name 		= $xfn;
+									if (( $locations = get_nav_menu_locations()) && isset( $locations[ $subItem_name ])) {
+										$subItem = wp_get_nav_menu_object( $locations[ $subItem_name ]);
+										$subItem_items = wp_get_nav_menu_items( $subItem->term_id );
+										$subItem_list = '';
+										foreach ( (array) $subItem_items as $key => $subItem_item) {
 
-								$currentPage 		= '';
-								if ($description != '') {
-									if (is_page($description)) {
-										$currentPage	='active';
-									}								
+											$url 				= $subItem_item->url;
+											$title 				= $subItem_item->title;
+											$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $subItem_item->classes ), $subItem_item) ) );
+											$description		= $subItem_item->description;
+
+											$currentPageItem 		= '';
+											if ($description != '') {
+												if (is_page($description)) {
+													$currentPageItem	='active';
+												}										
+											}
+
+											$menu_list .='<li itemprop="actionOption" class="sub-item ' . $class .'"><a href="' . $url . '"  class="' . $currentPageItem . '">' . $title . '</a></li>';
+										}
+									} /*End if sub menú */
+
 								}
-
-								$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
 							}
-						}
-						echo $submenu_list;
-					?>	
+							echo $menu_list;
+						?>				
 					</ul>
 				</nav>
-			<?php endif; ?>
+				<?php if (!is_home()) : ?>
+					<nav id="sub-menu">
+						<ul>
+						<?php
+							if (( $locations = get_nav_menu_locations()) && isset( $locations[ $submenu_name ])) {
+								$submenu = wp_get_nav_menu_object( $locations[ $submenu_name ]);
+								$submenu_items = wp_get_nav_menu_items( $submenu->term_id );
+								$submenu_list = '';
+								foreach ( (array) $submenu_items as $key => $submenu_item) {
+
+									$url 				= $submenu_item->url;
+									$title 				= $submenu_item->title;
+									$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $submenu_item->classes ), $submenu_item) ) );
+									$description		= $submenu_item->description;
+
+									$currentPage 		= '';
+									if ($description != '') {
+										if (is_page($description)) {
+											$currentPage	='active';
+										}								
+									}
+
+									$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
+								}
+							}
+							echo $submenu_list;
+						?>	
+						</ul>
+					</nav>
+				<?php endif; ?>				
+			</div>
+
 		</header>
 		<div class="[ main-body ]">

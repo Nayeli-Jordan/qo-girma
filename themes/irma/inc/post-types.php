@@ -133,4 +133,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'gi_articulo', $args );	
 
+	// Irma transforma - Historias de vida
+	$labels = array(
+		'name'          => 'Testimonial',
+		'singular_name' => 'Testimonial',
+		'add_new'       => 'Nuevo Testimonial',
+		'add_new_item'  => 'Nuevo Testimonial',
+		'edit_item'     => 'Editar Testimonial',
+		'new_item'      => 'Nuevo Testimonial',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Testimonial',
+		'search_items'  => 'Buscar Testimonial',
+		'not_found'     => 'No hay Testimonial.',
+		'menu_name'     => 'Testimonial'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'gi_testimonial' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor' ),
+		'menu_icon' 		 => 'dashicons-slides'
+	);
+	register_post_type( 'gi_testimonial', $args );	
+
 });

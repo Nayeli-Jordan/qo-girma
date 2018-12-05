@@ -18,9 +18,12 @@
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
                 $i = 1;
-                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                while ( $loop->have_posts() ) : $loop->the_post(); 
+                    $custom_fields  = get_post_custom();
+                    $post_id        = get_the_ID();
+                    $url       = get_post_meta( $post_id, 'gi_articulo_url', true ); ?>
 
-                    <a href="<?php the_permalink(); ?>" class="color-primary"><h4 class="margin-bottom-xsmall"><i class="icon-close"></i> <?php the_title(); ?></h4></a>
+                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall"><i class="icon-doc"></i> <?php the_title(); ?></h4></a>
 
                 <?php $i++; endwhile;
             } 
@@ -45,9 +48,12 @@
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
                 $i = 1;
-                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                while ( $loop->have_posts() ) : $loop->the_post();  
+                    $custom_fields  = get_post_custom();
+                    $post_id        = get_the_ID();
+                    $url       = get_post_meta( $post_id, 'gi_articulo_url', true ); ?>
 
-                    <a href="<?php the_permalink(); ?>" class="color-primary"><h4 class="margin-bottom-xsmall"><i class="icon-close"></i> <?php the_title(); ?></h4></a>
+                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall"><i class="icon-doc"></i> <?php the_title(); ?></h4></a>
 
                 <?php $i++; endwhile;
             } 
@@ -72,9 +78,12 @@
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
                 $i = 1;
-                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                while ( $loop->have_posts() ) : $loop->the_post();  
+                    $custom_fields  = get_post_custom();
+                    $post_id        = get_the_ID();
+                    $url       = get_post_meta( $post_id, 'gi_articulo_url', true ); ?>
 
-                    <a href="<?php the_permalink(); ?>" class="color-primary"><h4 class="margin-bottom-xsmall"><i class="icon-close"></i> <?php the_title(); ?></h4></a>
+                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall"><i class="icon-doc"></i> <?php the_title(); ?></h4></a>
 
                 <?php $i++; endwhile;
             } 

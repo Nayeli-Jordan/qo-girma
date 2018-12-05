@@ -167,7 +167,7 @@ function display_gi_articulo_atributos( $gi_articulo ){
         <tr>
             <th>
                 <label for="gi_articulo_url">URL*:</label>
-                <input type="text" name="gi_articulo_url" id="gi_articulo_url" class="meta-image" value="<?php echo $url; ?>">
+                <input type="text" name="gi_articulo_url" id="gi_articulo_url" class="meta-image" value="<?php echo $url; ?>" required>
                 <input type="button" class="button image-upload" value="Seleccionar">
             </th>
         </tr>

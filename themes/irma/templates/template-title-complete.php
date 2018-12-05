@@ -29,6 +29,8 @@ get_header();
 						include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/formulario-necesitas-ayuda.php');
 					} else if  (is_page('irma-comunica')) {
 						include (TEMPLATEPATH . '/templates/pages-include/que-hacemos/irma-comunica-articulos.php');
+					} else if  (is_page('historias-de-vida')) {
+						include (TEMPLATEPATH . '/templates/pages-include/que-hacemos/irma-transforma-historias-de-vida.php');
 					} ?>
 				</div>	
 			</div>

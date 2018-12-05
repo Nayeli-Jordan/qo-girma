@@ -10,25 +10,29 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			footerBottom();
-			fixedSubmenu();
+			fixedMenu();
 			/* Templete Content Complete */
 			if ($('#header-page-complete').length > 0) {
 				contentComplete();
+				$('.main-body').addClass('bg-orange');
 			}
 			/* VIDEO */
 			if ($("#videoHome")[0]){
 				console.log('Hay video');
 				runVideo();
 			}
-			/* Donador frecuente active */
+			/* Sub page active */
 			if(window.location.href.indexOf("donador-frecuente") > -1) {
 				$('#sub-menu li.itemDonativos a').addClass('active');
+			}
+			if(window.location.href.indexOf("historias-de-vida") > -1) {
+				$('#sub-menu li.itemIrmaTransforma a').addClass('active');
 			}	
 		});
  
 		$(window).on('resize', function(){
 			footerBottom();
-			fixedSubmenu();
+			fixedMenu();
 			/* Templete Content Complete */
 			if ($('#header-page-complete').length > 0) {
 				contentComplete();
@@ -36,7 +40,7 @@ var $=jQuery.noConflict();
 		});
  
 		$(document).scroll(function() {
-			fixedSubmenu();
+			fixedMenu();
 		});
  
 		// Nav
@@ -115,13 +119,13 @@ function getFooterHeight(){
 }// getFooterHeight
 
 /* Fijar sub menú desktop */
-function fixedSubmenu(){
-	var topSubmenu = $('#sub-menu').offset();
-	var topWindow = $(window).scrollTop();
-    if(topWindow >= topSubmenu.top){
-        $('#sub-menu').addClass('menuFixed');
+function fixedMenu(){
+	var topHeaderScroll 	= getHeaderHeight() - 111.5; /* Menos altura header fijo para evitar salto */
+	var topWindow 			= $(window).scrollTop();
+    if(topWindow >= topHeaderScroll){
+        $('#content-header').addClass('nav-fixed');
     } else {
-        $('#sub-menu').removeClass('menuFixed');
+        $('#content-header').removeClass('nav-fixed');
     }
 }
 

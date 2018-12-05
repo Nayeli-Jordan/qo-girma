@@ -1,14 +1,19 @@
 header {
 	position: relative;
-	padding-top: 50px;
-	background-image: linear-gradient(to right, $orange-color , $light-color, $orange-color);
 	z-index: 99;
-	@media #{$medium-and-down}{ padding: 10px 0 20px; }
-	& > a {
-		display: block;
-		width: 200px;
-		margin: auto;
-		@media #{$medium-and-down}{ width: 100px; }
+	min-height: 237.5px;
+	@extend .bg-degrade-yellow_to_yellow;
+	@media #{$medium-and-down}{ min-height: 70.5px; }
+	#content-header {		
+		padding-top: 50px;
+		@extend .bg-degrade-yellow_to_yellow;
+		& > a {
+			display: block;
+			width: 200px;
+			margin: auto;
+			@media #{$medium-and-down}{ width: 100px; }
+		}
+		@media #{$medium-and-down}{ padding: 10px 0; }
 	}
 	.open-nav {
 		position: absolute;
@@ -64,11 +69,12 @@ header {
 				right: 0px;
 			}
 			i { 
-				position: absolute;
-				display: block; 
+				display: block;
+				padding: 10px 20px;
 				top: 5px;
 				right: 20px;
 				color: $primary-color;
+				text-align: right;
 				cursor: pointer;
 			}
 			ul {
@@ -120,7 +126,7 @@ header {
 					text-align: center;
 					background-color: $light-color; 
 					border-bottom-right-radius: 20px;
-					@include shadow();
+					@extend .shadow;
 					@extend %transition;
 					&.active {
 						background-color: $orange-color;
@@ -141,9 +147,19 @@ header {
 			}
 		}
 	}
-	&.nav-fixed {
+	#content-header.nav-fixed {
 		position: fixed;
 		width: 100%;
+		padding: 10px 0;
+		@extend .shadow;
+		& > a { width: 100px; }
+		nav#top-menu {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		nav#sub-menu {
+			margin-top: -40px;
+		}
 	}
 }
 

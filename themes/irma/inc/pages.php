@@ -113,6 +113,18 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	// ¿Qué hacemos? - Irma transforma - Historia de vida
+	if( ! get_page_by_path('historias-de-vida') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Historias de vida',
+			'post_name'   => 'historias-de-vida',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
 	// ¿Cómo ayudar? - Voluntariado
 	if( ! get_page_by_path('voluntariado') ){
 		$page = array(

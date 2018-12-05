@@ -1,7 +1,7 @@
 <?php echo do_shortcode('[contact-form-7 id="143" title="Form necesitas ayuda"]'); ?>
 
 <div class="text-center margin-top-xlarge">
-	<i class="icon-close icon-xlarge"></i>
+	<i class="icon-phone icon-xlarge margin-bottom-xxsmall block"></i>
 	<h3>Llámanos:</h3>
 	<p>México: 5260 3178 / 5260 8859 <br>01 800 911 IRMA (4762)</p>	
 </div>
