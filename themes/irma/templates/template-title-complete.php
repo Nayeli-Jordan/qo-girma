@@ -31,6 +31,8 @@ get_header();
 						include (TEMPLATEPATH . '/templates/pages-include/que-hacemos/irma-comunica-articulos.php');
 					} else if  (is_page('historias-de-vida')) {
 						include (TEMPLATEPATH . '/templates/pages-include/que-hacemos/irma-transforma-historias-de-vida.php');
+					} else if  (is_page('donador-frecuente')) {
+						include (TEMPLATEPATH . '/templates/pages-include/como-ayudar/donador-frecuente.php');
 					} ?>
 				</div>	
 			</div>
