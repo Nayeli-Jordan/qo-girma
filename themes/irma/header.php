@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Importante agregar el prefijo para cuando dice que og no se está usando -->
 <html id="site-irma" prefix="og: http://ogp.me/ns#" lang="es">
 	<head>
 		<meta charset="utf-8">
@@ -56,26 +55,34 @@
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<?php if (is_home()) {
+		$pageName = 'page-home';
+	} else {
+		$pageName = '';
+	} ?>
+	<?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
+	<body class="<?php echo $pageName; ?>">
 		<header class="js-header">
-			<div id="content-header">
-				<a href="<?php echo SITEURL ?>">
-					<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
+			<div id="content-header">			
+				<a href="<?php echo SITEURL ?><?php if( 'en' == $lang ) : ?>?lang=en<?php endif; ?>" title="Link a Inicio sitio Grupo Irma">
+					<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/identidad/logo.png" alt="Logo de Grupo Irma, comprender para fortalecer">
 				</a>
-				<i class="icon-menu open-nav"></i>
+				<?php do_action('wpml_add_language_selector'); ?>
+				<em class="icon-menu open-nav"></em>
 				<?php /* Detect Active */ 
-					if (is_page( array('historia', 'mision', 'vision', 'filosofia', 'directorio') )) {
+					$submenu_name = '';
+					if (is_single( array('historia', 'mision', 'vision', 'filosofia', 'directorio', 'informes-anuales') ) || is_404() ) {
 						$submenu_name = 'quienes-somos';
-					} elseif (is_page( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida') )) {
+					} elseif (is_single( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida') ) || is_singular('gi_articulo')) {
 						$submenu_name = 'que-hacemos';
-					} elseif (is_page( array('voluntariado', 'donativos', 'donador-frecuente') )) {
+					} elseif (is_single( array('voluntariado', 'donativos', 'donador-frecuente') )) {
 						$submenu_name = 'como-ayudar';
-					} elseif (is_page( array('preguntas-frecuentes', 'formulario-necesitas-ayuda', 'test-acudir-a-terapia') )) {
+					} elseif (is_single( array('preguntas-frecuentes', 'formulario', 'necesito-terapia') )) {
 						$submenu_name = 'necesitas-ayuda';
 					}
 				?>
 				<nav id="top-menu">
-					<i class="icon-close close-nav"></i>
+					<em class="icon-cancel close-nav"></em>
 					<ul class="container" itemscope>
 						<?php
 							$menu_name 		= 'top_menu';					
@@ -92,13 +99,13 @@
 									$xfn 				= $menu_item->xfn;
 
 									$currentSection 	= '';
-									if ($xfn != '') {
+									if (!is_home() && $xfn != '') {
 										if ($xfn === $submenu_name) {
 											$currentSection	='active';
 										}										
 									}
 
-									$menu_list .='<li itemprop="actionOption" class="pather-item"><a href="' . $url . '" class="' . $currentSection . '">' . $title . '</a></li>';
+									$menu_list .='<li itemprop="actionOption" class="pather-item"><a href="' . $url . '" class="' . $currentSection . '" title="Link a ' . $title . '">' . $title . '</a></li>';
 
 									/*Obtener sub elementos nav mobile */
 									$subItem_name 		= $xfn;
@@ -115,12 +122,12 @@
 
 											$currentPageItem 		= '';
 											if ($description != '') {
-												if (is_page($description)) {
+												if (is_single($description)) {
 													$currentPageItem	='active';
 												}										
 											}
 
-											$menu_list .='<li itemprop="actionOption" class="sub-item ' . $class .'"><a href="' . $url . '"  class="' . $currentPageItem . '">' . $title . '</a></li>';
+											$menu_list .='<li itemprop="actionOption" class="sub-item ' . $class .'"><a href="' . $url . '"  class="' . $currentPageItem . '" title="Link a ' . $title . '">' . $title . '</a></li>';
 										}
 									} /*End if sub menú */
 
@@ -134,10 +141,11 @@
 					<nav id="sub-menu">
 						<ul>
 						<?php
+							$submenu_list = '';
 							if (( $locations = get_nav_menu_locations()) && isset( $locations[ $submenu_name ])) {
 								$submenu = wp_get_nav_menu_object( $locations[ $submenu_name ]);
 								$submenu_items = wp_get_nav_menu_items( $submenu->term_id );
-								$submenu_list = '';
+								
 								foreach ( (array) $submenu_items as $key => $submenu_item) {
 
 									$url 				= $submenu_item->url;
@@ -147,20 +155,25 @@
 
 									$currentPage 		= '';
 									if ($description != '') {
-										if (is_page($description)) {
+										if (is_single($description)) {
 											$currentPage	='active';
 										}								
 									}
 
-									$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
+									$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '" title="' . $title . '"><span>' . $title . '</span></a></li>';
 								}
 							}
 							echo $submenu_list;
 						?>	
 						</ul>
+						<div id="icons-redes">
+							<a href="https://www.facebook.com/InstitutoIRMAac" target="_blank" class="btn-facebook" title="Link a facebook Grupo Irma"><em class="icon-facebook"></em></a>
+							<a href="https://twitter.com/irmaac?lang=es" target="_blank" class="btn-twitter" title="Link a twitter Grupo Irma"><em class="icon-twitter"></em></a>
+							<a href="https://www.instagram.com/instituto.irma/" target="_blank" class="btn-instagram" title="Link a instagram Grupo Irma"><em class="icon-instagram"></em></a>
+							<a href="https://www.youtube.com/channel/UCky5f3UVRQkN2StorBb3ecw" target="_blank" class="btn-youtube" title="Link a youtube Grupo Irma"><em class="icon-youtube-play"></em></a>
+						</div>						
 					</nav>
 				<?php endif; ?>				
 			</div>
-
 		</header>
 		<div class="[ main-body ]">
