@@ -65,6 +65,18 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	// ¿Quíenes somos? - Informes anuales
+	if( ! get_page_by_path('informes-anuales') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Informes anuales',
+			'post_name'   => 'informes-anuales',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
 	// ¿Qué hacemos? - Irma te escucha
 	if( ! get_page_by_path('irma-te-escucha') ){
 		$page = array(
@@ -186,12 +198,12 @@ add_action('init', function(){
 	}
 
 	// ¿Necesitas ayuda? - Test acudir a terapia
-	if( ! get_page_by_path('test-acudir-a-terapia') ){
+	if( ! get_page_by_path('necesito-terapia') ){
 		$page = array(
 			'post_author' => 1,
 			'post_status' => 'publish',
-			'post_title'  => 'Test acudir a terapia',
-			'post_name'   => 'test-acudir-a-terapia',
+			'post_title'  => '¿Necesito terapia?',
+			'post_name'   => 'necesito-terapia',
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );

@@ -10,29 +10,55 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			footerBottom();
-			fixedMenu();
+			if ($('#intro-video').length === 0){
+				fixedMenu();
+			}
 			/* Templete Content Complete */
 			if ($('#header-page-complete').length > 0) {
 				contentComplete();
 				$('.main-body').addClass('bg-orange');
 			}
+			/* Validación form */
+			$('form.validation').parsley();
 			/* VIDEO */
 			if ($("#videoHome")[0]){
 				console.log('Hay video');
 				runVideo();
+				/*setTimeout( function(){
+			    	$('html, body').animate({		
+						scrollTop: $('#intro-video').offset().top
+					}, 1000);
+			   	}, 300);*/	
 			}
+
 			/* Sub page active */
 			if(window.location.href.indexOf("donador-frecuente") > -1) {
 				$('#sub-menu li.itemDonativos a').addClass('active');
 			}
 			if(window.location.href.indexOf("historias-de-vida") > -1) {
 				$('#sub-menu li.itemIrmaTransforma a').addClass('active');
-			}	
+			}
+			if(window.location.href.indexOf("gi_articulo") > -1) {
+				$('#sub-menu li.itemIrmaComunica a').addClass('active');
+			}
+
+			/* Si se ha enviado el formulario de donador */
+			if(window.location.href.indexOf("#donador-enviado") > -1) {
+				$('#modal-donador').show();
+				$('body').addClass('overflow-hide');
+			}
+			/* Si se ha enviado el formulario de necesitas ayuda */
+			if(window.location.href.indexOf("#ayuda-enviado") > -1) {
+				$('#modal-ayuda').show();
+				$('body').addClass('overflow-hide');
+			}
 		});
  
 		$(window).on('resize', function(){
 			footerBottom();
-			fixedMenu();
+			if ($('#intro-video').length === 0){
+				fixedMenu();
+			}
 			/* Templete Content Complete */
 			if ($('#header-page-complete').length > 0) {
 				contentComplete();
@@ -40,7 +66,9 @@ var $=jQuery.noConflict();
 		});
  
 		$(document).scroll(function() {
-			fixedMenu();
+			if ($('#intro-video').length === 0){
+				fixedMenu();
+			}
 		});
  
 		// Nav
@@ -90,11 +118,17 @@ var $=jQuery.noConflict();
 
 		/* Preguntas frecuentes */
 		$("#preguntasFrecuentes h2").click(function() {
-			if($(this).hasClass('active')){
-				$(this).removeClass('active');
-			} else {
-				$(this).addClass('active');
-			}			
+			var idPregunta = $(this).attr('id');
+			$("#preguntasFrecuentes h2").removeClass('active');
+			$("#preguntasFrecuentes h2#" + idPregunta).addClass('active');
+		});
+
+		/* Linea tiempo */
+		$(".content-urlTiempo div").click(function() {
+			var idDate = $(this).attr('id');
+			console.log(idDate );
+			$(".infoDate div").addClass('hide');
+			$(".infoDate #Info" + idDate).removeClass('hide');
 		});
 
 	});
@@ -106,11 +140,23 @@ var $=jQuery.noConflict();
 function footerBottom(){
 	var alturaFooter   = getFooterHeight();
 	var heightMainBody = $(window).height() - getHeaderHeight();
+
+	/* Verificar que sub-menu no sea más grande que el cuerpo de la página */
+	var heightSubmenu 	= getSubmenuHeight() - 45; /* Margin-top negativo a 45px */
+	var heightBodyPage 	= heightMainBody - getFooterHeight();
+	if (heightSubmenu > heightBodyPage){
+		var diffHeights			= heightSubmenu - heightBodyPage;
+		var heightMainBody		= heightMainBody + diffHeights + 20; /*20 como margin extra*/
+	}
+
 	$('.main-body').css({
 		'padding-bottom': alturaFooter,
 		'min-height': heightMainBody,
 	});
 }
+function getSubmenuHeight(){
+	return $('#sub-menu').outerHeight();
+}// get #sub-menu Height
 function getHeaderHeight(){
 	return $('.js-header').outerHeight();
 }// getHeaderHeight
@@ -120,7 +166,7 @@ function getFooterHeight(){
 
 /* Fijar sub menú desktop */
 function fixedMenu(){
-	var topHeaderScroll 	= getHeaderHeight() - 111.5; /* Menos altura header fijo para evitar salto */
+	var topHeaderScroll 	= getHeaderHeight() - 117; /* Menos altura header fijo para evitar salto */
 	var topWindow 			= $(window).scrollTop();
     if(topWindow >= topHeaderScroll){
         $('#content-header').addClass('nav-fixed');
@@ -139,7 +185,7 @@ function runVideo(){
 		}).catch(error => {
 			// Autoplay was prevented.
 			$('#videoControles').addClass('hide');
-			$('#videoPortada').removeClass('hide');
+			$('#videoPortada').removeClass('hide');	
 		});
 	}	
 	//Al terminar el video
@@ -150,22 +196,23 @@ function runVideo(){
 }
 
 /* Template Complete content */
-function contentComplete(){
+function contentComplete(){	
+	/* Eliminar min-height previa si se está cambiando el tamaño de la pantalla*/
+	$('#header-page-complete').css({ 'min-height': '' });
+	
 	var heightHeaderFooter  = getFooterHeight() + getHeaderHeight();
-	var heightWindow 		= $(window).height();
-	if (heightWindow > heightHeaderFooter) {
-		heightContent		= heightWindow - heightHeaderFooter;
-		$('#header-page-complete').css({
-			'min-height': heightContent,
-		});
-		/* Verificar si el contenido puede tener center full */
-		heightConteiner 	= $('.container-limit').outerHeight();
-		heightConteiner 	= heightConteiner + 65; /* Padding y border (30 + 30 + 5) */
-		if (heightConteiner < heightContent) {
-			$('.container-limit').addClass('content-center');
-		} else {
-			$('.container-limit').removeClass('content-center');
-		}
+	var pageHeight			= $('body').outerHeight();
+	var heightContent		= pageHeight - heightHeaderFooter;
+	console.log(heightHeaderFooter);
+	console.log(heightContent);
+	$('#header-page-complete').css({ 'min-height': heightContent });
+
+	/* Verificar si el contenido puede tener center full */
+	heightConteiner 	= $('.container-limit').outerHeight();
+	heightConteiner 	= heightConteiner + 65; /* Padding y border (30 + 30 + 5) */
+	if (heightConteiner < heightContent) {
+		$('.container-limit').addClass('content-center');
+	} else {
+		$('.container-limit').removeClass('content-center');
 	}
 }
-
