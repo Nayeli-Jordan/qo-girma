@@ -1,6 +1,12 @@
+<?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
 <div id="gi_articulos" class="margin-top-large">    
     <div class="margin-bottom-xlarge">
-        <h3 class="margin-bottom-small">IRMA - Artículos científicos</h3>    
+        <h3 class="margin-bottom-small">IRMA - 
+        <?php if( 'es' == $lang ) : ?>
+            Artículos científicos
+        <?php else : ?>
+            Scientific articles
+        <?php endif; ?></h3>    
         <?php 
             $args = array(
                 'post_type'         => 'gi_articulo',
@@ -23,14 +29,19 @@
                     $post_id        = get_the_ID();
                     $url       = get_post_meta( $post_id, 'gi_articulo_url', true ); ?>
 
-                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall"><i class="icon-doc"></i> <?php the_title(); ?></h4></a>
+                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall" title="Enlace a artículo: <?php the_title(); ?>"><em class="icon-doc-text"></em> <?php the_title(); ?></h4></a>
 
                 <?php $i++; endwhile;
             } 
             wp_reset_postdata(); ?>
     </div>
     <div class="margin-bottom-xlarge">
-        <h3 class="margin-bottom-small">IRMA - Artículos de interés</h3>    
+        <h3 class="margin-bottom-small">IRMA - 
+        <?php if( 'es' == $lang ) : ?>
+            Artículos de interés
+        <?php else : ?>
+            Articles of interest
+        <?php endif; ?></h3>    
         <?php 
             $args = array(
                 'post_type'         => 'gi_articulo',
@@ -48,19 +59,31 @@
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
                 $i = 1;
-                while ( $loop->have_posts() ) : $loop->the_post();  
+                while ( $loop->have_posts() ) : $loop->the_post();
+                    global $post;
                     $custom_fields  = get_post_custom();
                     $post_id        = get_the_ID();
-                    $url       = get_post_meta( $post_id, 'gi_articulo_url', true ); ?>
+                    $url            = get_post_meta( $post_id, 'gi_articulo_url', true );
+                    $content        = $post->post_content; ?>
 
-                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall"><i class="icon-doc"></i> <?php the_title(); ?></h4></a>
+                    <?php if ($content != ''): ?>
+                        <a href="<?php the_permalink(); ?>" class="color-primary">
+                    <?php else: ?>
+                        <a href="<?php echo $url; ?>" class="color-primary" target="_blank">
+                    <?php endif ?>
+                        <h4 class="margin-bottom-xsmall" title="Enlace a artículo: <?php the_title(); ?>"><em class="icon-doc-text"></em> <?php the_title(); ?></h4></a>
 
                 <?php $i++; endwhile;
             } 
             wp_reset_postdata(); ?>         
     </div>
     <div>
-        <h3 class="margin-bottom-small">Artículos relacionados</h3>
+        <h3 class="margin-bottom-small"> 
+        <?php if( 'es' == $lang ) : ?>
+            Artículos relacionados
+        <?php else : ?>
+            Related Posts
+        <?php endif; ?></h3>
         <?php 
             $args = array(
                 'post_type'         => 'gi_articulo',
@@ -83,7 +106,7 @@
                     $post_id        = get_the_ID();
                     $url       = get_post_meta( $post_id, 'gi_articulo_url', true ); ?>
 
-                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall"><i class="icon-doc"></i> <?php the_title(); ?></h4></a>
+                    <a href="<?php echo $url; ?>" class="color-primary" target="_blank"><h4 class="margin-bottom-xsmall" title="Enlace a artículo: <?php the_title(); ?>"><em class="icon-doc-text"></em> <?php the_title(); ?></h4></a>
 
                 <?php $i++; endwhile;
             } 
