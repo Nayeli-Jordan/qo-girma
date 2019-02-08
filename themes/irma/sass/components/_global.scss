@@ -20,15 +20,9 @@ html {
 .main-body {
   position: relative;
   .container-limit {
-    @media #{$large-and-up} { padding-left: 200px;  }    
+    @media #{$large-and-up} { padding-left: 170px;  }    
   }
 }
-
-/* section {
-	margin: 50px 0;
-  & + section { margin-top: 50px; }
-  &.header-page { margin-top: 0px; }
-} */
 
 ul {
     padding: 0px;
@@ -56,12 +50,12 @@ ul {
 } 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    background-color: $uva-dark-color;
+    background-color: $orange-color-light;
 } 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-    background-color: $pink-color;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    background-color: $orange-color;
 }
 /* ::-webkit-scrollbar-button {
       background-color: black;

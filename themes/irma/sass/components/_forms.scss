@@ -10,7 +10,7 @@ select {
 	max-width: 100%;
 	height: 30px;
 	font-size: 14px;
-	font-family: $font-text;
+	font-family: $font-default;
 	line-height: 30px;
 	background-color: $light-color;
 	border-radius: 0px;
@@ -71,5 +71,15 @@ div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
 	margin: auto;
 	&:hover {
 		@extend .shadow;
+	}
+}
+
+/* Validación Parsley */
+.parsley-errors-list {
+	padding: 0px!important;
+	font-size: 12px;
+	li { 
+		color: $red-dark-color; 
+		list-style-type: none!important;
 	}
 }

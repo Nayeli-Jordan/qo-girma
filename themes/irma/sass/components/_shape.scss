@@ -3,45 +3,6 @@
 
 .circle { border-radius: 50%; }
 
-.line-pink,
-.line-purple {
-	position: relative;
-	width: 80%;
-	height: 10px;
-	i {
-		position: absolute;
-		top: -20px;
-		display: inline-block;
-		width: 50px;
-		font-size: 35px;
-		text-align: center;
-		line-height: 50px;
-		color: $light-color;
-		border-radius: 50%;
-	}
-}
-.line-pink { 
-	margin-bottom: 40px;
-	border-top-right-radius: 40%;
-	border-bottom-right-radius: 40%;
-	background-image: linear-gradient(to right, $uva-color , $pink-color, $pink-color-light);
-	i {
-		background-color: $uva-color;
-		transform: rotate(180deg);
-	}
-}
-.line-purple {
-	margin-top: 40px;
-	margin-left: 20%;
-	border-top-left-radius: 40%;
-	border-bottom-left-radius: 40%;
-	background-image: linear-gradient(to left, $purple-color, $uva-color, $uva-color-light);
-	i {
-		right: 0px;
-		background-color: $purple-color;
-	}
-}
-
 .border-primary {
 	border: 2px solid $primary-color;
 }

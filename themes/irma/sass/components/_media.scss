@@ -40,11 +40,15 @@ video.responsive-video {
 
 /* Video */
 #intro-video {
+	box-shadow: 0px 7px 2px 0 rgba(0, 0, 0, 0.3);
+	margin-bottom: -6px;
+	background-color: $dark-color;
 	video {
-		margin-bottom: -6px;
+		max-height: 100vh;
 	}
 	#videoPortada {
 		transition: .2s ease-out;
+		/* margin-bottom: -6px; */
 		&.hide {
 			display: block;
 			opacity: 0;
@@ -69,24 +73,19 @@ video.responsive-video {
 	    bottom: 20px;
 	    @media #{$small-and-down} {
 			right: 10px;
-			bottom: 5px;
+			top: 10px;
+			bottom: inherit;
 	    }
-	    i {
+	    em {
 	    	font-size: 25px;
 	    	cursor: pointer;
-	    	&:before {
-				background: -webkit-linear-gradient(left, $purple-color 0%, $pink-color 100%);
-				background: -moz-linear-gradient(left, $purple-color 0%, $pink-color 100%);
-				background: -o-linear-gradient(left, $purple-color 0%, $pink-color 100%);
-				background: -ms-linear-gradient(left, $purple-color 0%, $pink-color 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;	
-	    	}
+	    	color: $pink-color;
+	    	text-shadow: 2px 2px 2px #00000038;
 	    }
 	}	
 }
 
-#intro-que-hacemos img{ width: 120px; }
+#intro-que-hacemos img{ width: 80px; }
 
 #gallery .bg-image { 
 	padding-bottom: 30%; 
@@ -99,8 +98,56 @@ video.responsive-video {
 }
 
 /* Templete title complete */
-#title-complete img {
-	height: 50px;
-    vertical-align: middle;
-    margin-right: 20px;
+#title-complete {
+	img { 
+		height: 50px;
+	    vertical-align: middle;    
+	    @media #{$medium-and-up} { margin-right: 20px; }
+	}
+	@media #{$small-and-down}{
+		text-align: center;
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto; 
+			margin-bottom: 10px;
+		}
+	}	
+} 
+
+/* Testimoniales */
+
+#testimoniales {
+	img {
+		display: block;
+		&.aligncenter { margin: auto; }
+		&.alignright { 
+			float: right;  
+			margin-left: 10px;
+		}
+		&.alignleft { 
+			float: left;  
+			margin-right: 10px;
+		}
+		@media #{$medium-and-down} {
+			&.alignright, &.alignleft { 
+				margin: 10px 0;
+				float: none; 
+			} 
+		}
+	}
+	.wp-video {
+		margin: auto;
+	}
+}
+
+/* Historia */
+.content-historia {
+	figure {
+		overflow: auto; 
+		img {
+			min-width: 680px;
+			@media #{$small-and-down} { min-width: 850px;  }
+		}
+	}
 }

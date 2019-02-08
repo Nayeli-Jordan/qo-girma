@@ -5,83 +5,47 @@
 
 
 #intro-actividad {
-	.col:first-child {
+	.content-actividad {
 		position: relative;
-		padding: 0px;
-		img { margin-bottom: -6px; }
-	}
-	.link-actividad {
-		position: absolute;
-		top: 0px;
-		bottom: 0px;
-		right: 23%;
+		width: 100%;
+		max-width: 450px;
+		margin: auto;
 		a {
 			position: absolute;
-			display: block;
-			padding: 15px 30px;
-			color: $primary-color; 
-			text-transform: uppercase;
-			font-weight: 600;
-			background-color: $light-color;
-			&:first-child { 
-				top: 28%;
-			}
-			&:nth-child(2) { 
-				top: 48%;
-				width: 220px;
-				height: 40px;
-				font-size: 14px;
-			}
-			&:nth-child(3) { 
-				top: 68%; 
-			}
-			span {
+			transform: rotate(45deg);
+			span { 
 				position: absolute;
-				right: -20px;
-				top: 0px;
-				width: 0; 
-				height: 0; 
-				border-left: 20px solid $light-color;
-				border-top: 20px solid transparent;
-				border-bottom: 20px solid transparent;
+				opacity: 0; 
+			}
+			&.link-necesitas-ayuda {
+				top: 5%;
+			    width: 30%;
+			    margin-left: 41%;
+			    padding-bottom: calc(30%);
+			}
+			&.link-logros {
+			    top: 24%;
+			    width: 27%;
+			    margin-left: 62%;
+			    padding-bottom: calc(27%);
+			}
+			&.link-historias-vida {
+			    bottom: 19%;
+			    width: 26%;
+			    margin-left: 69%;
+			    padding-bottom: calc(26%);
+			}
+			&.link-colabora {
+			    bottom: 5%;
+			    width: 24%;
+			    margin-left: 51%;
+			    padding-bottom: calc(24%);
 			}
 			&:hover {
-				color: $orange-color;
+				background-color: rgba(255, 255, 255, 0.08);
 			}
 		}
-		@media #{$medium-only} {
-			right: 25%;
-			a {
-				padding: 10px 20px;
-			}
-		}
-		@media #{$large-and-up} {
-			a {
-				&:nth-child(2) { width: 240px; }
-				&:first-child, &:nth-child(3) {
-					span {
-						right: -25px;
-						border-left: 25px solid $light-color;
-						border-top: 25px solid transparent;
-						border-bottom: 25px solid transparent;						
-					}					
-				}
-			}
-		}
-		@media #{$sm-and-down} {
-			position: relative;
-			top: inherit;
-			bottom: inherit;
-			right: inherit;
-			img { margin-bottom: -1px; }			
-			a {
-				position: relative;
-				width: 100%!important;
-				margin-bottom: -1px;
-				span { display: none; }
-			}
-		}
-	} 	
+	}
 } 
 
 /* TEMPLATE Content Complete */
@@ -106,12 +70,26 @@
 			display: none; 
 			padding-top: 10px;
 			transition: .3s ease-out;
+			ul, p { margin-bottom: 10px; }
 		}
 		&.active {
-			color: $purple-color;
+			color: $pink-color;
 			& .minor { display: inline-block; }
 			& .more { display: none; }
 			& + .content-faq { display: block; }
 		}
+	}
+}
+
+#testimoniales {
+	@media #{$sm-and-down} {
+		margin-top: 0px;
+		.padding-right-50 { padding-right: 0px; }
+		.padding-left-50 { padding-left: 0px; }
+		h3 {
+			text-align: left;
+			max-width: calc(100% - 60px);
+		}
+		.margin-bottom-75:last-child { margin-bottom: 0px; }
 	}
 }

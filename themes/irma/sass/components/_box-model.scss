@@ -46,6 +46,7 @@
 .margin-auto 				{ margin-left: auto; margin-right: auto; }
 
 @media #{$sm-and-down}{
+	.margin-bottom-large_sm-and-down		{ margin-bottom: ($box-space/4)*6; }
 	.margin-bottom-small_sm-and-down		{ margin-bottom: ($box-space/4)*3; }
 	.margin-bottom-xsmall_sm-and-down		{ margin-bottom: ($box-space/4)*2; }
 }
@@ -58,12 +59,14 @@
 .padding-top 				{ padding-top: $box-space; }
 .padding-top-large			{ padding-top: ($box-space/4)*5; }
 .padding-top-xlarge 		{ padding-top: ($box-space/4)*6; }
+.padding-top-50 			{ padding-top: 50px; }
 
 .padding-bottom-xsmall		{ padding-bottom: ($box-space/4)*2; }
 .padding-bottom-small 		{ padding-bottom: ($box-space/4)*3; }
 .padding-bottom 			{ padding-bottom: $box-space; }
 .padding-bottom-large		{ padding-bottom: ($box-space/4)*5; }
 .padding-bottom-xlarge 		{ padding-bottom: ($box-space/4)*6; }
+.padding-bottom-40	 		{ padding-bottom: 40px; }
 
 .padding-right-xsmall		{ padding-right: ($box-space/4)*2; }
 .padding-right-small 		{ padding-right: ($box-space/4)*3; }
