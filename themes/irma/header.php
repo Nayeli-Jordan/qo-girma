@@ -6,7 +6,7 @@
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- SEO -->
-		<meta name="keywords" content="">
+		<meta name="keywords" content="aborto, pérdida gestacional, ayuda, #NoEstásSola, atención psicológica, bebé, mujeres, rehabilitación, depresión">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<!-- Meta robots -->
@@ -53,6 +53,20 @@
 
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105788032-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-105788032-6');
+          gtag('config', 'AW-946177792');
+        </script>  -->
+        <!-- To do - Conversiones -->
+        <!-- <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-946177792/z5vPCKfQlHUQgI6WwwM', 'event_callback': callback }); return false; } </script> -->
+
 		<?php wp_head(); ?>
 	</head>
 	<?php if (is_home()) {
