@@ -23,5 +23,14 @@ jQuery(document).ready(function ($) {
 		meta_image_frame.open();
 	});
 
+	 /* Detectar template */
+	/*if ($('.post-php.post-type-page').length > 0) {
+		if(document.getElementById('page_template').value == "templates/template-title-with-content.php") {*/
+			/* Ver postbox contenido*/
+		/*} else {
+			$('#gi_page_meta').addClass('hide');
+		}    
+	}*/
+
 });
 
