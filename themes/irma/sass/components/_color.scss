@@ -2,15 +2,12 @@
 // ==========================================================================
 
 .color-primary 			{ color: $primary-color; }
-
 .color-light 			{ color: $light-color; }
 .color-dark 			{ color: $dark-color; }
 .color-blue 			{ color: $blue-color; }
-.color-blue-text 		{ color: $blue-text-color; }
 .color-pink 			{ color: $pink-color; }
 .color-red 				{ color: $red-dark-color; }
 .color-yellow 			{ color: $yellow-color; }
-
 
 // Bg Color
 // ==========================================================================
@@ -19,13 +16,4 @@
 .bg-orange 						{ background-color: $orange-color; }
 .bg-blue						{ background-color: $blue-color; }
 
-.bg-degrade-yellow_light_yellow { background-image: linear-gradient(to right, $orange-color -5%, $orange-color-xlight, $light-color 25%, $light-color 75%, $orange-color-xlight, $orange-color 105%); }
-.bg-degrade-yellow_to_yellow 	{ background-image: linear-gradient(to right, $orange-color , $orange-color-xlight, $orange-color); }
-.bg-degrade-purple_to_pink  	{ background-image: linear-gradient(to right, $blue-color -10%, $purple-color, $uva-dark-color, $uva-color, $pink-color 85%); }
-.bg-degrade-pink_to_purple  	{ background-image: linear-gradient(to right, $pink-color, $uva-color, $uva-dark-color, $purple-color, $blue-color); }
 .bg-degrade-pink_to_yellow  	{ background-image: linear-gradient(to right, $pink-color 10%, $orange-color, $yellow-color); }
-.bg-degrade-pinkLarge_to_yellow { background-image: linear-gradient(to right, $pink-color 20%, $orange-color 80%, $yellow-color); }
-
-.bg-degrade-blue_to_uva		  	{ background-image: linear-gradient(to right, $blue-color -10%, $purple-color 70%, $uva-dark-color); }
-.bg-degrade-purple_to_uva		{ background-image: linear-gradient(to right, $purple-color, $uva-dark-color 90%, $uva-color); }
-.bg-degrade-purple_to_uva-dark	{ background-image: linear-gradient(to right, $purple-color, $uva-dark-color); }

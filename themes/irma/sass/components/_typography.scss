@@ -98,7 +98,7 @@ small                         { font-size: 75%; }
 }
 .header-page h2 { @extend .text-shadow; }
 #body-page {
-  color: $blue-text-color;
+  color: $blue-color;
   a { 
     &:hover { 
       color: $uva-color;

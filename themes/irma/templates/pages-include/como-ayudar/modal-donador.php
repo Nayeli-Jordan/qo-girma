@@ -1,3 +1,4 @@
+<?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
 <div id="modal-donador" class="modal">
 	<div class="exit-modal"></div>
 	<div class="modal-content">
@@ -12,7 +13,7 @@
 				The information for your pre-registration as a frequent donor has been sent. Soon we will contact you to continue the process.
 			<?php endif; ?>
 			</p>
-			<a href="<?php echo SITEURL; ?>donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="btn" title="Enlace para volver a donativos">Cerrar</a>
+			<a href="<?php echo SITEURL; ?>seccion/donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="btn" title="Enlace para volver a donativos">Cerrar</a>
 		</div>
 	</div>
 </div>

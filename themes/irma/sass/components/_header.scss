@@ -2,11 +2,11 @@ header {
 	position: relative;
 	z-index: 99;
 	min-height: 154.2px;
-	@extend .bg-degrade-yellow_light_yellow;
+	@extend .bg-light;
 	@media #{$medium-and-down}{ min-height: 70.5px; }
 	#content-header {		
 		padding-top: 15px;
-		@extend .bg-degrade-yellow_light_yellow;
+		@extend .bg-light;
 		& > a {
 			display: block;
 			width: 170px;
@@ -211,24 +211,24 @@ header {
 
 .header-page {
 	color: $light-color;
-	padding: 30px 0;
-	@extend .bg-degrade-purple_to_uva;
+	padding: 15px 0;
+	@extend .bg-blue;
 	&:not(#header-page-complete) {
 		.container {
 			position: relative;
 			.icon-title {
 				position: absolute;
-			    bottom: -50px;
+			    bottom: -35px;
 				width: 40px;
 				height: 40px;
 				margin-left: 20px;
 				transform: rotate(45deg);
 				z-index: -1;
-				background-color: #524871;
+				@extend .bg-blue;
 			}		
 		}		
 	}
 	&#header-page-complete {
-		@extend .bg-degrade-purple_to_uva-dark;
+		@extend .bg-blue;
 	}
 }

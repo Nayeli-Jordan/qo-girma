@@ -24,11 +24,6 @@ var $=jQuery.noConflict();
 			if ($("#videoHome")[0]){
 				console.log('Hay video');
 				runVideo();
-				/*setTimeout( function(){
-			    	$('html, body').animate({		
-						scrollTop: $('#intro-video').offset().top
-					}, 1000);
-			   	}, 300);*/	
 			}
 
 			/* Sub page active */

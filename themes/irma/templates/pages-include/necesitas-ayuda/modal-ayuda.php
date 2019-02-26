@@ -1,3 +1,4 @@
+<?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
 <div id="modal-ayuda" class="modal">
 	<div class="exit-modal"></div>
 	<div class="modal-content">
@@ -12,7 +13,7 @@
 				Your message has been sent, we will contact you shortly to answer your comments.
 			<?php endif; ?>
 			</p>
-			<a href="<?php echo SITEURL; ?>preguntas-frecuentes<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="btn" title="Enlace a preguntas frecuentes">Cerrar</a>
+			<a href="<?php echo SITEURL; ?>seccion/preguntas-frecuentes<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="btn" title="Enlace a preguntas frecuentes">Cerrar</a>
 		</div>
 	</div>
 </div>

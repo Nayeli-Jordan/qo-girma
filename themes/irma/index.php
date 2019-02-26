@@ -39,7 +39,7 @@
 		} 
 		wp_reset_postdata(); ?>
 	</section>
-	<section id="intro-que-hacemos" class="bg-degrade-purple_to_uva-dark relative">
+	<section id="intro-que-hacemos" class="bg-blue relative">
 		<div class="title-degrade"><p class="bg-degrade-pink_to_yellow"><em class="icon-play icon-triangle-left color-pink"></em>
 			<?php if( 'es' == $lang ) : ?>
 				¿Qué hacemos?
