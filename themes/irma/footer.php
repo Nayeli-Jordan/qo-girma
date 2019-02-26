@@ -14,7 +14,7 @@
 						</a>
 					</div>
 					<div class="col s12 l6 footer-logos">
-						<p class="color-blue-text">
+						<p class="color-blue">
 							<?php if( 'es' == $lang ) : ?>
 								Responsables Sanitarios
 							<?php else : ?>
@@ -35,7 +35,7 @@
 							<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/footer/cemefi.jpg" alt="Logo de cemefi">
 							<a href="http://www.portalesmedicos.com/web_interes_sanitario/index.htm" target="_blank" class="inline-block" title="Link a certificación wis"><img class="responsive-img" src="<?php echo THEMEPATH; ?>images/footer/wis.jpg" alt="Logo de certificación wis"></a>
 						</div>
-						<p><a href="<?php echo THEMEPATH; ?>docs/aviso-de-privacidad.pdf" target="_blank" class="color-blue-text text-underline-hover" title="Link a aviso de privacidad"><?php if( 'es' == $lang ) : ?>Aviso de privacidad<?php else : ?>Notice of Privacy<?php endif; ?></a><span class="color-blue-text"> | </span><a href="<?php echo SITEURL; ?>seccion/informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-blue-text text-underline-hover" title="Link a informes anuales"><?php if( 'es' == $lang ) : ?>Informes anuales<?php else : ?>Annual reports<?php endif; ?>
+						<p><a href="<?php echo THEMEPATH; ?>docs/aviso-de-privacidad.pdf" target="_blank" class="color-blue text-underline-hover" title="Link a aviso de privacidad"><?php if( 'es' == $lang ) : ?>Aviso de privacidad<?php else : ?>Notice of Privacy<?php endif; ?></a><span class="color-blue"> | </span><a href="<?php echo SITEURL; ?>seccion/informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-blue text-underline-hover" title="Link a informes anuales"><?php if( 'es' == $lang ) : ?>Informes anuales<?php else : ?>Annual reports<?php endif; ?>
 						</a></p>
 						<div id="icons-redes-footer" class="hide-on-large-and-up">
 							<a href="https://www.facebook.com/InstitutoIRMAac" target="_blank" class="btn-facebook" title="Link a facebook Grupo Irma"><em class="icon-facebook"></em></a>
