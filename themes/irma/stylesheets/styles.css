@@ -1998,6 +1998,11 @@
   background-image: linear-gradient(to right, #e55e78 10%, #ef8f47, #f5dc8a);
 }
 
+/* line 20, ../sass/components/_color.scss */
+.bg-degrade-pink_to_yellow_large {
+  background-image: linear-gradient(to right, #e55e78 35%, #ef8f47, #f5dc8a);
+}
+
 /* line 4, ../sass/components/_effects.scss */
 .rotate-180 {
   transform: rotate(180deg);
@@ -2293,6 +2298,11 @@ ul li {
 ::-webkit-scrollbar-corner {
       background-color: black;
 } */
+/* line 67, ../sass/components/_global.scss */
+.accesibilidadImg {
+  display: none;
+}
+
 /* line 1, ../sass/components/_grid.scss */
 .container {
   margin: 0 auto;
@@ -8565,129 +8575,247 @@ small {
   }
 }
 
-/* line 8, ../sass/components/_utilities.scss */
+/* line 7, ../sass/components/_utilities.scss */
+#intro-actividad {
+  overflow: hidden;
+  /* .col_actividad { max-width: 600px; } */
+}
+/* line 10, ../sass/components/_utilities.scss */
 #intro-actividad .content-actividad {
   position: relative;
   width: 100%;
   max-width: 450px;
   margin: auto;
 }
-/* line 13, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a {
-  position: absolute;
-  transform: rotate(45deg);
+/* line 15, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad img {
+  position: relative;
 }
 /* line 16, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a span {
+#intro-actividad .content-actividad a:not(.link-text) {
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+/* line 20, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad a:not(.link-text) span {
   position: absolute;
   opacity: 0;
 }
-/* line 20, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a.link-necesitas-ayuda {
+/* line 24, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad a:not(.link-text).link-necesitas-ayuda {
   top: 5%;
   width: 30%;
   margin-left: 41%;
   padding-bottom: calc(30%);
 }
-/* line 26, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a.link-logros {
+/* line 30, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad a:not(.link-text).link-logros {
   top: 24%;
   width: 27%;
   margin-left: 62%;
   padding-bottom: calc(27%);
 }
-/* line 32, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a.link-historias-vida {
+/* line 36, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad a:not(.link-text).link-historias-vida {
   bottom: 19%;
   width: 26%;
   margin-left: 69%;
   padding-bottom: calc(26%);
 }
-/* line 38, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a.link-colabora {
+/* line 42, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad a:not(.link-text).link-colabora {
   bottom: 5%;
   width: 24%;
   margin-left: 51%;
   padding-bottom: calc(24%);
 }
-/* line 44, ../sass/components/_utilities.scss */
-#intro-actividad .content-actividad a:hover {
+/* line 48, ../sass/components/_utilities.scss */
+#intro-actividad .content-actividad a:not(.link-text):hover {
   background-color: rgba(255, 255, 255, 0.08);
+}
+/* line 53, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text {
+  position: absolute;
+  background-color: #fff;
+  color: #3b5182;
+  padding: 10px 10px 10px 90px;
+}
+/* line 58, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text:hover {
+  text-decoration: underline;
+}
+/* line 59, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text.link-necesitas-ayuda {
+  right: -30%;
+  top: 5%;
+}
+/* line 63, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text.link-logros {
+  right: -40%;
+  top: 25%;
+}
+/* line 67, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text.link-historias-vida {
+  right: -50%;
+  top: 65%;
+}
+/* line 71, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text.link-colabora {
+  right: -15%;
+  top: 85%;
+}
+@media only screen and (max-width: 600px) {
+  /* line 53, ../sass/components/_utilities.scss */
+  #intro-actividad a.link-text {
+    display: none;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 77, ../sass/components/_utilities.scss */
+  #intro-actividad a.link-text.link-necesitas-ayuda {
+    right: -35%;
+  }
+  /* line 78, ../sass/components/_utilities.scss */
+  #intro-actividad a.link-text.link-logros {
+    right: -45%;
+  }
+  /* line 79, ../sass/components/_utilities.scss */
+  #intro-actividad a.link-text.link-historias-vida {
+    right: -60%;
+  }
+  /* line 80, ../sass/components/_utilities.scss */
+  #intro-actividad a.link-text.link-colabora {
+    right: -25%;
+  }
+}
+/* line 82, ../sass/components/_utilities.scss */
+#intro-actividad a.link-text .icon-play {
+  position: absolute;
+  top: -3px;
+  right: -50px;
+  color: #fff;
+  font-size: 49px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 90, ../sass/components/_utilities.scss */
+  #intro-actividad .bg-absolute {
+    right: 62%;
+    /* max-width: 300px; */
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 90, ../sass/components/_utilities.scss */
+  #intro-actividad .bg-absolute {
+    right: 65%;
+  }
+}
+/* line 97, ../sass/components/_utilities.scss */
+#intro-actividad .bg-square {
+  position: absolute;
+  top: 50%;
+  height: 700px;
+  width: 700px;
+  transform: translateY(-50%) rotate(45deg);
+}
+@media only screen and (max-width: 600px) {
+  /* line 97, ../sass/components/_utilities.scss */
+  #intro-actividad .bg-square {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  /* line 97, ../sass/components/_utilities.scss */
+  #intro-actividad .bg-square {
+    right: -4%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 97, ../sass/components/_utilities.scss */
+  #intro-actividad .bg-square {
+    right: -7%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 97, ../sass/components/_utilities.scss */
+  #intro-actividad .bg-square {
+    right: 2%;
+  }
 }
 
 /* TEMPLATE Content Complete */
-/* line 52, ../sass/components/_utilities.scss */
+/* line 111, ../sass/components/_utilities.scss */
 #header-page-complete {
   position: relative;
   border-bottom: 5px solid #ef8f47;
 }
-/* line 55, ../sass/components/_utilities.scss */
+/* line 114, ../sass/components/_utilities.scss */
 #header-page-complete .container-limit.content-center {
   width: 90%;
 }
 
 /* Preguntas frecuentes */
-/* line 60, ../sass/components/_utilities.scss */
+/* line 119, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2 {
   font-size: 16px;
   cursor: pointer;
 }
-/* line 63, ../sass/components/_utilities.scss */
+/* line 122, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2 .minor, #preguntasFrecuentes h2 .more {
   display: inline-block;
   width: 10px;
   opacity: 0.7;
 }
-/* line 68, ../sass/components/_utilities.scss */
+/* line 127, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2 .minor {
   display: none;
 }
-/* line 69, ../sass/components/_utilities.scss */
+/* line 128, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2 + .content-faq {
   display: none;
   padding-top: 10px;
   transition: .3s ease-out;
 }
-/* line 73, ../sass/components/_utilities.scss */
+/* line 132, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2 + .content-faq ul, #preguntasFrecuentes h2 + .content-faq p {
   margin-bottom: 10px;
 }
-/* line 75, ../sass/components/_utilities.scss */
+/* line 134, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2.active {
   color: #e55e78;
 }
-/* line 77, ../sass/components/_utilities.scss */
+/* line 136, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2.active .minor {
   display: inline-block;
 }
-/* line 78, ../sass/components/_utilities.scss */
+/* line 137, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2.active .more {
   display: none;
 }
-/* line 79, ../sass/components/_utilities.scss */
+/* line 138, ../sass/components/_utilities.scss */
 #preguntasFrecuentes h2.active + .content-faq {
   display: block;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 84, ../sass/components/_utilities.scss */
+  /* line 143, ../sass/components/_utilities.scss */
   #testimoniales {
     margin-top: 0px;
   }
-  /* line 87, ../sass/components/_utilities.scss */
+  /* line 146, ../sass/components/_utilities.scss */
   #testimoniales .padding-right-50 {
     padding-right: 0px;
   }
-  /* line 88, ../sass/components/_utilities.scss */
+  /* line 147, ../sass/components/_utilities.scss */
   #testimoniales .padding-left-50 {
     padding-left: 0px;
   }
-  /* line 89, ../sass/components/_utilities.scss */
+  /* line 148, ../sass/components/_utilities.scss */
   #testimoniales h3 {
     text-align: left;
     max-width: calc(100% - 60px);
   }
-  /* line 93, ../sass/components/_utilities.scss */
+  /* line 152, ../sass/components/_utilities.scss */
   #testimoniales .margin-bottom-75:last-child {
     margin-bottom: 0px;
   }

@@ -50,7 +50,7 @@
 		<div class="[ container ]">
 			<div class="row padding-top-50 padding-bottom-40 text-center">
 				<div class="col s6 m3 margin-bottom-small_sm-and-down">
-					<a href="<?php echo SITEURL; ?>irma-te-escucha<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma te escucha">
+					<a href="<?php echo SITEURL; ?>seccion/irma-te-escucha<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma te escucha">
 						<img src="<?php echo THEMEPATH ?>images/irma/escucha.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma te escucha">
 						<?php if( 'es' == $lang ) : ?>
 							<p>Irma te<br> escucha</p>
@@ -60,7 +60,7 @@
 					</a>
 				</div>
 				<div class="col s6 m3 margin-bottom-small_sm-and-down">
-					<a href="<?php echo SITEURL; ?>irma-conoce<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma conoce">
+					<a href="<?php echo SITEURL; ?>seccion/irma-conoce<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma conoce">
 						<img src="<?php echo THEMEPATH ?>images/irma/conoce.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma conoce">
 						<?php if( 'es' == $lang ) : ?>
 							<p>Irma<br> conoce</p>
@@ -70,7 +70,7 @@
 					</a>
 				</div>
 				<div class="col s6 m3 margin-bottom-small_sm-and-down clear-on-sm-and-down">
-					<a href="<?php echo SITEURL; ?>irma-comunica<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma comunica">
+					<a href="<?php echo SITEURL; ?>seccion/irma-comunica<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma comunica">
 						<img src="<?php echo THEMEPATH ?>images/irma/comunica.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma comunica">
 						<?php if( 'es' == $lang ) : ?>
 							<p>Irma<br> comunica</p>
@@ -80,7 +80,7 @@
 					</a>
 				</div>
 				<div class="col s6 m3">
-					<a href="<?php echo SITEURL; ?>irma-transforma<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma transforma">
+					<a href="<?php echo SITEURL; ?>seccion/irma-transforma<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma transforma">
 						<img src="<?php echo THEMEPATH ?>images/irma/transforma.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma transforma">
 						<?php if( 'es' == $lang ) : ?>
 							<p>Irma<br> transforma</p>	
@@ -93,14 +93,22 @@
 		</div>
 	</section>
 	<section id="intro-actividad">
-		<div class="padding-top-bottom-large padding-left-right-small">
-			<div class="content-actividad">
-				<img src="<?php echo THEMEPATH ?>images/actividad_irma.png" class="responsive-img" alt="Cuadro de actividades de Grupo Irma">
-				<a href="<?php echo SITEURL; ?>formulario-necesitas-ayuda<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>Necesitas ayuda</span></a>
-				<a href="<?php echo SITEURL; ?>informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-logros" title="Enlace a logros Grupo Irma"><span>Logros</span></a>
-				<a href="<?php echo SITEURL; ?>historias-de-vida<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-historias-vida" title="Enlace a Historias de vida"><span>Historias de vida</span></a>
-				<a href="<?php echo SITEURL; ?>donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-colabora" title="Enlace a colabora, donativos"><span>Colabora</span></a>
-			</div>		
+		<div class="row relative padding-top-bottom-large padding-left-right-small  bg-degrade-pink_to_yellow_large">
+			<div class="bg-absolute bg-light"></div>
+			<div class="col_actividad col s12 m8 l6 relative">
+			<div class="bg-square bg-light"></div>
+				<div class="content-actividad">
+					<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>Necesitas ayuda</span><em class="icon-play"></em></a>
+					<a href="<?php echo SITEURL; ?>seccion/informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-logros" title="Enlace a logros Grupo Irma"><span>Logros</span><em class="icon-play"></em></a>
+					<a href="<?php echo SITEURL; ?>seccion/historias-de-vida<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-historias-vida" title="Enlace a Historias de vida"><span>Historias de vida</span><em class="icon-play"></em></a>
+					<a href="<?php echo SITEURL; ?>seccion/donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-colabora" title="Enlace a colabora, donativos"><span>Colabora</span><em class="icon-play"></em></a>
+					<img src="<?php echo THEMEPATH ?>images/actividad_irma.png" class="responsive-img" alt="Cuadro de actividades de Grupo Irma">
+					<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>Necesitas ayuda</span></a>
+					<a href="<?php echo SITEURL; ?>seccion/informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-logros" title="Enlace a logros Grupo Irma"><span>Logros</span></a>
+					<a href="<?php echo SITEURL; ?>seccion/historias-de-vida<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-historias-vida" title="Enlace a Historias de vida"><span>Historias de vida</span></a>
+					<a href="<?php echo SITEURL; ?>seccion/donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-colabora" title="Enlace a colabora, donativos"><span>Colabora</span></a>
+				</div>					
+			</div>
 		</div>
 	</section>
 <?php get_footer(); ?>

@@ -4,7 +4,7 @@
 					<div class="col s12 l6 footer-necesitas-ayuda">
 						<!-- TO DO - Conversión irá?
 						onclick="return gtag_report_conversion('https://irma.org.mx/contacto_ayuda.html');" -->
-						<a href="<?php echo SITEURL; ?>formulario-necesitas-ayuda<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="block" title="Link a Inicio sitio Grupo Irma">
+						<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="block" title="Link a Inicio sitio Grupo Irma">
 							<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/identidad/logo-light.png" alt="Logo blanco de Grupo Irma, comprender para fortalecer">
 							<?php if( 'es' == $lang ) : ?>
 								<h2>¿Necesitas ayuda?</h2>

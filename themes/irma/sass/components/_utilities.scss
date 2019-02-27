@@ -5,14 +5,18 @@
 
 
 #intro-actividad {
+	overflow: hidden;
+	/* .col_actividad { max-width: 600px; } */
 	.content-actividad {
 		position: relative;
 		width: 100%;
 		max-width: 450px;
 		margin: auto;
-		a {
+		img { position: relative; }
+		a:not(.link-text) {
 			position: absolute;
 			transform: rotate(45deg);
+			z-index: 3;
 			span { 
 				position: absolute;
 				opacity: 0; 
@@ -45,6 +49,61 @@
 				background-color: rgba(255, 255, 255, 0.08);
 			}
 		}
+	}
+	a.link-text{
+		position: absolute;
+		background-color: $light-color;
+		color: $blue-color;
+		padding: 10px 10px 10px 90px;
+		&:hover { text-decoration: underline; }
+		&.link-necesitas-ayuda {
+			right: -30%;
+			top: 5%;
+		}
+		&.link-logros {
+			right: -40%;
+			top: 25%;
+		}
+		&.link-historias-vida {
+			right: -50%;
+			top: 65%;
+		}
+		&.link-colabora {
+			right: -15%;
+			top: 85%;
+		}
+		@media #{$sm-and-down}{ display: none; }
+		@media #{$large-and-up}{
+			&.link-necesitas-ayuda 	{ right: -35%; }
+			&.link-logros 			{ right: -45%; }
+			&.link-historias-vida 	{ right: -60%; }
+			&.link-colabora 		{ right: -25%; }	
+		}
+		& .icon-play {			
+			position: absolute;
+			top: -3px;
+			right: -50px;
+			color: $light-color;
+			font-size: 49px;
+		}
+	}
+	.bg-absolute {
+		@media #{$medium-and-up} { 
+			right: 62%; 
+			/* max-width: 300px; */
+		}
+		@media #{$large-and-up} { right: 65%; }
+	}
+	.bg-square {
+		position: absolute;
+		top: 50%;
+	    height: 700px;
+	    width: 700px;
+	    transform: translateY(-50%) rotate(45deg);
+	    @media #{$sm-and-down} { display: none; }
+	    @media #{$medium-and-up} { right: -4%; }
+		@media #{$large-and-up} { right: -7%; }
+		@media #{$extra-large-and-up} { right: 2%; }
 	}
 } 
 
@@ -93,3 +152,4 @@
 		.margin-bottom-75:last-child { margin-bottom: 0px; }
 	}
 }
+

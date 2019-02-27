@@ -17,3 +17,4 @@
 .bg-blue						{ background-color: $blue-color; }
 
 .bg-degrade-pink_to_yellow  	{ background-image: linear-gradient(to right, $pink-color 10%, $orange-color, $yellow-color); }
+.bg-degrade-pink_to_yellow_large{ background-image: linear-gradient(to right, $pink-color 35%, $orange-color, $yellow-color); }
