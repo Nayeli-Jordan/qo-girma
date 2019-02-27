@@ -12,7 +12,11 @@
 		width: 100%;
 		max-width: 450px;
 		margin: auto;
-		img { position: relative; }
+		img { 
+			position: relative;
+			filter: drop-shadow(-5px 1px 5px #d0d0d0);
+			-webkit-filter: drop-shadow(-5px 1px 5px #d0d0d0);
+		}
 		a:not(.link-text) {
 			position: absolute;
 			transform: rotate(45deg);
@@ -54,37 +58,38 @@
 		position: absolute;
 		background-color: $light-color;
 		color: $blue-color;
-		padding: 10px 10px 10px 90px;
+		padding: 15px 15px 15px 110px;
+		font-size: 20px;
 		&:hover { text-decoration: underline; }
 		&.link-necesitas-ayuda {
-			right: -30%;
-			top: 5%;
+			right: -39%;
+			top: 2%;
 		}
 		&.link-logros {
-			right: -40%;
+			right: -49%;
 			top: 25%;
 		}
 		&.link-historias-vida {
-			right: -50%;
+			right: -52%;
 			top: 65%;
 		}
 		&.link-colabora {
-			right: -15%;
-			top: 85%;
+			right: -23%;
+			top: 90%;
 		}
 		@media #{$sm-and-down}{ display: none; }
 		@media #{$large-and-up}{
-			&.link-necesitas-ayuda 	{ right: -35%; }
-			&.link-logros 			{ right: -45%; }
-			&.link-historias-vida 	{ right: -60%; }
+			&.link-necesitas-ayuda 	{ right: -40%; }
+			&.link-logros 			{ right: -50%; }
+			&.link-historias-vida 	{ right: -70%; }
 			&.link-colabora 		{ right: -25%; }	
 		}
 		& .icon-play {			
 			position: absolute;
 			top: -3px;
-			right: -50px;
+			right: -61px;
 			color: $light-color;
-			font-size: 49px;
+			font-size: 60px;
 		}
 	}
 	.bg-absolute {
