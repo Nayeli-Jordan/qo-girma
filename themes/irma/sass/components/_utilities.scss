@@ -110,13 +110,6 @@
 		@media #{$large-and-up} { right: -7%; }
 		@media #{$extra-large-and-up} { right: 2%; }
 	}
-} 
-
-/* TEMPLATE Content Complete */
-#header-page-complete {
-	position: relative;
-	border-bottom: 5px solid $orange-color;
-	.container-limit.content-center { width: 90%; }
 }
 
 /* Preguntas frecuentes */

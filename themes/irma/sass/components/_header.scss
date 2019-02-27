@@ -213,22 +213,17 @@ header {
 	color: $light-color;
 	padding: 15px 0;
 	@extend .bg-blue;
-	&:not(#header-page-complete) {
-		.container {
-			position: relative;
-			.icon-title {
-				position: absolute;
-			    bottom: -35px;
-				width: 40px;
-				height: 40px;
-				margin-left: 20px;
-				transform: rotate(45deg);
-				z-index: -1;
-				@extend .bg-blue;
-			}		
+	.container {
+		position: relative;
+		.icon-title {
+			position: absolute;
+		    bottom: -35px;
+			width: 40px;
+			height: 40px;
+			margin-left: 20px;
+			transform: rotate(45deg);
+			z-index: -1;
+			@extend .bg-blue;
 		}		
-	}
-	&#header-page-complete {
-		@extend .bg-blue;
 	}
 }

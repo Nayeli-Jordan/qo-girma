@@ -13,11 +13,6 @@ var $=jQuery.noConflict();
 			if ($('#intro-video').length === 0){
 				fixedMenu();
 			}
-			/* Templete Content Complete */
-			if ($('#header-page-complete').length > 0) {
-				contentComplete();
-				$('.main-body').addClass('bg-orange');
-			}
 			/* Validación form */
 			$('form.validation').parsley();
 			/* VIDEO */
@@ -53,10 +48,6 @@ var $=jQuery.noConflict();
 			footerBottom();
 			if ($('#intro-video').length === 0){
 				fixedMenu();
-			}
-			/* Templete Content Complete */
-			if ($('#header-page-complete').length > 0) {
-				contentComplete();
 			}
 		});
  
@@ -188,26 +179,4 @@ function runVideo(){
 		$('#videoControles').addClass('hide');
 		$('#videoPortada').removeClass('hide');
 	});
-}
-
-/* Template Complete content */
-function contentComplete(){	
-	/* Eliminar min-height previa si se está cambiando el tamaño de la pantalla*/
-	$('#header-page-complete').css({ 'min-height': '' });
-	
-	var heightHeaderFooter  = getFooterHeight() + getHeaderHeight();
-	var pageHeight			= $('body').outerHeight();
-	var heightContent		= pageHeight - heightHeaderFooter;
-	console.log(heightHeaderFooter);
-	console.log(heightContent);
-	$('#header-page-complete').css({ 'min-height': heightContent });
-
-	/* Verificar si el contenido puede tener center full */
-	heightConteiner 	= $('.container-limit').outerHeight();
-	heightConteiner 	= heightConteiner + 65; /* Padding y border (30 + 30 + 5) */
-	if (heightConteiner < heightContent) {
-		$('.container-limit').addClass('content-center');
-	} else {
-		$('.container-limit').removeClass('content-center');
-	}
 }
