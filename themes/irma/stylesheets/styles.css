@@ -1950,6 +1950,24 @@
   background-color: #804971;
 }
 
+/* line 23, ../sass/components/_buttons.scss */
+.btn-twitter {
+  background-color: #00acee;
+  color: #fff !important;
+  line-height: 28px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+/* line 29, ../sass/components/_buttons.scss */
+.btn-twitter em {
+  font-size: 10px;
+  margin-right: 2px;
+}
+/* line 33, ../sass/components/_buttons.scss */
+.btn-twitter:hover {
+  background-color: #08a1db;
+}
+
 /* line 4, ../sass/components/_color.scss */
 .color-primary {
   color: #3f5484;
@@ -2134,7 +2152,7 @@ select {
   font-size: 14px;
   font-family: "myriad_proregular", sans-serif;
   line-height: 30px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0px;
   border: 0px;
   outline: none;
@@ -3784,17 +3802,17 @@ video.responsive-video {
 }
 
 /* line 20, ../sass/components/_media.scss */
-.bg-image {
+.bg-image, .bg-flor {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 /* line 24, ../sass/components/_media.scss */
-.bg-image.bg-contain {
+.bg-image.bg-contain, .bg-flor {
   background-size: contain;
 }
 /* line 25, ../sass/components/_media.scss */
-.bg-image.bg-repeat {
+.bg-image.bg-repeat, .bg-repeat.bg-flor {
   background-repeat: repeat;
 }
 
@@ -3804,7 +3822,7 @@ video.responsive-video {
 }
 
 /* line 32, ../sass/components/_media.scss */
-.bg-absolute {
+.bg-absolute, .bg-flor {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3876,12 +3894,12 @@ video.responsive-video {
 }
 
 /* line 90, ../sass/components/_media.scss */
-#gallery .bg-image {
+#gallery .bg-image, #gallery .bg-flor {
   padding-bottom: 30%;
 }
 @media only screen and (max-width: 600px) {
   /* line 90, ../sass/components/_media.scss */
-  #gallery .bg-image {
+  #gallery .bg-image, #gallery .bg-flor {
     padding-bottom: 50%;
   }
 }
@@ -3964,6 +3982,14 @@ video.responsive-video {
   .content-historia figure img {
     min-width: 850px;
   }
+}
+
+/* Bg flor IRMA */
+/* line 162, ../sass/components/_media.scss */
+.bg-flor {
+  background-image: url(../images/flor.png);
+  opacity: 0.4;
+  z-index: -1;
 }
 
 /* line 2, ../sass/components/_modal.scss */
@@ -8090,254 +8116,259 @@ video.responsive-video {
 }
 
 /* line 52, ../sass/components/_position.scss */
+.block_imp {
+  display: block !important;
+}
+
+/* line 53, ../sass/components/_position.scss */
 .inline-block_imp {
   display: inline-block !important;
 }
 
-/* line 53, ../sass/components/_position.scss */
+/* line 54, ../sass/components/_position.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 54, ../sass/components/_position.scss */
+/* line 55, ../sass/components/_position.scss */
 .flex {
   display: flex;
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 56, ../sass/components/_position.scss */
+  /* line 57, ../sass/components/_position.scss */
   .hide-on-small {
     display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 57, ../sass/components/_position.scss */
+  /* line 58, ../sass/components/_position.scss */
   .hide-on-sm-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 58, ../sass/components/_position.scss */
+  /* line 59, ../sass/components/_position.scss */
   .hide-on-sm {
     display: none;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 59, ../sass/components/_position.scss */
+  /* line 60, ../sass/components/_position.scss */
   .hide-on-sm-and-up {
     display: none;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 60, ../sass/components/_position.scss */
+  /* line 61, ../sass/components/_position.scss */
   .hide-on-med-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 61, ../sass/components/_position.scss */
+  /* line 62, ../sass/components/_position.scss */
   .hide-on-med {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 62, ../sass/components/_position.scss */
+  /* line 63, ../sass/components/_position.scss */
   .hide-on-med-and-up {
     display: none;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 63, ../sass/components/_position.scss */
+  /* line 64, ../sass/components/_position.scss */
   .hide-on-large-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 64, ../sass/components/_position.scss */
+  /* line 65, ../sass/components/_position.scss */
   .hide-on-large {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 65, ../sass/components/_position.scss */
+  /* line 66, ../sass/components/_position.scss */
   .hide-on-large-and-up {
     display: none;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 66, ../sass/components/_position.scss */
+  /* line 67, ../sass/components/_position.scss */
   .hide-on-extra-large {
     display: none;
   }
 }
 @media only screen and (max-width: 430px) {
-  /* line 68, ../sass/components/_position.scss */
+  /* line 69, ../sass/components/_position.scss */
   .show-on-small {
     display: block;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 69, ../sass/components/_position.scss */
+  /* line 70, ../sass/components/_position.scss */
   .show-on-sm-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 70, ../sass/components/_position.scss */
+  /* line 71, ../sass/components/_position.scss */
   .show-on-sm {
     display: block;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 71, ../sass/components/_position.scss */
+  /* line 72, ../sass/components/_position.scss */
   .show-on-sm-and-up {
     display: block;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 72, ../sass/components/_position.scss */
+  /* line 73, ../sass/components/_position.scss */
   .show-on-med-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 73, ../sass/components/_position.scss */
+  /* line 74, ../sass/components/_position.scss */
   .show-on-med {
     display: block;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 74, ../sass/components/_position.scss */
+  /* line 75, ../sass/components/_position.scss */
   .show-on-med-and-up {
     display: block;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 75, ../sass/components/_position.scss */
+  /* line 76, ../sass/components/_position.scss */
   .show-on-large-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 76, ../sass/components/_position.scss */
+  /* line 77, ../sass/components/_position.scss */
   .show-on-large {
     display: block;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 77, ../sass/components/_position.scss */
+  /* line 78, ../sass/components/_position.scss */
   .show-on-large-and-up {
     display: block;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 78, ../sass/components/_position.scss */
+  /* line 79, ../sass/components/_position.scss */
   .show-on-extra-large {
     display: block;
   }
 }
-/* line 83, ../sass/components/_position.scss */
+/* line 84, ../sass/components/_position.scss */
 .clear {
   clear: both;
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 85, ../sass/components/_position.scss */
+  /* line 86, ../sass/components/_position.scss */
   .clear-on-small {
     clear: both;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 86, ../sass/components/_position.scss */
+  /* line 87, ../sass/components/_position.scss */
   .clear-on-sm-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 87, ../sass/components/_position.scss */
+  /* line 88, ../sass/components/_position.scss */
   .clear-on-sm {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 88, ../sass/components/_position.scss */
+  /* line 89, ../sass/components/_position.scss */
   .clear-on-sm-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 89, ../sass/components/_position.scss */
+  /* line 90, ../sass/components/_position.scss */
   .clear-on-med-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 90, ../sass/components/_position.scss */
+  /* line 91, ../sass/components/_position.scss */
   .clear-on-med {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 91, ../sass/components/_position.scss */
+  /* line 92, ../sass/components/_position.scss */
   .clear-on-med-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 92, ../sass/components/_position.scss */
+  /* line 93, ../sass/components/_position.scss */
   .clear-on-large-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 93, ../sass/components/_position.scss */
+  /* line 94, ../sass/components/_position.scss */
   .clear-on-large {
     clear: both;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 94, ../sass/components/_position.scss */
+  /* line 95, ../sass/components/_position.scss */
   .clear-on-large-and-up {
     clear: both;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 95, ../sass/components/_position.scss */
+  /* line 96, ../sass/components/_position.scss */
   .clear-on-extra-large {
     clear: both;
   }
 }
-/* line 101, ../sass/components/_position.scss */
+/* line 102, ../sass/components/_position.scss */
 .overflow-hide {
   overflow: hidden;
 }
 
-/* line 102, ../sass/components/_position.scss */
+/* line 103, ../sass/components/_position.scss */
 .overflow-x-hide {
   overflow: hidden;
 }
 
-/* line 103, ../sass/components/_position.scss */
+/* line 104, ../sass/components/_position.scss */
 .overflow-y-hide {
   overflow: hidden;
 }
 
-/* line 105, ../sass/components/_position.scss */
+/* line 106, ../sass/components/_position.scss */
 .z-index-1 {
   z-index: 1;
 }
 
-/* line 106, ../sass/components/_position.scss */
+/* line 107, ../sass/components/_position.scss */
 .z-index--1 {
   z-index: -1;
 }
 
-/* line 112, ../sass/components/_position.scss */
+/* line 113, ../sass/components/_position.scss */
 .transform-x-50 {
   transform: translateX(50%);
 }
 
-/* line 124, ../sass/components/_position.scss */
+/* line 125, ../sass/components/_position.scss */
 .content-center {
   width: 100%;
   position: absolute;
@@ -8725,20 +8756,20 @@ small {
 #intro-actividad a.link-text .icon-play {
   position: absolute;
   top: -3px;
-  right: -61px;
+  right: -64px;
   color: #fff;
-  font-size: 60px;
+  font-size: 62px;
 }
 @media only screen and (min-width: 601px) {
   /* line 95, ../sass/components/_utilities.scss */
-  #intro-actividad .bg-absolute {
+  #intro-actividad .bg-absolute, #intro-actividad .bg-flor {
     right: 62%;
     /* max-width: 300px; */
   }
 }
 @media only screen and (min-width: 993px) {
   /* line 95, ../sass/components/_utilities.scss */
-  #intro-actividad .bg-absolute {
+  #intro-actividad .bg-absolute, #intro-actividad .bg-flor {
     right: 65%;
   }
 }

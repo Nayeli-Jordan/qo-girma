@@ -18,8 +18,10 @@
 		<section id="body-page" class="[ container container-limit ] <?php if (is_page('historia')) { echo 'content-historia'; } ?>">
 			<div class="row padding-top-bottom-xlarge">				
 				<div class="col s12 fontfam-text">
-					<?php the_content(); ?>
-					<?php if (is_page('preguntas-frecuentes')) {
+					<?php if (!is_page('informes-anuales')) {
+						the_content();
+					} 
+					if (is_page('preguntas-frecuentes')) {
 						include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/preguntas-frecuentes.php');
 					} else if  (is_page('formulario-necesitas-ayuda')) {						
 						include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/modal-ayuda.php');

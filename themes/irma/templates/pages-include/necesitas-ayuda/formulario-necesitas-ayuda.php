@@ -7,6 +7,7 @@
 	endif;
 ?>
 <div class="row row-complete margin-top-large">
+	<div class="bg-flor"></div>
 	<form id="necesitasAyuda-form" action=""  method="post" class="validation" data-parsley-nayuda>
 		<div class="col s12 sm6 margin-bottom-small">
 			<label for="gi_nombre"><?php if( 'es' == $lang ) : ?>Nombre Completo<?php else: ?>Full name<?php endif; ?><span class="color-red">*</span>:</label>

@@ -156,3 +156,14 @@ video.responsive-video {
 		}
 	}
 }
+
+/* Bg flor IRMA */
+
+.bg-flor {
+	background-image: url(../images/flor.png);
+    opacity: 0.4;
+	z-index: -1;
+	@extend .bg-absolute;
+	@extend .bg-image;
+	@extend .bg-contain;
+}

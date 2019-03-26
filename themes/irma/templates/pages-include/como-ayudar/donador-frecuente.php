@@ -7,6 +7,7 @@
 	endif;
 ?>
 <div class="row row-complete">
+	<div class="bg-flor"></div>
 	<form id="donador-form" action=""  method="post" class="validation" data-parsley-donacion>
 		<div class="col s12 margin-top-bottom-small"><p class="color-pink"><strong><?php if( 'es' == $lang ) : ?>Datos generales<?php else: ?>General info<?php endif; ?></strong></p></div>
 		<div class="col s12 sm6 m4 margin-bottom-small">
