@@ -32,9 +32,8 @@
 		     		<em id="videoPlay" class="icon-play hide"></em>
 		     		<em id="videoStop" class="icon-stop"></em>
 		     		<em id="videoVolumen" class="icon-volume"><span class="pulse"></span></em>
-		     		<em id="videoMute" class="icon-volume-off hide"></em>	     			
+		     		<em id="videoMute" class="icon-volume-off hide"></em>
 	     		</div>
-
 			<?php endwhile;
 		} 
 		wp_reset_postdata(); ?>
@@ -53,9 +52,9 @@
 					<a href="<?php echo SITEURL; ?>seccion/irma-te-escucha<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma te escucha">
 						<img src="<?php echo THEMEPATH ?>images/irma/escucha.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma te escucha">
 						<?php if( 'es' == $lang ) : ?>
-							<p>Irma te<br> escucha</p>
+							<p><span class="font-irma">IRMA</span> te<br> escucha</p>
 						<?php else: ?>
-							<p>Irma listens<br> to you</p>
+							<p><span class="font-irma">IRMA</span> listens<br> to you</p>
 						<?php endif; ?>		
 					</a>
 				</div>
@@ -63,9 +62,9 @@
 					<a href="<?php echo SITEURL; ?>seccion/irma-conoce<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma conoce">
 						<img src="<?php echo THEMEPATH ?>images/irma/conoce.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma conoce">
 						<?php if( 'es' == $lang ) : ?>
-							<p>Irma<br> conoce</p>
+							<p><span class="font-irma">IRMA</span><br> conoce</p>
 						<?php else: ?>
-							<p>Irma<br> knows</p>
+							<p><span class="font-irma">IRMA</span><br> knows</p>
 						<?php endif; ?>
 					</a>
 				</div>
@@ -73,9 +72,9 @@
 					<a href="<?php echo SITEURL; ?>seccion/irma-comunica<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma comunica">
 						<img src="<?php echo THEMEPATH ?>images/irma/comunica.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma comunica">
 						<?php if( 'es' == $lang ) : ?>
-							<p>Irma<br> comunica</p>
+							<p><span class="font-irma">IRMA</span><br> comunica</p>
 						<?php else: ?>
-							<p>Irma<br> communicates</p>
+							<p><span class="font-irma">IRMA</span><br> communicates</p>
 						<?php endif; ?>		
 					</a>
 				</div>
@@ -83,9 +82,9 @@
 					<a href="<?php echo SITEURL; ?>seccion/irma-transforma<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="color-light block" title="Link a Irma transforma">
 						<img src="<?php echo THEMEPATH ?>images/irma/transforma.png" class="responsive-img margin-bottom-xsmall" alt="Icono de Irma transforma">
 						<?php if( 'es' == $lang ) : ?>
-							<p>Irma<br> transforma</p>	
+							<p><span class="font-irma">IRMA</span><br> transforma</p>	
 						<?php else: ?>
-							<p>Irma<br> transforms</p>	
+							<p><span class="font-irma">IRMA</span><br> transforms</p>	
 						<?php endif; ?>	
 					</a>
 				</div>

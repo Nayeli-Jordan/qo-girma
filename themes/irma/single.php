@@ -1,6 +1,8 @@
 <?php 
 	get_header();
 	global $post;
+
+	$lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */
 	
 	while ( have_posts() ) : the_post(); 
 		$custom_fields  = get_post_custom();

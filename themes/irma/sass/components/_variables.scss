@@ -85,6 +85,15 @@ $size-percent:			100 !default;
 }
 $font-default: 			"myriad_proregular", sans-serif !default;
 
+@font-face {
+    font-family: "timeburnerbold";
+    src: url("../fonts/timeburnerbold.ttf");
+    src: url("../fonts/timeburnerbold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+$font-irma: 			"timeburnerbold", sans-serif !default;
+
 // Header Styles
 $h1-fontsize: 			32px !default;
 $h2-fontsize: 			30px !default;

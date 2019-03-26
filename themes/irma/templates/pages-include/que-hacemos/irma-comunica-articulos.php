@@ -1,11 +1,11 @@
 <?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
 <div id="gi_articulos" class="margin-top-large">    
     <div class="margin-bottom-xlarge">
-        <h3 class="margin-bottom-small">IRMA - 
+        <h3 class="margin-bottom-small strong"> 
         <?php if( 'es' == $lang ) : ?>
-            Artículos científicos
+            Publicaciones <span class="font-irma">IRMA</span>
         <?php else : ?>
-            Scientific articles
+            <span class="font-irma">IRMA</span> publications
         <?php endif; ?></h3>    
         <?php 
             $args = array(
@@ -34,9 +34,11 @@
                 <?php $i++; endwhile;
             } 
             wp_reset_postdata(); ?>
+            <h4 class="margin-bottom-xsmall"><em class="icon-doc-text"></em>Guía para el Diagnóstico y Atención de los Efectos Posaborto (Disponible físicamente sólo en nuestras oficinas)</h4>
+            <img src="<?php echo THEMEPATH; ?>images/guia_irma.jpg" class="responsive-img">
     </div>
     <div class="margin-bottom-xlarge">
-        <h3 class="margin-bottom-small">IRMA - 
+        <h3 class="margin-bottom-small strong"><span class="font-irma">IRMA</span> - 
         <?php if( 'es' == $lang ) : ?>
             Artículos de interés
         <?php else : ?>
@@ -78,7 +80,7 @@
             wp_reset_postdata(); ?>         
     </div>
     <div>
-        <h3 class="margin-bottom-small"> 
+        <h3 class="margin-bottom-small strong"> 
         <?php if( 'es' == $lang ) : ?>
             Artículos relacionados
         <?php else : ?>

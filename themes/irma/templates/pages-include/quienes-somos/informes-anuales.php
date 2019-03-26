@@ -16,7 +16,7 @@
                     $post_id        = get_the_ID();
                     $url       = get_post_meta( $post_id, 'gi_informe_anual_url', true ); ?>
 
-                    <a href="<?php echo $url; ?>" class="color-primary block margin-bottom-small" target="_blank" title="Enlace a Informe anual <?php the_title(); ?>"><h3 class="fontfam-text margin-bottom-xsmall"><em class="icon-doc-text"></em> <?php if( 'es' == $lang ) : ?>Informe<?php else: ?>Report<?php endif; ?> <?php the_title(); ?></h3></a>
+                    <a href="<?php echo $url; ?>" class="margin-bottom-small margin-right-small btn" target="_blank" title="Enlace a Informe anual <?php the_title(); ?>"><?php if( 'es' == $lang ) : ?>Informe<?php else: ?>Report<?php endif; ?> <?php the_title(); ?></a>
 
                 <?php $i++; endwhile;
             } 

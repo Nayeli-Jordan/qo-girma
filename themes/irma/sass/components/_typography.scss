@@ -10,13 +10,18 @@ a {
 html{
   line-height: 1.5;
   color: $dark-color;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 26px;
   font-family: $font-default;
   font-weight: 700;
   letter-spacing: 0.5px;
-  & .fontfam-text{
-    letter-spacing: 0.2;
+  & .fontfam-text{ letter-spacing: 0.2; }
+  #body-page {
+    strong, .strong, b {
+      color: #f56900;
+      font-size: 19px; 
+    }
+    a:not(.btn) { color: $uva-color; }    
   }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -36,6 +41,11 @@ h5 { font-size: $h5-fontsize;}
 h6 { font-size: $h6-fontsize;}
 
 p { margin: 0px; }
+
+.font-irma { //<span class="font-irma">IRMA</span>
+  font-family: $font-irma;
+  text-transform: uppercase;
+}
 
 // Text Styles
 em                            { font-style: italic; }
@@ -86,9 +96,6 @@ small                         { font-size: 75%; }
 
 /* Heder-page */
 .header-page, #body-page {
-  strong {
-    font-family: $font-default;
-  }
   ul {
     padding: 0 20px;
     li {

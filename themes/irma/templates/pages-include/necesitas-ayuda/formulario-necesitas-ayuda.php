@@ -80,7 +80,7 @@
 <div class="text-center margin-top-xlarge">
 	<em class="icon-phone icon-xlarge margin-bottom-xxsmall block"></em>
 	<h3><?php if( 'es' == $lang ) : ?>Llámanos:<?php else: ?>Call us<?php endif; ?></h3>
-	<p><?php if( 'es' == $lang ) : ?>México<?php else: ?>Mexico<?php endif; ?>: 5260 3178 / 5260 8859 <br>01 800 911 IRMA (4762)</p>	
+	<p><?php if( 'es' == $lang ) : ?>México<?php else: ?>Mexico<?php endif; ?>: 5260 3178 / 5260 8859 <br>911 <span class="font-irma">IRMA</span> (4762)</p>	
 </div>
 
 <?php if(isset($_POST['submitNAyuda'])){

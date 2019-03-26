@@ -190,7 +190,7 @@ function display_gi_articulo_atributos( $gi_articulo ){
         <tr>
             <th>
                 <label for="gi_articulo_url">URL*:</label>
-                <input type="text" name="gi_articulo_url" id="gi_articulo_url" class="meta-image" value="<?php echo $url; ?>" required>
+                <input type="text" name="gi_articulo_url" id="gi_articulo_url" class="meta-image" value="<?php echo $url; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </th>
         </tr>
@@ -260,14 +260,12 @@ function display_gi_donador_frecuente_atributos( $gi_donador_frecuente ){
     $email              = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_email', true ) );
     $nacimiento         = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_nacimiento', true ) );
     $reciboNombre       = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboNombre', true ) );
+    $reciboRfc          = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboRfc', true ) );
+    $reciboCalle      = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboCalle', true ) );
     $reciboColonia      = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboColonia', true ) );
     $reciboDelegacion   = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboDelegacion', true ) );
     $reciboCp           = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboCp', true ) );
     $reciboPais         = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboPais', true ) );
-    $reciboRfc          = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboRfc', true ) );
-    $promotorNombre     = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_promotorNombre', true ) );
-    $promotorEmail      = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_promotorEmail', true ) );
-    $promotorTel        = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_promotorTel', true ) );
 ?>
     <table class="gi-custom-fields">
         <tr><th colspan="3" style="padding: 20px 0 10px; color: #c24871;">DATOS GENERALES</th></tr>
@@ -329,20 +327,30 @@ function display_gi_donador_frecuente_atributos( $gi_donador_frecuente ){
         </tr>
         <tr><th colspan="3" style="padding: 20px 0 10px; color: #c24871;">DATOS PARA RECIBO DEDUCIBLE DE IMPUESTOS</th></tr>
         <tr>
-            <th>
+            <th colspan="3">
                 <label for="gi_donador_frecuente_reciboNombre">Recibo a favor de*:</label>
                 <input type="text" id="gi_donador_frecuente_reciboNombre" name="gi_donador_frecuente_reciboNombre" value="<?php echo $reciboNombre; ?>" required>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label for="gi_donador_frecuente_reciboRfc">RFC*:</label>
+                <input type="text" id="gi_donador_frecuente_reciboRfc" name="gi_donador_frecuente_reciboRfc" value="<?php echo $reciboRfc; ?>" required>
+            </th>
+            <th>
+                <label for="gi_donador_frecuente_reciboCalle">Calle*:</label>
+                <input type="text" id="gi_donador_frecuente_reciboCalle" name="gi_donador_frecuente_reciboCalle" value="<?php echo $reciboCalle; ?>" required>
             </th>
             <th>
                 <label for="gi_donador_frecuente_reciboColonia">Colonia*:</label>
                 <input type="text" id="gi_donador_frecuente_reciboColonia" name="gi_donador_frecuente_reciboColonia" value="<?php echo $reciboColonia; ?>" required>
             </th>
+        </tr>
+        <tr>
             <th>
                 <label for="gi_donador_frecuente_reciboDelegacion">Delegación*:</label>
                 <input type="text" id="gi_donador_frecuente_reciboDelegacion" name="gi_donador_frecuente_reciboDelegacion" value="<?php echo $reciboDelegacion; ?>" required>
             </th>
-        </tr>
-        <tr>
             <th>
                 <label for="gi_donador_frecuente_reciboCp">Código Postal*:</label>
                 <input type="number" id="gi_donador_frecuente_reciboCp" name="gi_donador_frecuente_reciboCp" value="<?php echo $reciboCp; ?>" required>
@@ -350,26 +358,6 @@ function display_gi_donador_frecuente_atributos( $gi_donador_frecuente ){
             <th>
                 <label for="gi_donador_frecuente_reciboPais">País/Estado*:</label>
                 <input type="text" id="gi_donador_frecuente_reciboPais" name="gi_donador_frecuente_reciboPais" value="<?php echo $reciboPais; ?>" required>
-            </th>
-            <th>
-                <label for="gi_donador_frecuente_reciboRfc">RFC*:</label>
-                <input type="text" id="gi_donador_frecuente_reciboRfc" name="gi_donador_frecuente_reciboRfc" value="<?php echo $reciboRfc; ?>" required>
-            </th>
-        </tr>
-
-        <tr><th colspan="3" style="padding: 20px 0 10px; color: #c24871;">DATOS DEL PROMOTOR<br></th></tr>
-        <tr>
-            <th>
-                <label for="gi_donador_frecuente_promotorNombre">Nombre*:</label>
-                <input type="text" id="gi_donador_frecuente_promotorNombre" name="gi_donador_frecuente_promotorNombre" value="<?php echo $promotorNombre; ?>" required>
-            </th>
-            <th>
-                <label for="gi_donador_frecuente_promotorEmail">Correo Electrónico*:</label>
-                <input type="email" id="gi_donador_frecuente_promotorEmail" name="gi_donador_frecuente_promotorEmail" value="<?php echo $promotorEmail; ?>" required>
-            </th>
-            <th>
-                <label for="gi_donador_frecuente_promotorTel">Teléfono*:</label>
-                <input type="number" id="gi_donador_frecuente_promotorTel" name="gi_donador_frecuente_promotorTel" value="<?php echo $promotorTel; ?>" required>
             </th>
         </tr>
     </table>
@@ -418,6 +406,12 @@ function gi_donador_frecuente_save_metas( $idgi_donador_frecuente, $gi_donador_f
         if ( isset( $_POST['gi_donador_frecuente_reciboNombre'] ) ){
             update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboNombre', $_POST['gi_donador_frecuente_reciboNombre'] );
         }
+        if ( isset( $_POST['gi_donador_frecuente_reciboRfc'] ) ){
+            update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboRfc', $_POST['gi_donador_frecuente_reciboRfc'] );
+        }
+        if ( isset( $_POST['gi_donador_frecuente_reciboCalle'] ) ){
+            update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboCalle', $_POST['gi_donador_frecuente_reciboCalle'] );
+        }
         if ( isset( $_POST['gi_donador_frecuente_reciboColonia'] ) ){
             update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboColonia', $_POST['gi_donador_frecuente_reciboColonia'] );
         }
@@ -429,18 +423,6 @@ function gi_donador_frecuente_save_metas( $idgi_donador_frecuente, $gi_donador_f
         }
         if ( isset( $_POST['gi_donador_frecuente_reciboPais'] ) ){
             update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboPais', $_POST['gi_donador_frecuente_reciboPais'] );
-        }
-        if ( isset( $_POST['gi_donador_frecuente_reciboRfc'] ) ){
-            update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboRfc', $_POST['gi_donador_frecuente_reciboRfc'] );
-        }
-        if ( isset( $_POST['gi_donador_frecuente_promotorNombre'] ) ){
-            update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_promotorNombre', $_POST['gi_donador_frecuente_promotorNombre'] );
-        }
-        if ( isset( $_POST['gi_donador_frecuente_promotorEmail'] ) ){
-            update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_promotorEmail', $_POST['gi_donador_frecuente_promotorEmail'] );
-        }
-        if ( isset( $_POST['gi_donador_frecuente_promotorTel'] ) ){
-            update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_promotorTel', $_POST['gi_donador_frecuente_promotorTel'] );
         }
     }
 }

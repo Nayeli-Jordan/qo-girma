@@ -13,7 +13,7 @@
             $post_id        = get_the_ID(); ?>
 
             <div class="margin-bottom">
-                <h2 id="pf_<?php echo $post_id; ?>"><span class="more">+</span><span class="minor">-</span> <?php echo $i; ?>. <?php the_title(); ?></h2>
+                <h2 id="pf_<?php echo $post_id; ?>"><span class="more color-orange">+</span><span class="minor color-pink">-</span> <em class="color-pink"><?php echo $i; ?>.</em> <?php the_title(); ?></h2>
                 <div class="content-faq">
                     <?php the_content(); ?> 
                 </div>     

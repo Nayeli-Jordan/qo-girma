@@ -95,7 +95,12 @@ video.responsive-video {
 /* PAGE */
 #body-page img {
 	@extend .responsive-img;
+	&.aligncenter { 
+		display: block;
+		margin: auto; 
+	}
 }
+
 
 /* Templete title complete */
 #title-complete {

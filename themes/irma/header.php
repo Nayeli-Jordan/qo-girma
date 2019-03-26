@@ -89,7 +89,7 @@
 						$submenu_name = 'quienes-somos';
 					} elseif (is_single( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida') ) || is_singular('gi_articulo')) {
 						$submenu_name = 'que-hacemos';
-					} elseif (is_single( array('voluntariado', 'donativos', 'donador-frecuente') )) {
+					} elseif (is_single( array('voluntariado', 'donativos', 'donador-frecuente', 'razones-para-donar') )) {
 						$submenu_name = 'como-ayudar';
 					} elseif (is_single( array('preguntas-frecuentes', 'formulario', 'necesito-terapia') )) {
 						$submenu_name = 'necesitas-ayuda';
@@ -174,7 +174,7 @@
 										}								
 									}
 
-									$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '" title="' . $title . '"><span>' . $title . '</span></a></li>';
+									$submenu_list .='<li itemprop="actionOption" class="' . $class . ' "><a href="' . $url . '" class="' . $currentPage . '"><p>' . $title . '</p></a></li>';
 								}
 							}
 							echo $submenu_list;
