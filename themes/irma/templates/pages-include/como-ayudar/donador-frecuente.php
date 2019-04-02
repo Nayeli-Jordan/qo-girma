@@ -90,6 +90,82 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			<label for="gi_reciboPais"><?php if( 'es' == $lang ) : ?>País/Estado<?php else: ?>Country/State<?php endif; ?><span class="color-red">*</span>:</label>
 			<input type="text" id="gi_reciboPais" name="gi_reciboPais" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
 		</div>
+		<div class="col s12">
+			<p class="info-donation"><small>Solicito y autorizo al banco Inbursa o aquella institución afiliada a Visa o MasterCard para que, con base en el contrato de apertura de crédito o el contrato de depósito cuenta corriente según corresponda, que tengo celebrado y respeto del cual se expidió la Tarjeta/Cuenta arriba citada, o en su caso el número de Tarjeta que por reposición de la anterior, por robo o extravío de la misma me haya asignado el Banco se sirva por mi cuenta al INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C. los cargos por los conceptos, periocidad y montos que se datallan liberando al Banco Inbursa, o cualquier institución afiliada a Visa o Masterd Card de toda reclamación que se genere por parte del Tarjetahabiente. El Tarjetahabiente podrá revocar la Carta de Autorización mediante un comunicado por escrito con quince días naturales de anticipación dirigido al INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C., El cual anotará la fecha de su recepción con la firma y el nombre de quien recibe por el INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C. En este caso el INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C. deberá informar al Tarjeta/Cuentahabiente la fecha en que dejará de surtir efecto la presente carta de autorización.<br>El donativo será cargado con periocidad y monto especificados a partir de la fecha mencionada y por tiempo indefinido por concepto de donativo siempre y cuando tenga saldo disponible.</small></p>
+		</div>
+		<div class="col s12 margin-top-bottom-small"><p class="color-pink"><strong><?php if( 'es' == $lang ) : ?>Datos para donativo | Tarjeta de Crédito/Débito o cuenta de cheques<?php else: ?>Donation data | Credit/Debit Card or checking account<?php endif; ?></strong></p></div>
+		<div class="col s12 m6 margin-bottom-small">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>No. de tarjeta de crédito o débito<?php else: ?>No. of credit or debit card<?php endif; ?><span class="color-red">*</span>:</label>
+			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+		</div>
+		<div class="col s12 m6 margin-bottom-small">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Cuenta CLABE<?php else: ?>Key account<?php endif; ?><span class="color-red">*</span>:</label>
+			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+		</div>
+		<div class="col s12 m4 margin-bottom-small clearfix">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Tarjeta<?php else: ?>Card<?php endif; ?><span class="color-red">*</span>:</label>
+			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+				<option value=""></option>
+				<option value="Visa">Visa</option>
+				<option value="MasterCard">MasterCard</option>
+				<option value="AmericanExpress">AmericanExpress</option>
+			</select>
+		</div>
+		<div class="col s12 margin-bottom-small hide-on-medium-and-up"><label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?><span class="color-red">*</span>:</label></div>
+		<div class="col s6 m4 margin-bottom-small">
+			<label for="gi_reciboNombre" class="hide-on-sm-and-down"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?><span class="color-red">*</span>:</label>
+			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+				<option value=""></option>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+		</div>
+		<div class="col s6 m4 margin-bottom-small"><br class="hide-on-sm-and-down">
+			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+				<option value=""></option>
+				<?php 
+				$count = 1;
+				$today = date("Y");
+                while ( $count <= 6) { ?>
+                    <option value="<?php echo $today; ?>" ><?php echo $today; ?></option>
+                <?php 
+                	$count = $count + 1;
+                	$today = $today + 1;
+                } ?>
+			</select>			
+		</div>	
+		<div class="col s12 sm6 m4 margin-bottom-small clearfix">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Cantidad mensual<?php else: ?>Monthly amount<?php endif; ?><span class="color-red">*</span>:</label>
+			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+				<option value=""></option>
+				<option value="300">$300.00 mensuales</option>
+				<option value="400">$400.00 mensuales</option>
+				<option value="500">$500.00 mensuales</option>
+				<option value="otro">Otro importe</option>
+			</select>			
+		</div>
+		<div class="col s12 sm6 m4 margin-bottom-small">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Otro importe<?php else: ?>Other amount<?php endif; ?><span class="color-red">*</span>:</label>
+			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" placeholder="Cantidad mensual" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+		</div>
+		<div class="col s12 m4 margin-bottom-small">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Banco emisor<?php else: ?>Issuing bank<?php endif; ?><span class="color-red">*</span>:</label>
+			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+		</div>		
+		<div class="col s12 m12 margin-bottom-small">
+			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Nombre en la tarjeta o del titular en la cuenta de cheques<?php else: ?>Name on the card or the holder in the current account<?php endif; ?><span class="color-red">*</span>:</label>
+			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+		</div>
 		<div class="col s12 text-right">
 			<?php if( 'es' == $lang ) :
 				$valueButton = 'Enviar';
@@ -99,6 +175,7 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			<input type="submit" name="submitDonativo" class="btn inline-block_imp" value="<?php echo $valueButton; ?>" />
 		</div>
 	</form>	
+	<p class="col s12 fz-large margin-top-large">"Muchas gracias por ayudarnos a construir mejores familias".</p>
 </div>
 
 <?php if(isset($_POST['submitDonativo'])){

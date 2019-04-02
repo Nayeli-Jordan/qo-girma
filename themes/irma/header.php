@@ -98,7 +98,7 @@
 					$submenu_name = '';
 					if (is_single( array('historia', 'mision', 'vision', 'filosofia', 'directorio', 'informes-anuales') ) || is_404() ) {
 						$submenu_name = 'quienes-somos';
-					} elseif (is_single( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida') ) || is_singular('gi_articulo')) {
+					} elseif (is_single( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida', 'un-lenguaje-comun', 'estilo-de-acompanamiento', 'fortalecer-la-identidad-materna-y-paterna', 'importancia-de-atender-la-salud-mental') ) || is_singular('gi_articulo')) {
 						$submenu_name = 'que-hacemos';
 					} elseif (is_single( array('voluntariado', 'donativos', 'donador-frecuente', 'razones-para-donar') )) {
 						$submenu_name = 'como-ayudar';

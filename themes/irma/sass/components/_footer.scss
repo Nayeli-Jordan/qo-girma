@@ -3,35 +3,22 @@ footer {
 	bottom: 0px;
 	width: 100%;
 	text-align: center;
-	background-color: $light-color;
 	//.row { margin-bottom: -1px; }
-	.footer-necesitas-ayuda {
-		padding: 0px!important;	
-		a {
-			padding-top: 40px!important;
-			padding-bottom: 40px!important;
-			transition: .3s ease-out;
-			background-color: $pink-color;
-			img {
-				width: 100px;
-			}
-			h2 {
-				color: $light-color;
-				text-shadow: 1px 1px 5px #00000026;
-			}
-			@media #{$medium-and-down} {
-				padding-top: 25px!important;
-				padding-bottom: 25px!important;	
-			}
-			&:hover {
-				background-color: #c8406e;
-				box-shadow: 6px -6px 10px 0 rgba(84, 84, 84, 0.25);
-			}				
+	.footer-necesitas-ayuda a {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		transition: .3s ease-out;
+		color: $primary-color;
+		img { width: 100px; }
+		h2 { 
+			text-shadow: 1px 1px 5px #00000026;
+			@extend %transition3;
 		}
+		&:hover h2 { color: $pink-color; }
 	}
 	.footer-logos {
-		padding-top: 20px!important;
-		padding-bottom: 20px!important;
+		padding-top: 40px!important;
+		padding-bottom: 40px!important;
 		p { 
 			font-size: 14px;
 			line-height: 18px;
@@ -43,19 +30,4 @@ footer {
 			margin: 10px;
 		}
 	}
-}
-
-@media #{$large-and-up} {
-	.page-home {
-		footer {
-			.footer-necesitas-ayuda a {
-				padding-top: 60px!important;
-				padding-bottom: 60px!important;
-			}
-			.footer-logos {
-				padding-top: 20px!important;
-				padding-bottom: 20px!important;	
-			}
-		}
-	} 
 }

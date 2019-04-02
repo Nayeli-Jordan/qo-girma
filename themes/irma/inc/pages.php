@@ -124,6 +124,46 @@ add_action('init', function(){
 		);
 		wp_insert_post( $page, true );
 	}
+	if( ! get_page_by_path('lenguaje-comun') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Un lenguaje común',
+			'post_name'   => 'lenguaje-comun',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+	if( ! get_page_by_path('estilo-de-acompanamiento') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Estilo de acompañamiento',
+			'post_name'   => 'estilo-de-acompanamienton',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+	if( ! get_page_by_path('fortalecer-la-identidad-materna-y-paterna') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Fortalecer la identidad materna y paterna',
+			'post_name'   => 'fortalecer-la-identidad-materna-y-paterna',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+	if( ! get_page_by_path('importancia-de-atender-la-salud-mental') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Importancia de atender la salud mental',
+			'post_name'   => 'importancia-de-atender-la-salud-mental',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}		
 
 	// ¿Qué hacemos? - Irma transforma - Historia de vida
 	if( ! get_page_by_path('historias-de-vida') ){
