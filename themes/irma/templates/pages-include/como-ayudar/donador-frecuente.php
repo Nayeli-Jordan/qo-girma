@@ -95,26 +95,26 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 		</div>
 		<div class="col s12 margin-top-bottom-small"><p class="color-pink"><strong><?php if( 'es' == $lang ) : ?>Datos para donativo | Tarjeta de Crédito/Débito o cuenta de cheques<?php else: ?>Donation data | Credit/Debit Card or checking account<?php endif; ?></strong></p></div>
 		<div class="col s12 m6 margin-bottom-small">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>No. de tarjeta de crédito o débito<?php else: ?>No. of credit or debit card<?php endif; ?><span class="color-red">*</span>:</label>
-			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_noTarjeta"><?php if( 'es' == $lang ) : ?>No. de tarjeta de crédito o débito<?php else: ?>No. of credit or debit card<?php endif; ?>:</label>
+			<input type="text" id="gi_noTarjeta" name="gi_noTarjeta">
 		</div>
 		<div class="col s12 m6 margin-bottom-small">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Cuenta CLABE<?php else: ?>Key account<?php endif; ?><span class="color-red">*</span>:</label>
-			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_clabe"><?php if( 'es' == $lang ) : ?>Cuenta CLABE<?php else: ?>Key account<?php endif; ?>:</label>
+			<input type="text" id="gi_clabe" name="gi_clabe">
 		</div>
 		<div class="col s12 m4 margin-bottom-small clearfix">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Tarjeta<?php else: ?>Card<?php endif; ?><span class="color-red">*</span>:</label>
-			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_tarjeta"><?php if( 'es' == $lang ) : ?>Tarjeta<?php else: ?>Card<?php endif; ?>:</label>
+			<select id="gi_tarjeta" name="gi_tarjeta">
 				<option value=""></option>
 				<option value="Visa">Visa</option>
 				<option value="MasterCard">MasterCard</option>
 				<option value="AmericanExpress">AmericanExpress</option>
 			</select>
 		</div>
-		<div class="col s12 margin-bottom-small hide-on-medium-and-up"><label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?><span class="color-red">*</span>:</label></div>
+		<div class="col s12 margin-bottom-small hide-on-med-and-up"><label for="gi_vencimiento"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?>:</label></div>
 		<div class="col s6 m4 margin-bottom-small">
-			<label for="gi_reciboNombre" class="hide-on-sm-and-down"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?><span class="color-red">*</span>:</label>
-			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_vencimientoMes" class="hide-on-sm-and-down"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?>:</label>
+			<select id="gi_vencimientoMes" name="gi_vencimientoMes">
 				<option value=""></option>
 				<option value="01">01</option>
 				<option value="02">02</option>
@@ -131,7 +131,7 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			</select>
 		</div>
 		<div class="col s6 m4 margin-bottom-small"><br class="hide-on-sm-and-down">
-			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<select id="gi_vencimientoAno" name="gi_vencimientoAno">
 				<option value=""></option>
 				<?php 
 				$count = 1;
@@ -145,8 +145,8 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			</select>			
 		</div>	
 		<div class="col s12 sm6 m4 margin-bottom-small clearfix">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Cantidad mensual<?php else: ?>Monthly amount<?php endif; ?><span class="color-red">*</span>:</label>
-			<select id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_mensual"><?php if( 'es' == $lang ) : ?>Cantidad mensual<?php else: ?>Monthly amount<?php endif; ?>:</label>
+			<select id="gi_mensual" name="gi_mensual">
 				<option value=""></option>
 				<option value="300">$300.00 mensuales</option>
 				<option value="400">$400.00 mensuales</option>
@@ -155,16 +155,16 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			</select>			
 		</div>
 		<div class="col s12 sm6 m4 margin-bottom-small">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Otro importe<?php else: ?>Other amount<?php endif; ?><span class="color-red">*</span>:</label>
-			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" placeholder="Cantidad mensual" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_importe"><?php if( 'es' == $lang ) : ?>Otro importe<?php else: ?>Other amount<?php endif; ?>:</label>
+			<input type="text" id="gi_importe" name="gi_importe" placeholder="Cantidad mensual">
 		</div>
 		<div class="col s12 m4 margin-bottom-small">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Banco emisor<?php else: ?>Issuing bank<?php endif; ?><span class="color-red">*</span>:</label>
-			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_banco"><?php if( 'es' == $lang ) : ?>Banco emisor<?php else: ?>Issuing bank<?php endif; ?>:</label>
+			<input type="text" id="gi_banco" name="gi_banco">
 		</div>		
 		<div class="col s12 m12 margin-bottom-small">
-			<label for="gi_reciboNombre"><?php if( 'es' == $lang ) : ?>Nombre en la tarjeta o del titular en la cuenta de cheques<?php else: ?>Name on the card or the holder in the current account<?php endif; ?><span class="color-red">*</span>:</label>
-			<input type="text" id="gi_reciboNombre" name="gi_reciboNombre" required data-parsley-required-message="<?php echo $requiredMessage; ?>">
+			<label for="gi_nombreTitular"><?php if( 'es' == $lang ) : ?>Nombre en la tarjeta o del titular en la cuenta de cheques<?php else: ?>Name on the card or the holder in the current account<?php endif; ?>:</label>
+			<input type="text" id="gi_nombreTitular" name="gi_nombreTitular">
 		</div>
 		<div class="col s12 text-right">
 			<?php if( 'es' == $lang ) :
@@ -203,6 +203,16 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
     $reciboCp           = $_POST['gi_reciboCp'];
     $reciboPais         = $_POST['gi_reciboPais'];
 
+	$noTarjeta         = $_POST['gi_noTarjeta'];
+    $clabe              = $_POST['gi_clabe'];
+    $tarjeta            = $_POST['gi_tarjeta'];
+    $vencimientoMes     = $_POST['gi_vencimientoMes'];
+    $vencimientoAno     = $_POST['gi_vencimientoAno'];
+    $mensual            = $_POST['gi_mensual'];
+    $importe            = $_POST['gi_importe'];
+    $banco              = $_POST['gi_banco'];
+    $nombreTitular      = $_POST['gi_nombreTitular'];
+
 	$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';	
 	$message 	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="http://localhost:8888/irma/wp-content/themes/irma/images/identidad/logo.png"></a></div>';
 	$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #325192; text-transform: uppercase;">Nuevo pre-registro de donador frecuente</h1>';
@@ -221,12 +231,21 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Fecha de Nacimiento: </span>' . $nacimiento . '</p><br><br>';
 	$message 			.= '<p style="font-weight: 600; color: #c24871;">DATOS PARA RECIBO DEDUCIBLE DE IMPUESTOS</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Recibo a favor de: </span>' . $reciboNombre . '</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">RFC: </span>' . $reciboRfc . '</p><br><br>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">RFC: </span>' . $reciboRfc . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Calle: </span>' . $reciboCalle . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Colonia: </span>' . $reciboColonia . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Delegación: </span>' . $reciboDelegacion . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Código Postal: </span>' . $reciboCp . '</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">País/Estado: </span>' . $reciboPais . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">País/Estado: </span>' . $reciboPais . '</p><br><br>';
+	$message 			.= '<p style="font-weight: 600; color: #c24871;">DATOS PARA DONATIVO | TARJETA DE CRÉDITO/DÉBITO O CUENTA DE CHEQUES</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">No. de tarjeta de crédito o débito: </span>' . $noTarjeta . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Cuenta CLABE: </span>' . $clabe . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Tarjeta: </span>' . $tarjeta . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Fecha de vencimiento: </span>' . $vencimientoMes . '/' . $vencimientoAno . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Cantidad mensual: </span>' . $mensual . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Otro importe: </span>' . $importe . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Banco emisor: </span>' . $banco . '</p>';
+	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">País/Estado: </span>' . $nombreTitular . '</p>';
 	$message 			.= '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el formulario de donaciones frecuentes de Irma.</small></p></div>';
 	$message 	        .= '</body></html>';
 
@@ -263,4 +282,13 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
     update_post_meta($my_post_id,'gi_donador_frecuente_reciboDelegacion', $reciboDelegacion);
     update_post_meta($my_post_id,'gi_donador_frecuente_reciboCp', $reciboCp);
     update_post_meta($my_post_id,'gi_donador_frecuente_reciboPais', $reciboPais);
+	update_post_meta($my_post_id,'gi_donador_frecuente_noTarjeta', $noTarjeta);
+	update_post_meta($my_post_id,'gi_donador_frecuente_clabe', $clabe);
+	update_post_meta($my_post_id,'gi_donador_frecuente_tarjeta', $tarjeta);
+	update_post_meta($my_post_id,'gi_donador_frecuente_vencimientoMes', $vencimientoMes);
+	update_post_meta($my_post_id,'gi_donador_frecuente_vencimientoAno', $vencimientoAno);
+	update_post_meta($my_post_id,'gi_donador_frecuente_mensual', $mensual);
+	update_post_meta($my_post_id,'gi_donador_frecuente_importe', $importe);
+	update_post_meta($my_post_id,'gi_donador_frecuente_banco', $banco);
+	update_post_meta($my_post_id,'gi_donador_frecuente_nombreTitular', $nombreTitular);
 } ?>

@@ -266,6 +266,16 @@ function display_gi_donador_frecuente_atributos( $gi_donador_frecuente ){
     $reciboDelegacion   = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboDelegacion', true ) );
     $reciboCp           = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboCp', true ) );
     $reciboPais         = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboPais', true ) );
+
+    $noTarjeta         = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_noTarjeta', true ) );
+    $clabe              = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_clabe', true ) );
+    $tarjeta            = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_tarjeta', true ) );
+    $vencimientoMes     = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_vencimientoMes', true ) );
+    $vencimientoAno     = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_vencimientoAno', true ) );
+    $mensual            = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_mensual', true ) );
+    $importe            = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_importe', true ) );
+    $banco              = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_banco', true ) );
+    $nombreTitular      = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_nombreTitular', true ) );
 ?>
     <table class="gi-custom-fields">
         <tr><th colspan="3" style="padding: 20px 0 10px; color: #c24871;">DATOS GENERALES</th></tr>
