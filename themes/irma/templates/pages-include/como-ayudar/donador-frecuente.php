@@ -96,11 +96,11 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 		<div class="col s12 margin-top-bottom-small"><p class="color-pink"><strong><?php if( 'es' == $lang ) : ?>Datos para donativo | Tarjeta de Crédito/Débito o cuenta de cheques<?php else: ?>Donation data | Credit/Debit Card or checking account<?php endif; ?></strong></p></div>
 		<div class="col s12 m6 margin-bottom-small">
 			<label for="gi_noTarjeta"><?php if( 'es' == $lang ) : ?>No. de tarjeta de crédito o débito<?php else: ?>No. of credit or debit card<?php endif; ?>:</label>
-			<input type="text" id="gi_noTarjeta" name="gi_noTarjeta">
+			<input type="text" id="gi_noTarjeta" name="gi_noTarjeta" data-parsley-type="digits" data-parsley-length="[16, 16]" data-parsley-type-message="Se requieren números." data-parsley-length-message="Se requieren 16 dígitos.">
 		</div>
 		<div class="col s12 m6 margin-bottom-small">
 			<label for="gi_clabe"><?php if( 'es' == $lang ) : ?>Cuenta CLABE<?php else: ?>Key account<?php endif; ?>:</label>
-			<input type="text" id="gi_clabe" name="gi_clabe">
+			<input type="text" id="gi_clabe" name="gi_clabe" data-parsley-type="digits"  data-parsley-type-message="Se requieren números.">
 		</div>
 		<div class="col s12 m4 margin-bottom-small clearfix">
 			<label for="gi_tarjeta"><?php if( 'es' == $lang ) : ?>Tarjeta<?php else: ?>Card<?php endif; ?>:</label>
