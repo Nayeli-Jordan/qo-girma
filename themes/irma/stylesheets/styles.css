@@ -8881,6 +8881,137 @@ small {
   line-height: 16px;
 }
 
+/* Historia - Linea tiempo */
+/* line 162, ../sass/components/_utilities.scss */
+#content-lineaTiempo {
+  position: relative;
+  overflow: auto;
+}
+/* line 165, ../sass/components/_utilities.scss */
+#content-lineaTiempo::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* line 169, ../sass/components/_utilities.scss */
+#content-lineaTiempo img {
+  min-width: 750px;
+  width: 750px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 169, ../sass/components/_utilities.scss */
+  #content-lineaTiempo img {
+    min-width: 670px;
+    width: 670px;
+  }
+}
+/* line 177, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo {
+  position: absolute;
+  top: 0px;
+  min-width: 750px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 177, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo {
+    margin-left: 235px;
+    min-width: calc(670px - 235px);
+  }
+}
+/* line 185, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+/* line 189, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 190, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year1985 {
+  width: 23%;
+}
+/* line 191, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year1989 {
+  width: 22%;
+}
+/* line 192, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year1993 {
+  width: 23%;
+}
+/* line 193, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year1996 {
+  width: 26%;
+}
+/* line 194, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year1998 {
+  width: 23%;
+}
+/* line 195, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year1999 {
+  width: 26%;
+}
+/* line 196, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year2000a {
+  width: 23%;
+}
+/* line 197, ../sass/components/_utilities.scss */
+#content-lineaTiempo .content-urlTiempo div#year2000b {
+  width: 27%;
+}
+@media only screen and (max-width: 600px) {
+  /* line 185, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div {
+    height: 315px;
+  }
+  /* line 200, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year1985 {
+    width: 12%;
+  }
+  /* line 201, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year1989 {
+    width: 11%;
+  }
+  /* line 202, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year1993 {
+    width: 12%;
+  }
+  /* line 203, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year1996 {
+    width: 13%;
+  }
+  /* line 204, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year1998 {
+    width: 12%;
+  }
+  /* line 205, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year1999 {
+    width: 13%;
+  }
+  /* line 206, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year2000a {
+    width: 12%;
+  }
+  /* line 207, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div#year2000b {
+    width: 14%;
+  }
+  /* line 208, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div.clearfix {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 601px) {
+  /* line 185, ../sass/components/_utilities.scss */
+  #content-lineaTiempo .content-urlTiempo div {
+    height: 380px;
+  }
+}
+/* line 213, ../sass/components/_utilities.scss */
+#content-lineaTiempo .infoDate div {
+  transition: .6s ease-out;
+}
+
 /* line 1, ../sass/components/_header.scss */
 header {
   position: relative;

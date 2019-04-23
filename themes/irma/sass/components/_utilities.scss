@@ -27,27 +27,27 @@
 			}
 			&.link-necesitas-ayuda {
 				top: 5%;
-			    width: 30%;
-			    margin-left: 41%;
-			    padding-bottom: calc(30%);
+				width: 30%;
+				margin-left: 41%;
+				padding-bottom: calc(30%);
 			}
 			&.link-logros {
-			    top: 24%;
-			    width: 27%;
-			    margin-left: 62%;
-			    padding-bottom: calc(27%);
+				top: 24%;
+				width: 27%;
+				margin-left: 62%;
+				padding-bottom: calc(27%);
 			}
 			&.link-historias-vida {
-			    bottom: 19%;
-			    width: 26%;
-			    margin-left: 69%;
-			    padding-bottom: calc(26%);
+				bottom: 19%;
+				width: 26%;
+				margin-left: 69%;
+				padding-bottom: calc(26%);
 			}
 			&.link-colabora {
-			    bottom: 5%;
-			    width: 24%;
-			    margin-left: 51%;
-			    padding-bottom: calc(24%);
+				bottom: 5%;
+				width: 24%;
+				margin-left: 51%;
+				padding-bottom: calc(24%);
 			}
 			&:hover {
 				background-color: rgba(255, 255, 255, 0.08);
@@ -102,11 +102,11 @@
 	.bg-square {
 		position: absolute;
 		top: 50%;
-	    height: 700px;
-	    width: 700px;
-	    transform: translateY(-50%) rotate(45deg);
-	    @media #{$sm-and-down} { display: none; }
-	    @media #{$medium-and-up} { right: -4%; }
+		height: 700px;
+		width: 700px;
+		transform: translateY(-50%) rotate(45deg);
+		@media #{$sm-and-down} { display: none; }
+		@media #{$medium-and-up} { right: -4%; }
 		@media #{$large-and-up} { right: -7%; }
 		@media #{$extra-large-and-up} { right: 2%; }
 	}
@@ -153,7 +153,62 @@
 
 .info-donation {
 	border: 2px solid red;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 16px;	
+	padding: 10px;
+	font-size: 14px;
+	line-height: 16px;	
+}
+
+/* Historia - Linea tiempo */
+#content-lineaTiempo {
+	position: relative;
+	overflow: auto;
+	&::-webkit-scrollbar {
+	    width: 10px;
+	    height: 10px;
+	} 
+	img {
+		min-width: 750px;
+		width: 750px;
+		@media #{$medium-and-up}{
+			min-width: 670px;
+			width: 670px;			
+		}
+	}
+	.content-urlTiempo {
+		position: absolute;
+		top: 0px;
+		min-width: 750px;
+		@media #{$medium-and-up} {
+			margin-left: 235px;
+			min-width: calc(670px - 235px);			
+		}
+		div {
+			display: inline-block;
+			float: left;
+			cursor: pointer;
+			&:hover { background-color: rgba(255, 255, 255, 0.1); }
+			&#year1985 { width: 23%; }
+			&#year1989 { width: 22%; }
+			&#year1993 { width: 23%; }
+			&#year1996 { width: 26%; }
+			&#year1998 { width: 23%; }
+			&#year1999 { width: 26%; }
+			&#year2000a { width: 23%; }
+			&#year2000b { width: 27%; }
+			@media #{$sm-and-down} { 
+				height: 315px;
+				&#year1985 { width: 12%; }
+				&#year1989 { width: 11%; }
+				&#year1993 { width: 12%; }
+				&#year1996 { width: 13%; }
+				&#year1998 { width: 12%; }
+				&#year1999 { width: 13%; }
+				&#year2000a { width: 12%; }
+				&#year2000b { width: 14%; }
+				&.clearfix { display: none!important; }
+			}
+			@media #{$medium-and-up} { height: 380px; }
+		}
+	}
+	.infoDate div { transition: .6s ease-out; }
 }

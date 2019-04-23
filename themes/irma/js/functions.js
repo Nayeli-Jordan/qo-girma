@@ -115,6 +115,9 @@ var $=jQuery.noConflict();
 			console.log(idDate );
 			$(".infoDate div").addClass('hide');
 			$(".infoDate #Info" + idDate).removeClass('hide');
+			$('html, body').animate({		
+				scrollTop: $('.infoDate').offset().top - 350
+			}, 1000);
 		});
 
 	});

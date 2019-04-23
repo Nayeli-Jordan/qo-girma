@@ -1,11 +1,16 @@
 <?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
+<div class="text-center">
+    <img src="<?php echo THEMEPATH; ?>images/mcarmen.jpg" class="hide-on-med-and-up">    
+</div>
 <div id="content-lineaTiempo" class="margin-bottom">
-    <img src="<?php echo THEMEPATH; ?>images/historia.png">
+    <img src="<?php echo THEMEPATH; ?>images/linea-tiempo.jpg" class="hide-on-sm-and-down">
+    <img src="<?php echo THEMEPATH; ?>images/linea-tiempo-sm.jpg" class="hide-on-med-and-up">
     <div class="content-urlTiempo">
         <div id="year1985"></div>
         <div id="year1989"></div>
         <div id="year1993"></div>
         <div id="year1996"></div>
+        <div class="clearfix"></div>
         <div id="year1998"></div>
         <div id="year1999"></div>
         <div id="year2000a"></div>
