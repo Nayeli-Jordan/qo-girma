@@ -130,7 +130,7 @@
 										}										
 									}
 
-									$menu_list .='<li itemprop="actionOption" class="pather-item"><a href="' . $url . '" class="' . $currentSection . '" title="Link a ' . $title . '">' . $title . '</a></li>';
+									$menu_list .='<li itemprop="actionOption" class="pather-item"><a href="' . $url . '" class="' . $currentSection . '">' . $title . '</a></li>';
 
 									/*Obtener sub elementos nav mobile */
 									$subItem_name 		= $xfn;
@@ -152,7 +152,7 @@
 												}										
 											}
 
-											$menu_list .='<li itemprop="actionOption" class="sub-item ' . $class .'"><a href="' . $url . '"  class="' . $currentPageItem . '" title="Link a ' . $title . '">' . $title . '</a></li>';
+											$menu_list .='<li itemprop="actionOption" class="sub-item ' . $class .'"><a href="' . $url . '"  class="' . $currentPageItem . '">' . $title . '</a></li>';
 										}
 									} /*End if sub menú */
 

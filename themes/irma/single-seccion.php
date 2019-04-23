@@ -22,23 +22,23 @@
 						<?php if (!is_single('informes-anuales')) {
 							the_content();
 						} 
-						if (is_page('preguntas-frecuentes')) {
+						if (is_single('preguntas-frecuentes')) {
 							include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/preguntas-frecuentes.php');
-						} else if  (is_single('formulario')) {						
+						} else if (is_single('formulario')) {						
 							include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/modal-ayuda.php');
 							include (TEMPLATEPATH . '/templates/pages-include/necesitas-ayuda/formulario-necesitas-ayuda.php');
-						} else if  (is_single('irma-comunica')) {
+						} else if (is_single('irma-comunica')) {
 							include (TEMPLATEPATH . '/templates/pages-include/que-hacemos/irma-comunica-articulos.php');
-						} else if  (is_single('historias-de-vida')) {
+						} else if (is_single('historias-de-vida')) {
 							include (TEMPLATEPATH . '/templates/pages-include/que-hacemos/irma-transforma-historias-de-vida.php');
-						} else if  (is_single('donador-frecuente')) {
+						} else if (is_single('donador-frecuente')) {
 							include (TEMPLATEPATH . '/templates/pages-include/como-ayudar/modal-donador.php');
 							include (TEMPLATEPATH . '/templates/pages-include/como-ayudar/donador-frecuente.php');
-						} else if  (is_single('donativos')) {
+						} else if (is_single('donativos')) {
 							include (TEMPLATEPATH . '/templates/pages-include/como-ayudar/share-irma.php');
-						} else if  (is_single('informes-anuales')) {
+						} else if (is_single('informes-anuales')) {
 							include (TEMPLATEPATH . '/templates/pages-include/quienes-somos/informes-anuales.php');
-						} else if  (is_single('historia')) {
+						} else if (is_single('historia')) {
 							include (TEMPLATEPATH . '/templates/pages-include/quienes-somos/historia.php');
 						} ?>
 					</div>	

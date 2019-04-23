@@ -9348,22 +9348,36 @@ footer .footer-necesitas-ayuda a h2 {
 footer .footer-necesitas-ayuda a:hover h2 {
   color: #e55e78;
 }
-/* line 20, ../sass/components/_footer.scss */
+@media only screen and (max-width: 430px) {
+  /* line 8, ../sass/components/_footer.scss */
+  footer .footer-necesitas-ayuda a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* line 24, ../sass/components/_footer.scss */
 footer .footer-logos {
   padding-top: 40px !important;
   padding-bottom: 40px !important;
 }
-/* line 23, ../sass/components/_footer.scss */
+/* line 27, ../sass/components/_footer.scss */
 footer .footer-logos p {
   font-size: 14px;
   line-height: 18px;
 }
-/* line 27, ../sass/components/_footer.scss */
+/* line 31, ../sass/components/_footer.scss */
 footer .footer-logos img {
   display: inline-block;
   height: 40px;
   margin-left: 10px;
   margin: 10px;
+}
+@media only screen and (max-width: 430px) {
+  /* line 24, ../sass/components/_footer.scss */
+  footer .footer-logos {
+    padding-top: 0px !important;
+    padding-bottom: 30px !important;
+  }
 }
 
 @media print {
