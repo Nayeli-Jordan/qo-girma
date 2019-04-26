@@ -22,8 +22,8 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="<?php echo site_url(); ?>" />
 		<meta property="og:image" content="<?php echo THEMEPATH; ?>images/dovela.jpg">
-		<meta property="og:description" content="Conoce a @InstitutoIRMAac institución especializada en terapia psicológica ante pérdidas durante el embarazo." />
-		<meta name="twitter:description" content="Conoce a @IRMAac institución de ayuda social que brinda atención psicológica especializada en pérdidas gestacionales." />
+		<meta property="og:description" content="¿Sufres porque tu embarazo no continuó? #NoEstásSola @InstitutoIRMAac te ofrece terapia psicológica, confidencial y libre de juicio." />
+		<meta name="twitter:description" content="#SabíasQue @IRMAac brinda atención psicológica, confidencial y libre de juicio a quien ha perdido un bebé antes de nacer #NoEstásSola" />
 		<meta name="twitter:image" content="<?php echo THEMEPATH; ?>images/dovela.jpg" />
 		<meta name="twitter:title" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:image:width" content="600" />

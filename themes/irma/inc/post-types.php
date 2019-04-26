@@ -260,36 +260,4 @@ add_action('init', function(){
 	);
 	register_post_type( 'gi_necesitas_ayuda', $args );	
 
-	// Share
-	$labels = array(
-		'name'          => 'Share',
-		'singular_name' => 'Share',
-		'add_new'       => 'Nuevo Share',
-		'add_new_item'  => 'Nuevo Share',
-		'edit_item'     => 'Editar Share',
-		'new_item'      => 'Nuevo Share',
-		'all_items'     => 'Todo',
-		'view_item'     => 'Ver Share',
-		'search_items'  => 'Buscar Share',
-		'not_found'     => 'No hay Share.',
-		'menu_name'     => 'Share'
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'gi_share' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => 6,
-		'supports'           => array( 'title', 'editor' ),
-		'menu_icon' 		 => 'dashicons-phone'
-	);
-	register_post_type( 'gi_share', $args );	
-
 });
