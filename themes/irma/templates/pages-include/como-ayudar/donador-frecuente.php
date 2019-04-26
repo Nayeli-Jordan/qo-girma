@@ -112,6 +112,9 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			<label for="gi_banco"><?php if( 'es' == $lang ) : ?>Banco emisor<?php else: ?>Issuing bank<?php endif; ?>:</label>
 			<input type="text" id="gi_banco" name="gi_banco">
 		</div>
+		<div class="col s12 margin-bottom-small text-center">
+			<p><?php if( 'es' == $lang ) : ?>Nos pondremos en contacto contigo para concluir el registro.<?php else: ?>We will contact you to complete the registration.<?php endif; ?></p>
+		</div>
 		<div class="col s12 text-right">
 			<?php if( 'es' == $lang ) :
 				$valueButton = 'Enviar';

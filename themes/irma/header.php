@@ -21,13 +21,13 @@
 		<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="<?php echo site_url(); ?>" />
-		<meta property="og:image" content="<?php echo THEMEPATH; ?>images/share.jpg">
-		<meta property="og:description" content="Conoce a @InstitutoIRMAac institución especializada en terapia psicológica ante pérdidas durante el embarazo. ¿Sufres porque tu embarazo no continuó? #NoEstásSola @InstitutoIRMAac te ofrece terapia psicológica, confidencial y libre de juicio." />
-		<meta name="twitter:description" content="Conoce a @IRMAac institución de ayuda social que brinda atención psicológica especializada en pérdidas gestacionales. irma.org.mx #SabíasQue @IRMAac brinda atención psicológica, confidencial y libre de juicio a quien ha perdido un bebé antes de nacer #NoEstásSola" />
-		<meta name="twitter:image" content="<?php echo THEMEPATH; ?>images/share.jpg" />
+		<meta property="og:image" content="<?php echo THEMEPATH; ?>images/dovela.jpg">
+		<meta property="og:description" content="Conoce a @InstitutoIRMAac institución especializada en terapia psicológica ante pérdidas durante el embarazo." />
+		<meta name="twitter:description" content="Conoce a @IRMAac institución de ayuda social que brinda atención psicológica especializada en pérdidas gestacionales." />
+		<meta name="twitter:image" content="<?php echo THEMEPATH; ?>images/dovela.jpg" />
 		<meta name="twitter:title" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:image:width" content="600" />
-		<meta property="og:image:height" content="600" />
+		<meta property="og:image:height" content="400" />
 		<meta property="fb:app_id" content="" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@" />
