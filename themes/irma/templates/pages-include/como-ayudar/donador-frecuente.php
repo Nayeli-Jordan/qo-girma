@@ -94,56 +94,6 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 			<p class="info-donation"><small>Solicito y autorizo al banco Inbursa o aquella institución afiliada a Visa o MasterCard para que, con base en el contrato de apertura de crédito o el contrato de depósito cuenta corriente según corresponda, que tengo celebrado y respeto del cual se expidió la Tarjeta/Cuenta arriba citada, o en su caso el número de Tarjeta que por reposición de la anterior, por robo o extravío de la misma me haya asignado el Banco se sirva por mi cuenta al INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C. los cargos por los conceptos, periocidad y montos que se datallan liberando al Banco Inbursa, o cualquier institución afiliada a Visa o Masterd Card de toda reclamación que se genere por parte del Tarjetahabiente. El Tarjetahabiente podrá revocar la Carta de Autorización mediante un comunicado por escrito con quince días naturales de anticipación dirigido al INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C., El cual anotará la fecha de su recepción con la firma y el nombre de quien recibe por el INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C. En este caso el INSTITUTO PARA LA REABILITACIÓN DE LA MUJER Y LA FAMILIA A.C. deberá informar al Tarjeta/Cuentahabiente la fecha en que dejará de surtir efecto la presente carta de autorización.<br>El donativo será cargado con periocidad y monto especificados a partir de la fecha mencionada y por tiempo indefinido por concepto de donativo siempre y cuando tenga saldo disponible.</small></p>
 		</div>
 		<div class="col s12 margin-top-bottom-small"><p class="color-pink"><strong><?php if( 'es' == $lang ) : ?>Datos para donativo | Tarjeta de Crédito/Débito o cuenta de cheques<?php else: ?>Donation data | Credit/Debit Card or checking account<?php endif; ?></strong></p></div>
-		<div class="col s12 m6 margin-bottom-small">
-			<label for="gi_noTarjeta"><?php if( 'es' == $lang ) : ?>No. de tarjeta de crédito o débito<?php else: ?>No. of credit or debit card<?php endif; ?>:</label>
-			<input type="text" id="gi_noTarjeta" name="gi_noTarjeta" data-parsley-type="digits" data-parsley-length="[16, 16]" data-parsley-type-message="Se requieren números." data-parsley-length-message="Se requieren 16 dígitos.">
-		</div>
-		<div class="col s12 m6 margin-bottom-small">
-			<label for="gi_clabe"><?php if( 'es' == $lang ) : ?>Cuenta CLABE<?php else: ?>Key account<?php endif; ?>:</label>
-			<input type="text" id="gi_clabe" name="gi_clabe" data-parsley-type="digits"  data-parsley-type-message="Se requieren números.">
-		</div>
-		<div class="col s12 m4 margin-bottom-small clearfix">
-			<label for="gi_tarjeta"><?php if( 'es' == $lang ) : ?>Tarjeta<?php else: ?>Card<?php endif; ?>:</label>
-			<select id="gi_tarjeta" name="gi_tarjeta">
-				<option value=""></option>
-				<option value="Visa">Visa</option>
-				<option value="MasterCard">MasterCard</option>
-				<option value="AmericanExpress">AmericanExpress</option>
-			</select>
-		</div>
-		<div class="col s12 margin-bottom-small hide-on-med-and-up"><label for="gi_vencimiento"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?>:</label></div>
-		<div class="col s6 m4 margin-bottom-small">
-			<label for="gi_vencimientoMes" class="hide-on-sm-and-down"><?php if( 'es' == $lang ) : ?>Fecha de vencimiento<?php else: ?>Expiration date<?php endif; ?>:</label>
-			<select id="gi_vencimientoMes" name="gi_vencimientoMes">
-				<option value=""></option>
-				<option value="01">01</option>
-				<option value="02">02</option>
-				<option value="03">03</option>
-				<option value="04">04</option>
-				<option value="05">05</option>
-				<option value="06">06</option>
-				<option value="07">07</option>
-				<option value="08">08</option>
-				<option value="09">09</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select>
-		</div>
-		<div class="col s6 m4 margin-bottom-small"><br class="hide-on-sm-and-down">
-			<select id="gi_vencimientoAno" name="gi_vencimientoAno">
-				<option value=""></option>
-				<?php 
-				$count = 1;
-				$today = date("Y");
-                while ( $count <= 6) { ?>
-                    <option value="<?php echo $today; ?>" ><?php echo $today; ?></option>
-                <?php 
-                	$count = $count + 1;
-                	$today = $today + 1;
-                } ?>
-			</select>			
-		</div>	
 		<div class="col s12 sm6 m4 margin-bottom-small clearfix">
 			<label for="gi_mensual"><?php if( 'es' == $lang ) : ?>Cantidad mensual<?php else: ?>Monthly amount<?php endif; ?>:</label>
 			<select id="gi_mensual" name="gi_mensual">
@@ -161,10 +111,6 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 		<div class="col s12 m4 margin-bottom-small">
 			<label for="gi_banco"><?php if( 'es' == $lang ) : ?>Banco emisor<?php else: ?>Issuing bank<?php endif; ?>:</label>
 			<input type="text" id="gi_banco" name="gi_banco">
-		</div>		
-		<div class="col s12 m12 margin-bottom-small">
-			<label for="gi_nombreTitular"><?php if( 'es' == $lang ) : ?>Nombre en la tarjeta o del titular en la cuenta de cheques<?php else: ?>Name on the card or the holder in the current account<?php endif; ?>:</label>
-			<input type="text" id="gi_nombreTitular" name="gi_nombreTitular">
 		</div>
 		<div class="col s12 text-right">
 			<?php if( 'es' == $lang ) :
@@ -203,15 +149,9 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
     $reciboCp           = $_POST['gi_reciboCp'];
     $reciboPais         = $_POST['gi_reciboPais'];
 
-	$noTarjeta         = $_POST['gi_noTarjeta'];
-    $clabe              = $_POST['gi_clabe'];
-    $tarjeta            = $_POST['gi_tarjeta'];
-    $vencimientoMes     = $_POST['gi_vencimientoMes'];
-    $vencimientoAno     = $_POST['gi_vencimientoAno'];
     $mensual            = $_POST['gi_mensual'];
     $importe            = $_POST['gi_importe'];
     $banco              = $_POST['gi_banco'];
-    $nombreTitular      = $_POST['gi_nombreTitular'];
 
 	$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';	
 	$message 	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="http://localhost:8888/irma/wp-content/themes/irma/images/identidad/logo.png"></a></div>';
@@ -238,14 +178,9 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Código Postal: </span>' . $reciboCp . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">País/Estado: </span>' . $reciboPais . '</p><br><br>';
 	$message 			.= '<p style="font-weight: 600; color: #c24871;">DATOS PARA DONATIVO | TARJETA DE CRÉDITO/DÉBITO O CUENTA DE CHEQUES</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">No. de tarjeta de crédito o débito: </span>' . $noTarjeta . '</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Cuenta CLABE: </span>' . $clabe . '</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Tarjeta: </span>' . $tarjeta . '</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Fecha de vencimiento: </span>' . $vencimientoMes . '/' . $vencimientoAno . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Cantidad mensual: </span>' . $mensual . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Otro importe: </span>' . $importe . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Banco emisor: </span>' . $banco . '</p>';
-	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">País/Estado: </span>' . $nombreTitular . '</p>';
 	$message 			.= '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el formulario de donaciones frecuentes de Irma.</small></p></div>';
 	$message 	        .= '</body></html>';
 
@@ -282,13 +217,7 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
     update_post_meta($my_post_id,'gi_donador_frecuente_reciboDelegacion', $reciboDelegacion);
     update_post_meta($my_post_id,'gi_donador_frecuente_reciboCp', $reciboCp);
     update_post_meta($my_post_id,'gi_donador_frecuente_reciboPais', $reciboPais);
-	update_post_meta($my_post_id,'gi_donador_frecuente_noTarjeta', $noTarjeta);
-	update_post_meta($my_post_id,'gi_donador_frecuente_clabe', $clabe);
-	update_post_meta($my_post_id,'gi_donador_frecuente_tarjeta', $tarjeta);
-	update_post_meta($my_post_id,'gi_donador_frecuente_vencimientoMes', $vencimientoMes);
-	update_post_meta($my_post_id,'gi_donador_frecuente_vencimientoAno', $vencimientoAno);
 	update_post_meta($my_post_id,'gi_donador_frecuente_mensual', $mensual);
 	update_post_meta($my_post_id,'gi_donador_frecuente_importe', $importe);
 	update_post_meta($my_post_id,'gi_donador_frecuente_banco', $banco);
-	update_post_meta($my_post_id,'gi_donador_frecuente_nombreTitular', $nombreTitular);
 } ?>

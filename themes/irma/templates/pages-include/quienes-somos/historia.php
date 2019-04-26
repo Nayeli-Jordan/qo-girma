@@ -63,9 +63,9 @@
     </div>
     <div id="Infoyear2000a" class="hide">
         <p><?php if( 'es' == $lang ) : ?>
-            2000: Crear un espacio en donde expresar el pensar y sentir alrededor de un aborto, para entender lo sucedido y sanar. Sin ánimo de juicio, en donde hacer bien el BIEN inició por ser uno de los motores rodeando a IRMA de personas amigas y competentes.
+            2000: Crear un espacio en donde expresar el pensar y sentir alrededor de un aborto, para entender lo sucedido y sanar. Sin ánimo de juicio, en donde hacer bien el BIEN, inició por ser uno de los motores para rodear a IRMA de personas amigas y competentes.
         <?php else : ?>
-            2000: Create a space in which to express the thinking and feeling around an abortion, to understand what happened and to heal. Without a sense of judgment, where to do well the GOOD started by being one of the engines surrounding IRMA of friendly and competent people.
+            2000: Create a space in which to express the thinking and feeling around an abortion, to understand what happened and to heal. Without a sense of judgment, where to do well, GOOD, started by being one of the engines to surround IRMA with friendly and competent people.
         <?php endif; ?></p>
     </div>
     <div id="Infoyear2000b" class="hide">

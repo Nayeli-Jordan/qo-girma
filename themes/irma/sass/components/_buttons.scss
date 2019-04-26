@@ -12,7 +12,9 @@
 	transition: .3s ease-out;
 	cursor: pointer;
 	@extend .shadow-small;
-	&:hover {
+	&.btn-pink { background-color: $pink-color; } 	
+	&:hover,
+	&.btn-pink:hover {
 		color: $light-color!important;
 		text-decoration: none!important;
 		background-color: $uva-color;

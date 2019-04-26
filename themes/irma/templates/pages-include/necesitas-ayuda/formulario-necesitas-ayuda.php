@@ -65,7 +65,7 @@
 			</select>
 		</div>
 		<div class="col s12 margin-bottom-small">
-			<label for="gi_comentario"><?php if( 'es' == $lang ) : ?>Comentario<?php else: ?>Commentary<?php endif; ?><span class="color-red">*</span>:</label>
+			<label for="gi_comentario"><?php if( 'es' == $lang ) : ?>Comentarios<?php else: ?>Comments<?php endif; ?><span class="color-red">*</span>:</label>
 			<textarea id="gi_comentario" name="gi_comentario" required data-parsley-required-message="El campo es obligatorio."></textarea>
 		</div>
 		<div class="col s12 text-right">
@@ -81,7 +81,7 @@
 <div class="text-center margin-top-xlarge">
 	<em class="icon-phone icon-xlarge margin-bottom-xxsmall block"></em>
 	<h3><?php if( 'es' == $lang ) : ?>Llámanos:<?php else: ?>Call us<?php endif; ?></h3>
-	<p><?php if( 'es' == $lang ) : ?>México<?php else: ?>Mexico<?php endif; ?>: 5260 3178 / 5260 8859 <br>911 <span class="font-irma">IRMA</span> (4762)</p>	
+	<p><?php if( 'es' == $lang ) : ?>México<?php else: ?>Mexico<?php endif; ?>: 5260 3178 / 5260 8859</p>	
 </div>
 
 <?php if(isset($_POST['submitNAyuda'])){

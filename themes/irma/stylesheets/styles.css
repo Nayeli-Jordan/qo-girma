@@ -1944,13 +1944,17 @@
   cursor: pointer;
 }
 /* line 15, ../sass/components/_buttons.scss */
-.btn:hover {
+.btn.btn-pink {
+  background-color: #e55e78;
+}
+/* line 16, ../sass/components/_buttons.scss */
+.btn:hover, .btn.btn-pink:hover {
   color: #fff !important;
   text-decoration: none !important;
   background-color: #804971;
 }
 
-/* line 23, ../sass/components/_buttons.scss */
+/* line 25, ../sass/components/_buttons.scss */
 .btn-twitter {
   background-color: #00acee;
   color: #fff !important;
@@ -1958,12 +1962,12 @@
   padding: 0 10px;
   font-size: 13px;
 }
-/* line 29, ../sass/components/_buttons.scss */
+/* line 31, ../sass/components/_buttons.scss */
 .btn-twitter em {
   font-size: 10px;
   margin-right: 2px;
 }
-/* line 33, ../sass/components/_buttons.scss */
+/* line 35, ../sass/components/_buttons.scss */
 .btn-twitter:hover {
   background-color: #08a1db;
 }
@@ -2039,7 +2043,7 @@
 }
 
 /* line 6, ../sass/components/_effects.scss */
-.shadow, .btn:hover, #donation-paypal input[type="image"]:hover, header #content-header nav#sub-menu ul li a, header #content-header.nav-fixed {
+.shadow, .btn:hover, .btn.btn-pink:hover, #donation-paypal input[type="image"]:hover, header #content-header nav#sub-menu ul li a, header #content-header.nav-fixed {
   box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
 }
 
@@ -8105,270 +8109,280 @@ video.responsive-video {
   vertical-align: middle;
 }
 
-/* line 50, ../sass/components/_position.scss */
+/* line 46, ../sass/components/_position.scss */
+.alignright {
+  float: right;
+}
+
+/* line 47, ../sass/components/_position.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 53, ../sass/components/_position.scss */
 .hide {
   display: none;
 }
 
-/* line 51, ../sass/components/_position.scss */
+/* line 54, ../sass/components/_position.scss */
 .block {
   display: block;
 }
 
-/* line 52, ../sass/components/_position.scss */
+/* line 55, ../sass/components/_position.scss */
 .block_imp {
   display: block !important;
 }
 
-/* line 53, ../sass/components/_position.scss */
+/* line 56, ../sass/components/_position.scss */
 .inline-block_imp {
   display: inline-block !important;
 }
 
-/* line 54, ../sass/components/_position.scss */
+/* line 57, ../sass/components/_position.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 55, ../sass/components/_position.scss */
+/* line 58, ../sass/components/_position.scss */
 .flex {
   display: flex;
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 57, ../sass/components/_position.scss */
+  /* line 60, ../sass/components/_position.scss */
   .hide-on-small {
     display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 58, ../sass/components/_position.scss */
+  /* line 61, ../sass/components/_position.scss */
   .hide-on-sm-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 59, ../sass/components/_position.scss */
+  /* line 62, ../sass/components/_position.scss */
   .hide-on-sm {
     display: none;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 60, ../sass/components/_position.scss */
+  /* line 63, ../sass/components/_position.scss */
   .hide-on-sm-and-up {
     display: none;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 61, ../sass/components/_position.scss */
+  /* line 64, ../sass/components/_position.scss */
   .hide-on-med-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 62, ../sass/components/_position.scss */
+  /* line 65, ../sass/components/_position.scss */
   .hide-on-med {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 63, ../sass/components/_position.scss */
+  /* line 66, ../sass/components/_position.scss */
   .hide-on-med-and-up {
     display: none;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 64, ../sass/components/_position.scss */
+  /* line 67, ../sass/components/_position.scss */
   .hide-on-large-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 65, ../sass/components/_position.scss */
+  /* line 68, ../sass/components/_position.scss */
   .hide-on-large {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 66, ../sass/components/_position.scss */
+  /* line 69, ../sass/components/_position.scss */
   .hide-on-large-and-up {
     display: none;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 67, ../sass/components/_position.scss */
+  /* line 70, ../sass/components/_position.scss */
   .hide-on-extra-large {
     display: none;
   }
 }
 @media only screen and (max-width: 430px) {
-  /* line 69, ../sass/components/_position.scss */
+  /* line 72, ../sass/components/_position.scss */
   .show-on-small {
     display: block;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 70, ../sass/components/_position.scss */
+  /* line 73, ../sass/components/_position.scss */
   .show-on-sm-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 71, ../sass/components/_position.scss */
+  /* line 74, ../sass/components/_position.scss */
   .show-on-sm {
     display: block;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 72, ../sass/components/_position.scss */
+  /* line 75, ../sass/components/_position.scss */
   .show-on-sm-and-up {
     display: block;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 73, ../sass/components/_position.scss */
+  /* line 76, ../sass/components/_position.scss */
   .show-on-med-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 74, ../sass/components/_position.scss */
+  /* line 77, ../sass/components/_position.scss */
   .show-on-med {
     display: block;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 75, ../sass/components/_position.scss */
+  /* line 78, ../sass/components/_position.scss */
   .show-on-med-and-up {
     display: block;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 76, ../sass/components/_position.scss */
+  /* line 79, ../sass/components/_position.scss */
   .show-on-large-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 77, ../sass/components/_position.scss */
+  /* line 80, ../sass/components/_position.scss */
   .show-on-large {
     display: block;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 78, ../sass/components/_position.scss */
+  /* line 81, ../sass/components/_position.scss */
   .show-on-large-and-up {
     display: block;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 79, ../sass/components/_position.scss */
+  /* line 82, ../sass/components/_position.scss */
   .show-on-extra-large {
     display: block;
   }
 }
-/* line 84, ../sass/components/_position.scss */
+/* line 87, ../sass/components/_position.scss */
 .clear {
   clear: both;
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 86, ../sass/components/_position.scss */
+  /* line 89, ../sass/components/_position.scss */
   .clear-on-small {
     clear: both;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 87, ../sass/components/_position.scss */
+  /* line 90, ../sass/components/_position.scss */
   .clear-on-sm-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 88, ../sass/components/_position.scss */
+  /* line 91, ../sass/components/_position.scss */
   .clear-on-sm {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 89, ../sass/components/_position.scss */
+  /* line 92, ../sass/components/_position.scss */
   .clear-on-sm-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 90, ../sass/components/_position.scss */
+  /* line 93, ../sass/components/_position.scss */
   .clear-on-med-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 91, ../sass/components/_position.scss */
+  /* line 94, ../sass/components/_position.scss */
   .clear-on-med {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 92, ../sass/components/_position.scss */
+  /* line 95, ../sass/components/_position.scss */
   .clear-on-med-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 93, ../sass/components/_position.scss */
+  /* line 96, ../sass/components/_position.scss */
   .clear-on-large-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 94, ../sass/components/_position.scss */
+  /* line 97, ../sass/components/_position.scss */
   .clear-on-large {
     clear: both;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 95, ../sass/components/_position.scss */
+  /* line 98, ../sass/components/_position.scss */
   .clear-on-large-and-up {
     clear: both;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 96, ../sass/components/_position.scss */
+  /* line 99, ../sass/components/_position.scss */
   .clear-on-extra-large {
     clear: both;
   }
 }
-/* line 102, ../sass/components/_position.scss */
+/* line 105, ../sass/components/_position.scss */
 .overflow-hide {
   overflow: hidden;
 }
 
-/* line 103, ../sass/components/_position.scss */
+/* line 106, ../sass/components/_position.scss */
 .overflow-x-hide {
   overflow: hidden;
 }
 
-/* line 104, ../sass/components/_position.scss */
+/* line 107, ../sass/components/_position.scss */
 .overflow-y-hide {
   overflow: hidden;
 }
 
-/* line 106, ../sass/components/_position.scss */
+/* line 109, ../sass/components/_position.scss */
 .z-index-1 {
   z-index: 1;
 }
 
-/* line 107, ../sass/components/_position.scss */
+/* line 110, ../sass/components/_position.scss */
 .z-index--1 {
   z-index: -1;
 }
 
-/* line 113, ../sass/components/_position.scss */
+/* line 116, ../sass/components/_position.scss */
 .transform-x-50 {
   transform: translateX(50%);
 }
 
-/* line 125, ../sass/components/_position.scss */
+/* line 128, ../sass/components/_position.scss */
 .content-center {
   width: 100%;
   position: absolute;

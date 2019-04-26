@@ -97,12 +97,12 @@
 			<div class="col_actividad col s12 m8 l6 relative">
 			<div class="bg-square bg-light"></div>
 				<div class="content-actividad">
-					<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>Necesitas ayuda</span><em class="icon-play"></em></a>
+					<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>¿Necesitas ayuda?</span><em class="icon-play"></em></a>
 					<a href="<?php echo SITEURL; ?>seccion/informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-logros" title="Enlace a logros Grupo Irma"><span>Logros</span><em class="icon-play"></em></a>
 					<a href="<?php echo SITEURL; ?>seccion/historias-de-vida<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-historias-vida" title="Enlace a Historias de vida"><span>Historias de vida</span><em class="icon-play"></em></a>
 					<a href="<?php echo SITEURL; ?>seccion/donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-text link-colabora" title="Enlace a colabora, donativos"><span>Colabora</span><em class="icon-play"></em></a>
 					<img src="<?php echo THEMEPATH ?>images/actividad_irma.png" class="responsive-img" alt="Cuadro de actividades de Grupo Irma">
-					<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>Necesitas ayuda</span></a>
+					<a href="<?php echo SITEURL; ?>seccion/formulario<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-necesitas-ayuda" title="Enlace a Necesitas ayuda"><span>¿Necesitas ayuda?</span></a>
 					<a href="<?php echo SITEURL; ?>seccion/informes-anuales<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-logros" title="Enlace a logros Grupo Irma"><span>Logros</span></a>
 					<a href="<?php echo SITEURL; ?>seccion/historias-de-vida<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-historias-vida" title="Enlace a Historias de vida"><span>Historias de vida</span></a>
 					<a href="<?php echo SITEURL; ?>seccion/donativos<?php if( 'en' == $lang ) : ?>/?lang=en<?php endif; ?>" class="link-colabora" title="Enlace a colabora, donativos"><span>Colabora</span></a>
