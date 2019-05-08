@@ -133,13 +133,17 @@ add_filter( 'wp_mail_content_type','transforme_content_type' );
 
 
 //Hide item admin menu for certain user profile
-function qo_remove_menu_items() {
+function gi_remove_menu_items() {
     remove_menu_page('edit.php'); // Posts     
     remove_menu_page('edit.php?post_type=page'); // Pages
     remove_menu_page('edit-comments.php'); // Comments
+    //Editor
+    if( current_user_can( 'contributor' ) ):
+        remove_menu_page( 'edit.php?post_type=seccion' );
+        remove_menu_page('tools.php'); // Tools
+    endif;    
 }
-add_action( 'admin_menu', 'qo_remove_menu_items' );
-
+add_action( 'admin_menu', 'gi_remove_menu_items' );
 
 /**
 ************ CUSTOM FUNCTIONS *************
@@ -267,15 +271,9 @@ function display_gi_donador_frecuente_atributos( $gi_donador_frecuente ){
     $reciboCp           = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboCp', true ) );
     $reciboPais         = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_reciboPais', true ) );
 
-    $noTarjeta         = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_noTarjeta', true ) );
-    $clabe              = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_clabe', true ) );
-    $tarjeta            = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_tarjeta', true ) );
-    $vencimientoMes     = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_vencimientoMes', true ) );
-    $vencimientoAno     = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_vencimientoAno', true ) );
     $mensual            = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_mensual', true ) );
     $importe            = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_importe', true ) );
     $banco              = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_banco', true ) );
-    $nombreTitular      = esc_html( get_post_meta( $gi_donador_frecuente->ID, 'gi_donador_frecuente_nombreTitular', true ) );
 ?>
     <table class="gi-custom-fields">
         <tr><th colspan="3" style="padding: 20px 0 10px; color: #c24871;">DATOS GENERALES</th></tr>
@@ -370,6 +368,21 @@ function display_gi_donador_frecuente_atributos( $gi_donador_frecuente ){
                 <input type="text" id="gi_donador_frecuente_reciboPais" name="gi_donador_frecuente_reciboPais" value="<?php echo $reciboPais; ?>" required>
             </th>
         </tr>
+        <tr><th colspan="3" style="padding: 20px 0 10px; color: #c24871;">Datos para donativo | Tarjeta de Crédito/Débito o cuenta de cheques</th></tr>
+        <tr>
+            <th>
+                <label for="gi_mensual">Cantidad mensual:</label>
+                <input type="text" id="gi_mensual" name="gi_mensual" value="<?php echo $mensual; ?>" required>
+            </th>
+            <th>
+                <label for="gi_importe">Otro importe:</label>
+                <input type="text" id="gi_importe" name="gi_importe" value="<?php echo $importe; ?>" required>
+            </th>
+            <th>
+                <label for="gi_banco">Banco emisor:</label>
+                <input type="text" id="gi_banco" name="gi_banco" value="<?php echo $banco; ?>" required>
+            </th>
+        </tr>
     </table>
 <?php }
 
@@ -433,6 +446,15 @@ function gi_donador_frecuente_save_metas( $idgi_donador_frecuente, $gi_donador_f
         }
         if ( isset( $_POST['gi_donador_frecuente_reciboPais'] ) ){
             update_post_meta( $idgi_donador_frecuente, 'gi_donador_frecuente_reciboPais', $_POST['gi_donador_frecuente_reciboPais'] );
+        }
+        if ( isset( $_POST['gi_mensual'] ) ){
+            update_post_meta( $idgi_donador_frecuente, 'gi_mensual', $_POST['gi_mensual'] );
+        }
+        if ( isset( $_POST['gi_importe'] ) ){
+            update_post_meta( $idgi_donador_frecuente, 'gi_importe', $_POST['gi_importe'] );
+        }        
+        if ( isset( $_POST['gi_banco'] ) ){
+            update_post_meta( $idgi_donador_frecuente, 'gi_banco', $_POST['gi_banco'] );
         }
     }
 }

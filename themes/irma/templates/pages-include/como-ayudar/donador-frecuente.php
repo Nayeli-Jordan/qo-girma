@@ -157,7 +157,7 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
     $banco              = $_POST['gi_banco'];
 
 	$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';	
-	$message 	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="http://localhost:8888/irma/wp-content/themes/irma/images/identidad/logo.png"></a></div>';
+	$message 	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="http://localhost:8888/irma/wp-content/themes/irma/images/identidad/logo1.png"></a></div>';
 	$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #325192; text-transform: uppercase;">Nuevo pre-registro de donador frecuente</h1>';
 	$message 			.= '<p style="font-weight: 600; color: #c24871;">DATOS GENERALES</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Apellido Paterno: </span>' . $apellidoPaterno . '</p>';

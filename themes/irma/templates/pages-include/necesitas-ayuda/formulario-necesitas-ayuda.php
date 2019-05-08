@@ -99,7 +99,7 @@
     $comentario         = $_POST['gi_comentario'];
 
 	$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';	
-	$message 	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="http://localhost:8888/irma/wp-content/themes/irma/images/identidad/logo.png"></a></div>';
+	$message 	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="http://localhost:8888/irma/wp-content/themes/irma/images/identidad/logo1.png"></a></div>';
 	$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #c24871; text-transform: uppercase;">Contacto Necesitas Ayuda</h1>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Nombre completo: </span>' . $nombre . '</p>';
 	$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #325192;">Correo eléctronico: </span>' . $email . '</p>';
