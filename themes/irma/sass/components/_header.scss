@@ -197,9 +197,9 @@ header {
 			width: 100%;
 			padding: 10px 0;
 			@extend .shadow;
-			& > a { width: 100px; }
+			& > a { width: 110px; }
 			nav#top-menu {
-				padding-top: 10px;
+				padding-top: 0px;
 				padding-bottom: 10px;
 			}
 			nav#sub-menu {

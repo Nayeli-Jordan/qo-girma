@@ -92,7 +92,7 @@
 				<a href="<?php echo SITEURL ?><?php if( 'en' == $lang ) : ?>?lang=en<?php endif; ?>" title="Link a Inicio sitio Grupo Irma">
 					<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/identidad/logo.png" alt="Logo de Grupo Irma, comprender para fortalecer">
 				</a>
-				<?php do_action('wpml_add_language_selector'); ?>
+				<?php //do_action('wpml_add_language_selector'); ?>
 				<em class="icon-menu open-nav"></em>
 				<?php /* Detect Active */ 
 					$submenu_name = '';
