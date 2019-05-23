@@ -86,7 +86,7 @@
 
 <?php if(isset($_POST['submitNAyuda'])){
 
-    $to 				= "pruebas@altoempleo.com.mx";    
+    $to 				= "ayuda@irma.org.mx";    
     $subject 			= "Contacto Necesitas Ayuda";	
 
     $nombre    			= $_POST['gi_nombre'];

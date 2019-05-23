@@ -16,6 +16,23 @@
 .bg-light 						{ background-color: $light-color; }
 .bg-orange 						{ background-color: $orange-color; }
 .bg-blue						{ background-color: $blue-color; }
+.bg-uva							{ background-color: $uva-color; }
+.bg-pink						{ background-color: $pink-color; }
+.bg-yellow						{ background-color: #ffb341; }
 
 .bg-degrade-pink_to_yellow  	{ background-image: linear-gradient(to right, $pink-color 10%, $orange-color, $yellow-color); }
 .bg-degrade-pink_to_yellow_large{ background-image: linear-gradient(to right, $pink-color 35%, $orange-color, $yellow-color); }
+
+.bg-valor {
+	padding: 20px 30px;
+    border-radius: 3px;
+    @media #{$sm-and-down} { padding: 10px 20px; }
+    &.bg-uva,
+    &.bg-blue,
+    &.bg-pink {
+		color: $light-color;
+    }
+    &.bg-orange strong { color: #80432d !important; }
+    &.bg-pink strong { color: $blue-color!important; }
+    p { margin-bottom: 10px; }
+}

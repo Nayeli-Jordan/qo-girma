@@ -129,7 +129,7 @@ Street and number<?php endif; ?><span class="color-red">*</span>:</label>
 
 <?php if(isset($_POST['submitDonativo'])){
 
-    $to 				= "pruebas@altoempleo.com.mx";    
+    $to 				= "mc.alva@irma.org.mx";    
     $subject 			= "Pre-registro Donador frecuente";	
 
     $apellidoPaterno    = $_POST['gi_apellidoPaterno'];
