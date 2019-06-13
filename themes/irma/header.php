@@ -96,7 +96,7 @@
 				<em class="icon-menu open-nav"></em>
 				<?php /* Detect Active */ 
 					$submenu_name = '';
-					if (is_single( array('historia', 'mision', 'vision', 'filosofia', 'directorio', 'informes-anuales') ) || is_404() ) {
+					if (is_single( array('historia', 'mision', 'vision', 'filosofia', 'directorio', 'informes-anuales', 'blog') ) || is_404() || is_singular('gi_blog')) {
 						$submenu_name = 'quienes-somos';
 					} elseif (is_single( array('irma-te-escucha', 'irma-conoce', 'irma-comunica', 'irma-transforma', 'historias-de-vida', 'un-lenguaje-comun', 'estilo-de-acompanamiento', 'fortalecer-la-identidad-materna-y-paterna', 'importancia-de-atender-la-salud-mental') ) || is_singular('gi_articulo')) {
 						$submenu_name = 'que-hacemos';

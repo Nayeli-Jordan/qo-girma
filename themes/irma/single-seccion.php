@@ -40,6 +40,8 @@
 							include (TEMPLATEPATH . '/templates/pages-include/quienes-somos/informes-anuales.php');
 						} else if (is_single('historia')) {
 							include (TEMPLATEPATH . '/templates/pages-include/quienes-somos/historia.php');
+						} else if (is_single('blog')) {
+							include (TEMPLATEPATH . '/templates/pages-include/quienes-somos/blog.php');
 						} ?>
 					</div>	
 				</div>

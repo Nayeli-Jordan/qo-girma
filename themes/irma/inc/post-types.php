@@ -260,4 +260,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'gi_necesitas_ayuda', $args );	
 
+	// Blog Irma
+	$labels = array(
+		'name'          => 'Blog',
+		'singular_name' => 'Blog',
+		'add_new'       => 'Nuevo Blog',
+		'add_new_item'  => 'Nuevo Blog',
+		'edit_item'     => 'Editar Blog',
+		'new_item'      => 'Nuevo Blog',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Blog',
+		'search_items'  => 'Buscar Blog',
+		'not_found'     => 'No hay Blog.',
+		'menu_name'     => 'Blog'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'gi_blog' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-media-document'
+	);
+	register_post_type( 'gi_blog', $args );
+
 });
