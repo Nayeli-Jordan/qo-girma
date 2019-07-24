@@ -1,4 +1,7 @@
 <?php $lang = isset( $_GET['lang'] ) ? $_GET['lang'] : 'es'; /* Iniciar WPML */ ?>
+<div class="text-center">
+    <a href="<?php echo SITEURL; ?>blog" class="btn margin-top-large">Blog <span class="font-irma">IRMA</span></a>
+</div>
 <div id="gi_articulos" class="margin-top-large">    
     <div class="margin-bottom-xlarge">
         <h3 class="margin-bottom-small strong"> 
